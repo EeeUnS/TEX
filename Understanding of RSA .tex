@@ -11,27 +11,29 @@
 \chapter{}
 \begin{justbox}
 $d,m,n,$이 어떤 정수일 때 \par
-1. $d$가 $m$과 $n$의 공약수일때, $m+n$도 $d$의 배수이다.
-\par
+1. $d$가 $m$과 $n$의 공약수일때, $m+n$도 $d$의 배수이다.\par
 2. $d$가 $m$과 $n$의 공약수일때, $m-n$도 $d$의 배수이다.
 \end{justbox}
 이에 대한 증명은 간단합니다. \par
 $m=dq_1 , n = dq_2$( $q_1,q_2$는 어떤 정수)\par
 $m+n = d(q_1 + q_2) , m-n=d(q_1-q_2)$ \par
-참고로 $d$가 $n$의 약수(인수)일 때 $d\: |\: n$으로 표시합니다.
-\par 
+참고로 $d$가 $n$의 약수(인수)일 때 $d\: |\: n$으로 표시합니다.\par 
 $m$과 $n$의 최대공약수는 $\gcd(m,n)$이라고 합니다.\par
 $r$이 $a$를 $b$로 나눈 나머지라면  $r=a\bmod b$입니다. \par
 이를써서 위 명제를 다시 적으면 $d\mid n , d\mid m  \longrightarrow d \mid (m+n), d\mid (m-n)$
+
 \newpage
+
 \begin{justbox}
 $a,b,z$를 양의 정수라 하면, 다음이 성립한다.
 \begin{center}
     $ab\bmod z= [(a\bmod z)(b \bmod z)]\bmod z$
 \end{center}
 \end{justbox}
+
 $w = ab\bmod z, x =a \bmod z, y=b\bmod z$라 하자.
 다음이 성립하는 $q_1$이 존재한다.
+
 \begin{center}
     $ab=q_1z+w \Longleftrightarrow w=ab-q_1 z$
 \end{center}
@@ -59,15 +61,16 @@ $a^{29} \bmod z$는 다음과 같은 순서로 계산한다.
 \begin{center}
     $a \bmod z$ , $a^{5}\bmod z$, $a^{13}\bmod z$, $a^{29}\bmod z$
 \end{center}
-\begin{center}
-    $a^2 \bmod z=[(a\bmod z)(a\bmod z)]\bmod z$ \par
-    $a^4 \bmod z=[(a^2\bmod z)(a^2\bmod z)]\bmod z$ \par
-    $a^8 \bmod z=[(a^4\bmod z)(a^4\bmod z)]\bmod z$ \par
-    $a^{16} \bmod z = [(a^8 \bmod z)(a^8\bmod z)]\bmod z$ \par
-    $a^5 \bmod z=[(a \bmod z)(a^4\bmod z)]\bmod z$ \par
-    $a^{13} \bmod z=[(a^5\bmod z)(a^8\bmod z)]\bmod z$ \par
-    $a^{29} \bmod z=[(a^{13}\bmod z)(a^{16}\bmod z)]\bmod z$ \par
-\end{center}
+
+\begin{align*}
+    a^2 \bmod z & = [(a\bmod z)(a\bmod z)]\bmod z \\
+    a^4 \bmod z & = [(a^2\bmod z)(a^2\bmod z)]\bmod z \\
+    a^8 \bmod z & = [(a^4\bmod z)(a^4\bmod z)]\bmod z \\
+    a^{16} \bmod z & = [(a^8 \bmod z)(a^8\bmod z)]\bmod z \\
+    a^5 \bmod z & = [(a \bmod z)(a^4\bmod z)]\bmod z \\
+    a^{13} \bmod z & = [(a^5\bmod z)(a^8\bmod z)]\bmod z \\ 
+    a^{29} \bmod z & = [(a^{13}\bmod z)(a^{16}\bmod z)]\bmod z
+\end{align*}
 
 \newpage
 \chapter{}
@@ -120,19 +123,19 @@ $k \mid d$에서 $ k = d$
 이미 증명되어있는 유클리드 알고리즘의 흐름을 통해서 예시로 이해 해보자.\par
 $a=273$  , $b=110$으로 하는 $\gcd(273,110)$을 구해봅시다.
 \begin{center}
-    $r= 273\bmod  110 = 53 \cdot\cdot\cdot\cdot \mathit{1}$
+    $r= 273\bmod  110 = 53 \cdot\cdots \mathit{1}$
 \end{center}
 $a=110 , b=53$으로 지정
 \begin{center}
-    $r= 110\:\bmod \: 53 = 4\cdot\cdot\cdot\cdot \mathit{2}$
+    $r= 110\:\bmod \: 53 = 4\cdot\cdots \mathit{2}$
 \end{center}
 $a=53 , b=4$로 지정
 \begin{center}
-    $r= 53\:\bmod \: 4 = 1 \cdot\cdot\cdot\cdot \mathit{3}$
+    $r= 53\:\bmod \: 4 = 1 \cdot\cdots \mathit{3}$
 \end{center}
 $a=4 , b=1$로 지정
 \begin{center}
-    $r= 4\bmod  1 = 0\cdot\cdot\cdot\cdot \mathit{4}$
+    $r= 4\bmod  1 = 0\cdot\cdots \mathit{4}$
 \end{center}
 $r=0$이므로 $\gcd(273,110)$은 최대공약수로 1을 가진다.
 여기서 $\mathit{4}$ 식으로 되돌아가면 이는 다음과 같이 쓸 수 있다.
@@ -183,7 +186,12 @@ $n\cdot s'\bmod  \phi =1$에서 $s= s'\bmod  \phi$라 하면 $0 \le s <\phi$가 
 $\varphi (n)$은 다음의 성질이 있다.
 \begin{itemize}
 \item{소수 $p$에 대해서  $\varphi (p)=p-1$}
-\item{ m, n이 서로소인 정수일 때,   $\varphi (mn)=\varphi (m)\varphi (n)$ }
+\item{ 
+m, n이 서로소인 정수일 때, 
+\begin{equation*}
+\varphi (mn)=\varphi (m)\varphi (n)
+\end{equation*}
+}
 \end{itemize}
 
 성질이 몇 개 더 있지만 RSA에서 필요한것만을 다루기위해서 생략하였다.
@@ -193,18 +201,22 @@ $mn -\dfrac{mn}{m}-\dfrac{mn}{n}+\dfrac{mn}{mn} =mn -m -n +1=(m-1)(n-1)=\varphi 
 
 \section{오일러 정리(Euler's theorem)\protect\footnote{페르마의 소정리는 오일러 정리에서의 특수한 경우이다.}}
 
-\subsection{증명}
 \begin{justbox}
-임의의 정수 a와 n이 서로소일 때, $a^{\varphi(n)} \bmod n = 1$
+임의의 정수 a와 n이 서로소일 때, 
+\begin{equation*}
+a^{\varphi(n)} \bmod n = 1
+\end{equation*}
 \end{justbox}
+
+\subsection{증명}
 정수 n에 대해서 1부터 n까지의 양의 정수 중에 n과 서로소인 것의 집합을 생각해보자.
 그러면 이는 집합
 \begin{center}
-    $A = \{ r_1 ,r_2,r_3,,,,r_{\varphi(n)}\}$\footnote{이러한 집합을 기약잉여계라고 부른다. 또한 집합 A의 원소의 갯수는 $\varphi(n)$이다.}
+    $A = \{ r_1 ,r_2,r_3, \cdots ,r_{\varphi(n)}\}$\footnote{이러한 집합을 기약잉여계라고 부른다. 또한 집합 A의 원소의 갯수는 $\varphi(n)$이다.}
 \end{center}
 으로 나타낼 수 있다. 이 집합은 A라하고 이 각 원소에 n과 서로소인 a를 곱한 집합을 B집합이라 하자.
 \begin{center}
-    $B = \{ ar_1 ,ar_2,ar_3,,,,ar_{\varphi(n)}\} $
+    $B = \{ ar_1 ,ar_2,ar_3, \cdots ,ar_{\varphi(n)}\} $
 \end{center}
 확실한건 $B$에 있는 모든 원소는 $n$과 서로소인 것이다. 
 그럼 $B$집합의 각 원소를 $\bmod n$에 대해 계산한 것을 생각해보자.
@@ -212,11 +224,11 @@ $mn -\dfrac{mn}{m}-\dfrac{mn}{n}+\dfrac{mn}{mn} =mn -m -n +1=(m-1)(n-1)=\varphi 
   \footnote{실제 증명은 귀류법을 통해서 증명할수있다.$ar_i  \equiv ar_j \bmod n $ 인 $1 \le i < j \le \varphi(n)$ 이 존재한다고 가정해보자.}
 따라서 $A$의 모든 원소를 곱한 값에 $\bmod n$을 한것과 $B$의 모든 원소를 곱한 값에 $\bmod n$을 한 값은 같다.
 \begin{center}
-    $ar_1 \cdot ar_2 \cdot ar_3 \cdot\cdot\cdot ar_{\varphi}\bmod n = r_1 \cdot r_2 \cdot r_3 \cdot\cdot\cdot r_{\varphi} \bmod n$
+    $ar_1 \cdot ar_2 \cdot ar_3 \cdots ar_{\varphi_{n}}\bmod n = r_1 \cdot r_2 \cdot r_3 \cdots r_{\varphi_{n}} \bmod n$
 \end{center}
-\begin{center}
-    $a^{\varphi(n)}\bmod n= 1$
-\end{center}
+\begin{equation*}
+    a^{\varphi(n)}\bmod n= 1
+\end{equation*}
 
 \newpage
 
