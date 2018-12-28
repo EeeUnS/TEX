@@ -101,12 +101,12 @@ $a$와 $b$가 음이 아니고 동시에 0이 아닌 정수라 하면 다음을 
 $ax + by =\gcd(x, y)$인 $a$, $b$가 존재한다.\par
 일반해는 $\gcd(x ,y)$의 배수이다.
 증명\par 
-집합 $S = \left\{ m | m =ax+by> , x\in \Zeta , y \in \Zeta \right\}$를 생각해보면, 이 집합 $S$는 $S \subset \Zeta$ ,  $S \subset \varnothing$ ( x, y를 원소로 가짐을 알 수 있다.) 자연수의 정렬성으로부터 최소가 되는 원소 $d$가 존재한다.
+집합 $S = \left\{ m | m =ax+by> , x\in \mathbf{Z} , y \in  \right\}$를 생각해보면, 이 집합 $S$는 $S \subset \mathbf{Z}$ ,  $S \subset \varnothing$ ( x, y를 원소로 가짐을 알 수 있다.) 자연수의 정렬성으로부터 최소가 되는 원소 $d$가 존재한다.
 $\alpha \in S \Rrightarrow \alpha = qd+r (0 \le r < d \because$ 나머지정리 )
-만약 $d \nmid \algha$ 일때, $r > 0$,
-$ r = \algha - qd , (\algha , d \in S)$ 
-$\algha = a_{1}x+b_{1}y , d=a_{2}x+b_{2}y$라 하면. $r=(a_{1}-a{2}q)x + (b_{1}-qb{2})y \in S $
-$0 < r < d$인 $r$에 대해 $d$가 최소라는 가정이 모순이다. $\therefore r = 0 , d \mid \algha (\forall \algha \in S)$
+만약 $d \nmid \alpha$ 일때, $r > 0$,
+$ r = \alpha - qd , (\alpha , d \in S)$ 
+$\alpha = a_{1}x+b_{1}y , d=a_{2}x+b_{2}y$라 하면. $r=(a_{1}-a{2}q)x + (b_{1}-qb{2})y \in S $
+$0 < r < d$인 $r$에 대해 $d$가 최소라는 가정이 모순이다. $\therefore r = 0 , d \mid \alpha (\forall \alpha \in S)$
 $ d \mid x, d \mid y \cdots$ $d$는  $x$ , $y$의 공약수
 $\gcd(x, y)=k $라 할때, $d = akx^{''}+bky^{''}=k(ax^{''}+by^{''})$
 $k \mid d$에서 $ k = d$
@@ -152,7 +152,7 @@ $\mathit{2}$
     $1=27\cdot53-13\cdot110=27\cdot(273 - 110\cdot2)-13\cdot110=27\cdot273-67\cdot 110$
 \end{center}
 따라서 $s=27, t=-67$로서 성립하는 값을 찾았다.
-\section{나머지 연산에서 곱셈에 대한 역원\footnote{역원: a와 연산자에 대해 연산결과가 항등원($=1$)이 되는 유일한 원소 b를 a의 역원이라한다.}(modular multiplicative inverse)}
+\section{나머지 연산에서 곱셈에 대한 역원 (modular multiplicative inverse)} \footnote{역원: a와 연산자에 대해 연산결과가 항등원($=1$)이 되는 유일한 원소 b를 a의 역원이라한다.}
 $\gcd(n,\phi)=1$인 두 정수 $n>0, \phi>1$가 있다고 하자.\footnote{한 마디로 n과 $\phi$는 서로소이다.}
 $n\cdot s\bmod  \phi =1 $을 만족시키는 $s$를 $n\bmod  \phi$의 역원(inverse) 이라고 한다.\newline
 이 s를 효율적으로 구하는 방법에대해서 논해보자\par
@@ -202,7 +202,8 @@ $mn -\dfrac{mn}{m}-\dfrac{mn}{n}+\dfrac{mn}{mn} =mn -m -n +1=(m-1)(n-1)=\varphi 
 
 \newpage
 \chapter{}
-\section{RSA \footnote{로널드 라이베스트(Ron Rivest), 아디 샤미르(Adi Shamir), 레너드 애들먼(Leonard Adleman)이 세명의 이름 앞글자를 따서 지었다.} 공개 키 암호 시스템(RSA public-key cryptosystem)}
+\section{RSA 공개 키 암호 시스템(RSA public-key cryptosystem)}
+\footnote{로널드 라이베스트(Ron Rivest), 아디 샤미르(Adi Shamir), 레너드 애들먼(Leonard Adleman)이 세명의 이름 앞글자를 따서 지었다.}
 
 이 알고리즘은 보안 기법중 하나로 가장 흔한 예시로서는 공인인증서가 있다.
 \begin{center}
@@ -233,4 +234,4 @@ $a^{b\varphi(n)+1}\bmod z =(a^{\varphi(n)} \bmod z)^{b} a \bmod z =a$ \footnote{
 \url{ https://blog.naver.com/mindo1103/221234421987}
 \newline
 \url{https://blog.naver.com/mindo1103/221234421626}
-\end{document}\:
+\end{document}
