@@ -27,4 +27,11 @@ margin=.5em}]{thm}
 
 정의로 부터 $\psi(e) = us$인 간선 $e$ ($e \in E(G)$)에 대해 대응되는 $\psi(\phi(e)) = \theta(u)\theta(v)$인 $\phi(e)$($\phi(e) \in E(H)$)가 존재함을 알 수 있다. 따라서 $ uv \in E(G) \rightarrow  \theta(u)\theta(v) \in E(H)$ 성립, 반대의 경우도 마찬가지로 성립한다.
 
+1.2.11
+\begin{itemize}
+    \item 여 그래프(complement graph) : 모든 정점에 대해서 포함하고 있는 존재하는 간선은 제거, 존재하지않는 간선을 생성해서 만든 그래프
+    \item 자기 여 그래프 (self-complementary graph) : 여그래프와 자기자신이 동형인 그래프
+\end{itemize}
+(b): 자기 여 그래프가 되기위해선 일단 동형 이전에 간선의 갯수가 동일해야하는데 여기서 총 생길수있는 간선의 갯수는$\dfrac{vX(v-1)}{2}$ 가 최댓값이자 그래프의 간선수 + 여그래프의 간선수 입니다. 그래프의 간선수 = 여그래프의 간선수 이므로 $v$나 $v-1$은 적어도 둘 중 하나는(적어도지만 사실 둘다 4의 배수인 경우의 수는 존재하지않습니다) 4의 배수여야합니다
+따라서 $v\pmod{4}$는 0 또는 1
 \end{document}
