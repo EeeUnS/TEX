@@ -21,67 +21,105 @@ margin=.5em}]{thm}
     \item $\psi(\phi(e)) = \theta(u)\theta(v)$% $\phi(e)$ %($\phi(e) \in E(H)$)
 \end{itemize}
 \end{thm}
-1.2.5
 
-명제: $G \cong H$ ,둘다 simple graph 일때, $$ uv \in E(G) \Longleftrightarrow  \theta(u)\theta(v) \in E(H)$$
+  $H \subseteq G$ if $ V(H) \subset V(G), E(V) \subset E(G)$, and $\psi_{H}$ is restricton $\psi_{G}$
+    subgraph : H, supergraph: G
 
-정의로 부터 $\psi(e) = us$인 간선 $e$ ($e \in E(G)$)에 대해 대응되는 $\psi(\phi(e)) = \theta(u)\theta(v)$인 $\phi(e)$($\phi(e) \in E(H)$)가 존재함을 알 수 있다. 따라서 $ uv \in E(G) \rightarrow  \theta(u)\theta(v) \in E(H)$ 성립, 반대의 경우도 마찬가지로 성립한다.
+    $ H \subset G$ proper graph: H
+    $V(H) = V(G) , H \subseteq G \Longleftrightarrow$ spaning subgraph : $H$
 
-1.2.11
+    spaning subgraph  simple graph $\rightarrow$ undelying simple graph
+
+
 \begin{itemize}
-    \item 여 그래프(complement graph) : 모든 정점에 대해서 포함하고 있는 존재하는 간선은 제거, 존재하지않는 간선을 생성해서 만든 그래프
-    \item 자기 여 그래프 (self-complementary graph) : 여그래프와 자기자신이 동형인 그래프
+    \item 1.2.5
+    $G \cong H$ , simple
+
+    bijection $\theta : V(G) \longrightarrow V(H)$
+    $ uv \in E(G) \Leftrightarrow  \theta(u)\theta(v) \in E(H)$
+
+    정의로 부터 $\psi(e) = us$인 간선 $e$ ($e \in E(G)$)에 대해 대응되는 $\psi(\phi(e)) = \theta(u)\theta(v)$인 $\phi(e)(\phi(e) \in E(H))$가 존재함을 알 수 있다. 따라서 $ uv \in E(G) \rightarrow \theta(u)\theta(v) \in E(H)$ 성립, 반대의 경우도 마찬가지로 성립한다.
+    \item 1.2.11
+    \begin{itemize}
+        \item 여 그래프(complement graph) : 모든 정점에 대해서 포함하고 있는 존재하는 간선은 제거, 존재하지않는 간선을 생성해서 만든 그래프
+        \item 자기 여 그래프 (self-complementary graph) : 여그래프와 자기자신이 동형인 그래프
+    \end{itemize}
+    (b): 자기 여 그래프가 되기위해선 일단 동형 이전에 간선의 갯수가 동일해야하는데 여기서 총 생길수있는 간선의 갯수는$\dfrac{vX(v-1)}{2}$ 가 최댓값이자 그래프의 간선수 + 여그래프의 간선수 입니다. 그래프의 간선수 = 여그래프의 간선수 이므로 $v$나 $v-1$은 적어도 둘 중 하나는(적어도지만 사실 둘다 4의 배수인 경우의 수는 존재하지않습니다) 4의 배수여야합니다
+    따라서 $v\pmod{4}$는 0 또는 1
+    
+    \item 1.5.2
+
+    M'는 M의 전치행렬 원표기 $M^{T}$,
+    $MM'[v_i][v_i] = \sum_{j=1}^n M[v_i][e_j] \cdot M'[e_j][v_i]$
+
+    $ M'[e_j][v_i] = M[v_i][e_j] $이며 simple graph일때 각 값은 0 또는 1이기 때문에 결과적으로 대각선의 값은 해당 정점의 차수가 된다.
+
+    $A$ 행렬에서 $A[v_i][v_j] = A[v_j][v_i]$ 
+
+    $d(i) = \sum_{j=1}^n A[v_i][v_j] = \sum_{j=1}^n A[v_j][v_i]$이다.
+    마찬가지로 simple graph에서 $A[v_i][v_j]$은 무조건 0 또는 1을 가지므로 $A[v_i][v_j] \cdot A[v_j][v_i] = A[v_i][v_j]$이다.
+
+    $A^2$에서 $A^2[v_i][v_i] = \sum_{j=1}^n A[v_i][v_j] \cdot A[v_j][v_i]= \sum_{j=1}^n A[v_i][v_j] = d(i)$
+
+    k-regular graph : 정규그래프
+    집합 $A$의 $|A|$ : A의 원소의 갯수
+
+    \item 1.5.3
+    k-regular bipartite graph의 bipartition($X$,$Y$)이 $|X|\neq |Y|$라 하자. $d(v)=|Y|,\: d(u)=|X|(u \in Y )$ $d(v) \neq d(u)$ 이는 k-regular graph의 조건에 모순
+
+    \item 1.5.4
+
+    두명 이상의 사람이 있는 그룹에서 그룹 내 친구의 수(그룹 내부의 사람으로 제한)가 같은 사람이 반드시 두명이 있음을 보여라
+
+    사람이 n명일때 친구의 수는 최대 n-1명이기때문에 비둘기집의 원리에 의해 친구 수가 같은 사람이 무조건 두명이 존재한다.
+
+    각각의 사람을 정점, 친구관계를 간선으로 나타낸다면은 해당 그룹은 simple graph로 볼수있으며 친구의 수는 각 정점의 차수가 된다.
+
+    따라서 해당 문제는 simple graph일때 반드시 두 정점의 차수가 같음을 보이는 것과 같다. 
+    \item 1.5.5
+    ??
+    \item 1.5.6 : A sequence $d = (d_1, d_2 , \cdots , d_n)$ is graphic if there is a simple graph with degree sequence d. Show that
+
+    (a) (7,6,5,4,3,3,2) : 정점이 총 7갠데 첫번째 정점의 간선이 7개인것은 simple graph의 조건을 충족하지 못한다.
+    (6,6,5,4,3,3,1) : 총 7개의 정점중 simple graph라면 자신을 제외한 모든 정점에 간선을 잇는 차수가 6인 정점이 2개이지만 차수가 1인 정점이 있으므로 모순이다.
+
+    (b) if $d$ is graphic and $d_1 \le d_2 \le ... \le d_n$, then $\sum_{i=1}^{n} d_i$ is even and $\sum_{i=l}^{k} d_i \le k(k -1)+\sum_{i=k+1}^{n}\min(k, d_i)$ for $1 \le k \le n$
+
+
+    \item 1.6.8
+
+    (a)간선 e가 빠짐으로서 하나였던 component가 두개의 component가 될 요지가 있다. 따라서 $\omega(G) \le \omega(G-e) \le \omega(G)+1 $가 성립한다.
+
+    (b) inequality: 부등식
+    반례: $V(G) = { v_1, v_2, v_3} ,\: E(G) = { e_1 , e_2} ,\: \psi_H(e_1) = v_1v_1 ,\psi_H(e_2) = v_2v_3  $
+    $v_1$과 $v_2v_3$가 각각 연결되어있는 $\omega(G) = 2$인 그래프이다$v_1$을 제거할때 component가 하나 사라지므로 주어진 부등식을 만족하지 못한다.
+
+    \item 1.6.14
+    $uv, uw, uw \in E $이면 $G$는 complete가 되기때문에 $uw \notin E$
+
+
+    \item 1.7.2
+    simple graph가 아닌경우
+          루프를 포함하는경우 $v_0v_0$는 정의에 의해 사이클이다.
+               임의의 정점$v_0, v_1$에 간선이 2개이상인경우            $v_0v_1v_0$사이클을 이룬다
+         
+        simple graph인경우
+            정점의 개수가 k인 그래프를 생각하자. 이때 $v_0v_1v_2 \cdots v_i$인 서로 다른 정점만 최대한 이어진 연결을 생각해볼때 i의 차수는 명제의 조건에의해서 무조건 $0<j \le k$인 정점 $v_j$에 연결이 되어있어야한다. 따라서 $v_{j}v_{j+1} \cdots v_k$인 사이클을 이룬다.
+
+    \item 1.8.4
+    늑대, 염소, 양배추가 강가에 있습니다.
+
+페리맨은 그들을 데려 가기를 원하지만 보트가 작기 때문에 한 번에 하나만 가져갈 수 있습니다.
+
+ 명백한 이유 때문에, 늑대와 염소, 염소와 양배추는 보호받지 못하게 될 수 없습니다.
+ 
+도선장은 어떻게 강을 건너 갈거야?
+
+그래프랑 무슨 관련이 있는진 모르겠지만
+먼저 양을 옮긴다. 그다음 늑대를 옮긴다. 돌아가면서 양을 다시 데리고간다. 양을 두고 양배추를 옮긴다. 양을 옮긴다.
+
+    \item 1.8.5
+    \item 1.8.6
+
 \end{itemize}
-(b): 자기 여 그래프가 되기위해선 일단 동형 이전에 간선의 갯수가 동일해야하는데 여기서 총 생길수있는 간선의 갯수는$\dfrac{vX(v-1)}{2}$ 가 최댓값이자 그래프의 간선수 + 여그래프의 간선수 입니다. 그래프의 간선수 = 여그래프의 간선수 이므로 $v$나 $v-1$은 적어도 둘 중 하나는(적어도지만 사실 둘다 4의 배수인 경우의 수는 존재하지않습니다) 4의 배수여야합니다
-따라서 $v\pmod{4}$는 0 또는 1
-
-
-1.5.2
-
-M'는 M의 전치행렬 원표기 M^{T},
-$MM'[v_i][v_i] = \sum_{j=1}^n M[v_i][e_j] \cdot M'[e_j][v_i]$
-
-$ M'[e_j][v_i] = M[v_i][e_j] $이며 simple graph일때 각 값은 0 또는 1이기 때문에 결과적으로 대각선의 값은 해당 정점의 차수가 된다.
-
-$A$ 행렬에서 $A[v_i][v_j] = A[v_j][v_i]$ 
-
-$d(i) = \sum_{j=1}^n A[v_i][v_j] = \sum_{j=1}^n A[v_j][v_i]$이다.
-마찬가지로 simple graph에서 $A[v_i][v_j]$은 무조건 0 또는 1을 가지므로 $A[v_i][v_j] \cdot A[v_j][v_i] = A[v_i][v_j]$이다.
-
-$A^2$에서 $A^2[v_i][v_i] = \sum_{j=1}^n A[v_i][v_j] \cdot A[v_j][v_i]= \sum_{j=1}^n A[v_i][v_j] = d(i)$
-
-k-regular graph : 정규그래프
-집합 $A$의 $|A|$ : A의 원소의 갯수
-
-1.5.3
-??
-
-1.5.4
-
-두명 이상의 사람이 있는 그룹에서 그룹 내 친구의 수(그룹 내부의 사람으로 제한)가 같은 사람이 반드시 두명이 있음을 보여라
-
-사람이 n명일때 친구의 수는 최대 n-1명이기때문에 비둘기집의 원리에 의해 친구 수가 같은 사람이 무조건 두명이 존재한다.
-
-각각의 사람을 정점, 친구관계를 간선으로 나타낸다면은 해당 그룹은 simple graph로 볼수있으며 친구의 수는 각 정점의 차수가 된다.
-
-따라서 해당 문제는 simple graph일때 반드시 두 정점의 차수가 같음을 보이는 것과 같다. 
-1.5.5
-??
-1.5.6
-(a) (7,6,5,4,3,3,2) : 정점이 총 7갠데 첫번째 정점의 간선이 7개인것은 simple graph의 조건을 충족하지 못한다.
-(6,6,5,4,3,3,1) : 총 7개의 정점중 simple graph라면 자신을 제외한 모든 정점에 간선을 잇는 차수가 6인 정점이 2개이지만 차수가 1인 정점이 있으므로 모순이다.
-(b)???
-
-1.6.8
-(a)간선 e가 빠짐으로서 하나였던 component가 두개의 component가 될 요지가 있다. 따라서 $\omega(G) \le \omega(G-e) \le \omega(G)+1 $가 성립한다.
-
-(b) inequality: 부등식
-반례: $V(G) = { v_1, v_2, v_3} , E(G) = { e_1 , e_2} , \psi_H(e_1) = v_1v_1 ,\psi_H(e_2) = v_2v_3  $
-v_1과 v_2v_3가 각각 연결되어있는 $\omega(G) = 2$인 그래프이다$v_1$을 제거할때 component가 하나 사라지므로 주어진 부등식을 만족하지 못한다.
-
-1.6.14
-$uv, uw, uw \in E $이면 $G$는 complete가 되기때문에 $uw \notin E$
-
-
-
 \end{document}
