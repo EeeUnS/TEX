@@ -19,7 +19,8 @@ margin=.5em}]{thm}
 
 \begin{document}
 
-\begin{thm}[isomophic] 두 그래프 G와 H가  전단사 함수 $\theta : V(G) \longrightarrow V(H)$와 $\phi : E(G) \rightarrow E(H)$에 대해 다음이 성립하면 두 그래프는 동형(isomophic)이다.
+\begin{thm}[isomophic] 두 그래프 G와 H가  전단사 함수 $\theta : V(G) \longrightarrow V(H)$와 $\phi : E(G) \rightarrow E(H)$이 성립하면 두 그래프는 동형(isomophic)이다.
+    또한 다음이 성립한다.
 \begin{itemize}
     \item $\psi(e) = us( e \in E(G), u,s \in V(G)) $
     \item $\psi(\phi(e)) = \theta(u)\theta(v)$% $\phi(e)$ %($\phi(e) \in E(H)$)
@@ -127,6 +128,14 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
     \item 1.8.6
 
 \end{itemize}
+
+인접성: $u$와 $v$가 인접하면 $\theta(u)$와  $\theta(v)$가 인접하고 그 역도 성립한다. 
+두 그래프 G와 H에 대해서 G의 정점들을 H의 정점들에 일대일로 대응하면서 
+인접성을 보존하는 함수 f가 존재하면 두 그래프 G와 H는 동형(isomorphic)이다.
+
+Proof: $E(G)$의 임의의 간선 $e$에 대해 임의의 정점 $u,v$가 인접할때, 인접성이 보존되므로 $\theta(u)$와  $\theta(v)$ 또한 인접한다.
+$\theta(u)$와  $\theta(v)$를 잇는 간선을 $e'$이라 할때 $\phi(e) = e'$인 $\phi: E(G) \longrightarrow E(H)$를 정의할 수 있다.
+따라서 정의에 의해 $G$와 $H$는 동형이다.
 
 
 
