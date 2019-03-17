@@ -19,14 +19,6 @@ margin=.5em}]{thm}
 
 \begin{document}
 
-\begin{thm}[isomophic] 두 그래프 G와 H가  전단사 함수 $\theta : V(G) \longrightarrow V(H)$와 $\phi : E(G) \rightarrow E(H)$이 성립하면 두 그래프는 동형(isomophic)이다.
-    또한 다음이 성립한다.
-\begin{itemize}
-    \item $\psi(e) = us( e \in E(G), u,s \in V(G)) $
-    \item $\psi(\phi(e)) = \theta(u)\theta(v)$% $\phi(e)$ %($\phi(e) \in E(H)$)
-\end{itemize}
-\end{thm}
-
   $H \subseteq G$ if $ V(H) \subset V(G), E(V) \subset E(G)$, and $\psi_{H}$ is restricton $\psi_{G}$
     subgraph : H, supergraph: G
 
@@ -36,7 +28,17 @@ margin=.5em}]{thm}
     spaning subgraph  simple graph $\rightarrow$ undelying simple graph
 
 
+    \begin{thm}[isomophic] 두 그래프 G와 H가  전단사 함수 $\theta : V(G) \longrightarrow V(H)$와 $\phi : E(G) \rightarrow E(H)$이 성립하면 두 그래프는 동형(isomophic)이다.
+        또한 다음이 성립한다.
+    \begin{itemize}
+        \item $\psi(e) = us( e \in E(G), u,s \in V(G)) $
+        \item $\psi(\phi(e)) = \theta(u)\theta(v)$% $\phi(e)$ %($\phi(e) \in E(H)$)
+    \end{itemize}
+    \end{thm}
+
+    
 \begin{itemize}
+
     \item 1.2.5
     $G \cong H$ , simple
 
@@ -45,15 +47,46 @@ margin=.5em}]{thm}
 
     정의로 부터 $\psi(e) = us$인 간선 $e$ ($e \in E(G)$)에 대해 대응되는 $\psi(\phi(e)) = \theta(u)\theta(v)$인 $\phi(e)(\phi(e) \in E(H))$가 존재함을 알 수 있다. 
     따라서 $ uv \in E(G) \rightarrow \theta(u)\theta(v) \in E(H)$ 성립, 반대의 경우도 마찬가지로 성립한다.
+  
+    \item 1.2.9
+    
+    \begin{align}
+        &{n \choose 2} -  (m(k+1)-n) {k \choose 2} -(n-mk){k+1 \choose 2} \\
+        &= {n \choose 2} -  m(k+1){k \choose 2}-n{k \choose 2} -(n-mk){k+1 \choose 2} \\
+        &= {n \choose 2} -  m(k-1){k+1 \choose 2} +n{k \choose 2} -(n-mk){k+1 \choose 2} \\
+        &= {n \choose 2} + n{k \choose 2} -(n-m){k+1 \choose 2} \\
+        &= {n \choose 2} + n{k \choose 2} -(n-m){k+1 \choose 2} +(n-1){k+1 \choose 2} - (n-1){k+1 \choose 2}\\
+        &= {n \choose 2} + n{k \choose 2} - (n-1){k+1 \choose 2} + (m-1){k+1 \choose 2}  \\
+        &= \dfrac{n^2-n-nk + k^2+k-nk}{2}  + (m-1){k+1 \choose 2} \\
+        &= \dfrac{(n-k)(n-k-1)}{2}={n-k \choose 2}  + (m-1){k+1 \choose 2}
+    \end{align}
+    
     \item 1.2.11
-    \begin{itemize}
-        \item 여 그래프(complement graph) : 모든 정점에 대해서 포함하고 있는 존재하는 간선은 제거, 존재하지않는 간선을 생성해서 만든 그래프
-        \item 자기 여 그래프 (self-complementary graph) : 여그래프와 자기자신이 동형인 그래프
-    \end{itemize}
+    \begin{thm}[여 그래프(complement graph)] 
+    모든 정점에 대해서 포함하고 있는 존재하는 간선은 제거, 존재하지않는 간선을 생성해서 만든 그래프
+    \end{thm}
+    \begin{thm}[ 자기 여 그래프 (self-complementary graph)] 
+        여그래프와 자기자신이 동형인 그래프
+    \end{thm}
     (b): 자기 여 그래프가 되기위해선 일단 동형 이전에 간선의 갯수가 동일해야하는데 여기서 총 생길수있는 간선의 갯수는 
 $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 간선수 입니다. 그래프의 간선수 = 여그래프의 간선수 이므로 $v$나 $v-1$은 적어도 둘 중 하나는(적어도지만 사실 둘다 4의 배수인 경우의 수는 존재하지않습니다) 4의 배수여야합니다
     따라서 $v\pmod{4}$는 0 또는 1
     
+
+    \item 추가문제 :
+
+    인접성 : 두 그래프가 인접성을 보존할때, $u$와 $v$가 인접하면 $\theta(u)$와  $\theta(v)$가 인접하고 그 역도 성립한다. 
+
+    두 그래프 G와 H에 대해서 G의 정점들을 H의 정점들에 일대일로 대응하면서 
+    인접성을 보존하는 함수 f가 존재하면 두 그래프 G와 H는 동형(isomorphic)이다.
+    
+    Proof: $E(G)$의 임의의 간선 $e$에 대해 임의의 정점 $u,v$가 인접할때, 인접성이 보존되므로 $\theta(u)$와  $\theta(v)$ 또한 인접한다.
+    $\theta(u)$와  $\theta(v)$를 잇는 간선을 $e'$이라 할때 $\phi(e) = e'$인 $\phi: E(G) \longrightarrow E(H)$를 정의할 수 있다.
+    따라서 정의에 의해 $G$와 $H$는 동형이다.
+    
+
+
+
     \item 1.5.2
 
     M'는 M의 전치행렬 원표기 $M^{T}$,
@@ -149,25 +182,5 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
 \item 1.8.6
 
 \end{itemize}
-
-인접성: $u$와 $v$가 인접하면 $\theta(u)$와  $\theta(v)$가 인접하고 그 역도 성립한다. 
-두 그래프 G와 H에 대해서 G의 정점들을 H의 정점들에 일대일로 대응하면서 
-인접성을 보존하는 함수 f가 존재하면 두 그래프 G와 H는 동형(isomorphic)이다.
-
-Proof: $E(G)$의 임의의 간선 $e$에 대해 임의의 정점 $u,v$가 인접할때, 인접성이 보존되므로 $\theta(u)$와  $\theta(v)$ 또한 인접한다.
-$\theta(u)$와  $\theta(v)$를 잇는 간선을 $e'$이라 할때 $\phi(e) = e'$인 $\phi: E(G) \longrightarrow E(H)$를 정의할 수 있다.
-따라서 정의에 의해 $G$와 $H$는 동형이다.
-
-\begin{align*}
-    ${n \choose 2} -  (m(k+1)-n) {k \choose 2} -(n-mk){k+1 \choose 2} \\
-     #= {n \choose 2} -  m(k+1){k \choose 2}-n{k \choose 2} -(n-mk){k+1 \choose 2} \\
-    #= {n \choose 2} -  m(k-1){k+1 \choose 2} +n{k \choose 2} -(n-mk){k+1 \choose 2} \\
-    #= {n \choose 2} + n{k \choose 2} -(n-m){k+1 \choose 2} \\
-    #= {n \choose 2} + n{k \choose 2} -(n-m){k+1 \choose 2} +(n-1){k+1 \choose 2} - (n-1){k+1 \choose 2}\\
-    #= {n \choose 2} + n{k \choose 2} - (n-1){k+1 \choose 2} + (m-1){k+1 \choose 2}  \\
-    #= \dfrac{n^2-n-nk + k^2+k-nk}{2}  + (m-1){k+1 \choose 2}
-    #= \dfrac{(n-k)(n-k-1)}{2}={n-k \choose 2}  + (m-1){k+1 \choose 2}\\
-    $  
-\end{align*}
 
 \end{document}
