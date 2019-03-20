@@ -15,11 +15,23 @@ postheadspace=1em,
 name=정의,
 style=maintheorem,
 numberwithin=section, shaded={%bgcolor=MainColorThree!20,
+margin=.5em}]{dfn}
+% \begin{dfn}[]
+% \end{dfn}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+%https://www.overleaf.com/learn/latex/Theorems_and_proofs
+%http://web.mit.edu/rsi/www/pdfs/theorems.pdf
+%https://texfaq.org/FAQ-proof
+\declaretheorem[%
+name=정리,
+style=maintheorem,
+numberwithin=section, shaded={%bgcolor=MainColorThree!20,
 margin=.5em}]{thm}
-% \begin{thm}[]
-% \end{thm}
+
 \begin{document}
-    \begin{thm}[Graph] 정점과 정점을 잇는 간선들로 이루어진 것을 그래프라한다.
+    \begin{dfn}[Graph] 정점과 정점을 잇는 간선들로 이루어진 것을 그래프라한다.
         \begin{itemize}
             \item $V(G)$ :  정점의 집합
             \item $E(G)$ :  간선의 집합
@@ -29,22 +41,22 @@ margin=.5em}]{thm}
         \end{itemize}
 
         Simple graph : loop가 없고 두 정점쌍에 두개이상의 간선이 존재하지않는 그래프
-    \end{thm}
+    \end{dfn}
 
-    \begin{thm}[planar]
+    \begin{dfn}[planar]
         그래프를 간선들이 교차하지않게 그릴수 있는 것을 plannar graph라 한다. 
         
         plannar graph가 아닌 것을 nonplanar graph라한다.
-    \end{thm}
-    \begin{thm}[isomophic] 두 그래프 G와 H가  전단사 함수 $\theta : V(G) \longrightarrow V(H)$와 $\phi : E(G) \rightarrow E(H)$이 성립하면 두 그래프는 동형(isomophic)이다.
+    \end{dfn}
+    \begin{dfn}[isomophic] 두 그래프 G와 H가  전단사 함수 $\theta : V(G) \longrightarrow V(H)$와 $\phi : E(G) \rightarrow E(H)$이 성립하면 두 그래프는 동형(isomophic)이다.
         또한 다음이 성립한다.
     \begin{itemize}
         \item $\psi(e) = us( e \in E(G), u,s \in V(G)) $
         \item $\psi(\phi(e)) = \theta(u)\theta(v)$% $\phi(e)$ %($\phi(e) \in E(H)$)
     \end{itemize}
-    \end{thm}
+    \end{dfn}
     
-    \begin{thm}[e special classes of graphs]
+    \begin{dfn}[e special classes of graphs]
         \begin{itemize}
             \item complete graph(완전 그래프) : 모든 정점에 간선이 연결된 그래프 정점의 개수가 $n$일때 $K_n$로 표현한다.
             \item empty graph : 정점이 한개고 간선이 없는 그래프
@@ -60,10 +72,10 @@ margin=.5em}]{thm}
 
             \item (1.2.10)k -cube : 각 정점은 하나의 ordered k-tuple(k-비트 이진수)이고, 두 정점이 1비트만 서로 다를 때 두 정점간에 에지가 있다.
             \item (1.2.11)여 그래프(complement graph) : 모든 정점에 대해서 포함하고 있는 존재하는 간선은 제거, 존재하지않는 간선을 생성해서 만든 그래프 
-            G^{c}로 표현한다.
+            $G^{c}$로 표현한다.
             \item (1.2.11)자기 여 그래프 (self-complementary graph) : 여그래프와 자기자신이 동형인 그래프
         \end{itemize}
-    \end{thm}
+    \end{dfn}
 
     week1
 
@@ -116,26 +128,45 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
 
     week2
 
-    \begin{thm}[subgraph]
+    \begin{dfn}[subgraph]
         그래프 $H$, $G$가 $ V(H) \subset V(G), E(H) \subset E(G)$, and $\psi_{H}$ is restricton $\psi_{G}$ \protect\footnote{$\psi_{H}$가 제한적으로 $\psi_{G}$이다.} 일때  $H \subseteq G$ 라쓰고 $H$($G$)를 subgraph(supergraph)라 한다.
     
         \begin{itemize}
             \item $H \subseteq G$,$H\neq G $이면 $ H \subset G$라 표기하고, $H$를  $G$의 proper graph라 한다.
-            \item $V(H) = V(G) , H \subseteq G $이면 $H$($G$)를 spaning subgraph(supergraph)라 한다.
+            \item $V(H) = V(G) , H \subseteq G $이면 $H$($G$)를  spaning subgraph(supergraph)라 한다.
             \item spaning subgraph과 동시에 simple graph이면, undelying simple graph라한다.
         \end{itemize}
-    \end{thm}
+    \end{dfn}
     
-    \begin{thm}[degree(차수)] $d_G(v)$는 정점 $v$에 연결된 간선의 갯수를 나타낸다. 그래프의 정점의 차수의 최솟값을 $\delta(G)$ , 최댓값을 $\Delta(G)$로 표기한다.
-       
+    \begin{dfn}[degree(차수)] $d_G(v)$는 정점 $v$에 연결된 간선의 갯수를 나타낸다. 그래프의 정점의 차수의 최솟값을 $\delta(G)$ , 최댓값을 $\Delta(G)$로 표기한다.
         \[
             \sum_{v \in V} d(v) = 2 \varepsilon  
         \]
         k-regular graph(정규그래프) : $d(v) = k \:\forall v \in V$
         $|A|$ : 집합 $A$의 원소의 갯수
-    \end{thm}
+    \end{dfn}
     
-    
+    \begin{theorem}
+        \[
+            \sum_{v \in V} d(v) = 2\varepsilon  
+        \]
+    \end{theorem}
+
+    \begin{proof}
+        근접행렬 $M$을 생각해보자 각 열은 정점으로 이루어져있으므로 행의 합은 해당 정점의 차수이다. 따라서 모든 행과 열의 합은 $\sum_{v \in V} d(v)$이며 또한 $2\varepsilon $이다. 예제 1.3.1(a)에 따라서 각 열의 합이 2이다. 
+    \end{proof}
+
+    \begin{corollary}
+        어떤 그래프의 차수가 홀수인 정점의 갯수는 짝수이다.
+    \end{corollary}
+
+    \begin{proof}
+        차수가 홀수와 짝수인 $V_1$, $V_2$로 정점을 나누었을 때,
+        \[
+            \sum_{v \in V_1} d(v) + \sum_{v \in V_2} d(v) = \sum_{v \in V_} d(v)
+        \]
+        는 짝수이다. $\sum_{v \in V_2} d(v)$는 짝수이므로 $\sum_{v \in V_1} d(v)$ 또한 짝수이다. 그러므로 $|V_1|$은 짝수이다.
+    \end{proof}
 
     \item 1.5.2
 
@@ -173,10 +204,9 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
     그래프의 차수의 합은 $2\varepsilon$임이  $Theorem1.1$에 이미 증명되어 있다. 따라서 차수 수열의 합은 짝수이며 반대의 경우도 성립한다.
     
     
-    If G has vertices VI, V2, .•. , v"' the sequence (d(Vl), d(V2)' ... , d(v,,)
-is called a degree sequence of G. Show that a sequence
-(d t , d2 , ••• , do) of non-negative integers is a degree sequence of some n
-graph if and only if. $\sum_{i=1}^n d_i$ is even
+    If G has vertices $(v_1, v_2, \cdots , v_n)$ the sequence ($d(v_l), d(v_2), \cdots , d(v_n)$ is called a degree sequence of G. 
+    Show that a sequence $(d_1, d_2, \cdots , d_n)$ of non-negative integers is a degree sequence of some n
+    graph if and only if $\sum_{i=1}^n d_i$ is even
 
     \item 1.5.6 : A sequence $d = (d_1, d_2 , \cdots , d_n)$ is graphic if there is a simple graph with degree sequence d. Show that
 
@@ -184,6 +214,7 @@ graph if and only if. $\sum_{i=1}^n d_i$ is even
     (6,6,5,4,3,3,1) : 총 7개의 정점중 자신을 제외한 모든 정점에 간선을 잇는 차수가 6인 정점이 2개이지만 차수가 1인 정점이 있으므로  simple graph임이 모순이다.
 
     (b) if $d$ is graphic and $d_1 \le d_2 \le ... \le d_n$, then $\sum_{i=1}^{n} d_i$ is even and $\sum_{i=l}^{k} d_i \le k(k -1)+\sum_{i=k+1}^{n}\min(k, d_i)$ for $1 \le k \le n$
+    
 ???
     \item 1.5.10
     
@@ -197,11 +228,12 @@ graph if and only if. $\sum_{i=1}^n d_i$ is even
     vEVlG) .
     (b) the edge graph of Ks is isomorphic to the complement of the
     graph featured in exercise 1.2.6.
+    
 ???
 
 
 
-    \begin{thm}[walk]순차적으로 이어지는 정점, 간선의 연결을 walk라한다. $v_{0}e_{1}v_{1}e_{2}v_{2} \cdots e_{k}v_{k}$인 walk를 $v_0$ to $v_k$ 또는 ($v_0$, $v_k$)-walk라 한다.
+    \begin{dfn}[walk]순차적으로 이어지는 정점, 간선의 연결을 walk라한다. $v_{0}e_{1}v_{1}e_{2}v_{2} \cdots e_{k}v_{k}$인 walk를 $v_0$ to $v_k$ 또는 ($v_0$, $v_k$)-walk라 한다.
         \begin{itemize}
             \item 지나는 간선을 한번씩만 쓴 walk를 trail이라한다.
             \item simple graph $G$의 모든 간선을 지나는 trail의 길이는 $\varepsilon (W)$이다.
@@ -210,7 +242,7 @@ graph if and only if. $\sum_{i=1}^n d_i$ is even
             \item 그래프의 정점을 쪼갠 부분 그래프들이 모두 각각의 연결된 그래프일때, 부분 그래프들을 그래프 G의 component라 한다.
             \item 그래프 G의 componet의 수를 $\omega(G)$라 쓴다.
         \end{itemize}
-    \end{thm}
+    \end{dfn}
     \item 1.6.1 ($u$,$v$)-walk사이에 사이클이 존재 할 경우 겹치는 정점을 중복사용하지않는 walk를 짤수있다 따라서 ($u$,$v$)-path가 존재한다.
     
     \item 1.6.2
@@ -238,13 +270,18 @@ graph if and only if. $\sum_{i=1}^n d_i$ is even
     \item 1.6.14
     $uv, uw, uw \in E $이면 $G$는 complete가 되기때문에 $uw \notin E$
 
-    \begin{thm}[cycle]
+    \begin{dfn}[cycle]
     walk가 양의 길이이고 시작점과 끝점이 같을때 닫혀있다(closed)고 한다. 
 
     닫힌 트레일을 cycle이라고한다.
+    \end{dfn}
 
+    \begin{theorem}
+        그래프가 이분그래프인것과 홀수개의 사이클을 가지지 않는것은 필요충분조건이다.
+    \end{theorem}
+    \begin{proof}
         
-    \end{thm}
+    \end{proof}
 
     \item 1.7.1
     \item 1.7.2
@@ -259,81 +296,74 @@ graph if and only if. $\sum_{i=1}^n d_i$ is even
     \item 1.7.5
     \item 1.7.6
     
-1.567
     week 3
      
 
-    \item 1.8.4
-    늑대, 염소, 양배추가 강가에 있습니다.
-
-페리맨은 그들을 데려 가기를 원하지만 보트가 작기 때문에 한 번에 하나만 가져갈 수 있습니다.
-
- 명백한 이유 때문에, 늑대와 염소, 염소와 양배추는 보호받지 못하게 될 수 없습니다.
- 
-도선장은 어떻게 강을 건너 갈거야?
-
-그래프랑 무슨 관련이 있는진 모르겠지만
-먼저 양을 옮긴다. 그다음 늑대를 옮긴다. 돌아가면서 양을 다시 데리고간다. 양을 두고 양배추를 옮긴다. 양을 옮긴다.
-
     \item 1.8.5
     
-    가능한 모든 경우의 수를 센다. 이때 양방향이아닌 한방향 간선은 사이클을 형성하므로 최적의 경로로서 제외해도 문제없다..
+    가능한 모든 경우의 수를 센다. 이때 양방향이아닌 한방향 간선은 사이클을 형성하므로 최적의 경로로서 제외해도 문제없다.
 
-\begin{enumerate}
-    \item (8,0,0) ->1,2
-    \item (3,5,0) -> 0,3,4
-    \item (5,0,3) -> 0,3,5
-    \item (0,5,3) -1,2,4
-    \item (3,2,3)2,5,6
-    \item (5,3,0)2,7
-    \item (6,2,0)4,8
-    \item (2,3,3)5
-    \item (6,0,2)6,9
-    \item (1,5,2)8,10
-    \item (1,4,3)9,11
-    \item (4,4,0),10,12,13
-    \item (4,1,3)11,13
-    \item (1,4,3)11
-\end{enumerate} 
+    \begin{enumerate}
+        \item 시작 (8,0,0) $\rightarrow$ 2,3
+        \item (3,5,0) $\rightarrow$ 1,4,5
+        \item (5,0,3) $\rightarrow$ 1,4,6
+        \item (0,5,3) $\rightarrow$ 2,3,5
+        \item (3,2,3) $\rightarrow$ 2,4,7
+        \item (5,3,0) $\rightarrow$ 3, 8
+        \item (6,2,0) $\rightarrow$ 5,9
+        \item (2,3,3) $\rightarrow$ 6
+        \item (6,0,2) $\rightarrow$ 7,10
+        \item (1,5,2) $\rightarrow$ 9,11
+        \item (1,4,3) $\rightarrow$ 10,12
+        \item 끝 (4,4,0) $\rightarrow$ 11,13,14
+        \item (4,1,3) $\rightarrow$ 12
+        \item (1,4,3) $\rightarrow$ 12
+    \end{enumerate} 
+    1 $\rightarrow$ 2 $\rightarrow$ 5 $\rightarrow$ 7 $\rightarrow$ 9 $\rightarrow$ 10 $\rightarrow$ 11 $\rightarrow$ 12
 
-\item 1.8.6
-\begin{thm}[tree] connected acyclic graph
+    \item 1.8.6
+    \begin{dfn}[tree] connected acyclic graph
 
-    acyclic graph : 사이클이 없는 그래프
-\end{thm}
+        acyclic graph : 사이클이 없는 그래프
+    \end{dfn}
 
-week 4
-\item  2.1.5
-Let 0 be a graph with v-I edges.
- Show that the following three
-statements are equivalent:
-(a) G is connected;
-(b) G is acyclic;
-(c) G is a tree.
+    week 4
+    \item  2.1.5
+    Let 0 be a graph with v-I edges. Show that the following three statements are equivalent: 
+    (a) G is connected;
+    (b) G is acyclic;
+    (c) G is a tree.
 
-연결된 acyclic graph는 정의에 의해 tree임이 자명하므로 간선의 개수가 $\nu -1$  일때, acyclic graph일때 connected한것과 connected graph일때 acyclic 그래프임이 필요충분조건임을 보이는 것으로 충분하다.
+    연결된 acyclic graph는 정의에 의해 tree임이 자명하므로 간선의 개수가 $\nu -1$  일때, acyclic graph일때 connected한것과 connected graph일때 acyclic 그래프임이 필요충분조건임을 보이는 것으로 충분하다.
 
-acyclic $\rightarrow$ connected graph
+    acyclic $\rightarrow$ connected graph
 
-acyclic그래프가 connected graph가 아니라고 가정해보자.
+    acyclic그래프가 connected graph가 아니라고 가정해보자.
 
-그러면 각 component는 connected graph이므로 트리이다.
-각 component의 간선의 갯수의 합은 $v(G_1)-1 + v(G_2)-1 + \cdots + v(G_n)-1 \neq v(G)-1 $
-따라서 가정에 모순 다음 명제가 성립한다.
+    그러면 각 component는 connected graph이므로 트리이다.
+    각 component의 간선의 갯수의 합은 $v(G_1)-1 + v(G_2)-1 + \cdots + v(G_n)-1 \neq v(G)-1 $
+    따라서 가정에 모순 다음 명제가 성립한다.
 
-connected graph $\rightarrow$ acyclic
+    connected graph $\rightarrow$ acyclic
 
-acyclic graph가 아니라고 하자 cycle이 형성된곳의 간선을 하나씩 제거해서 acyclic 그래프가 되도록 만들면 트리가 된다.
-$\nu-1-n \neq \nu -1 $ 가정에 모순이라 다음 명제가 성립한다.
+    acyclic graph가 아니라고 하자 cycle이 형성된곳의 간선을 하나씩 제거해서 acyclic 그래프가 되도록 만들면 트리가 된다.
+    $\nu-1-n \neq \nu -1 $ 가정에 모순이라 다음 명제가 성립한다.
 
-\item  2.1.8
-A centre of G is a vertex u such that max d(u, v) is as small as possible.
- Show that a tree has either exactly one centre or two,
-adj acent, centres.
+    \item  2.1.8
+    A centre of G is a vertex u such that max d(u, v) is as small as possible.
+    Show that a tree has either exactly one centre or two,
+    adj acent, centres.
 
 
-G의 중심은 최대 d (u, v)가 가능한 한 작은 꼭지점 u이다.
+    G의 중심은 최대 d(u, v)가 가능한 한 작은 꼭지점 u이다.
 
-나무 하나가 정확히 하나의 중심 또는 두 개의 인접한 중심을 가지고 있음을 보여줍니다.
-\end{itemize}
+    트리 하나가 정확히 하나의 중심 또는 두 개의 인접한 중심을 가지고 있음을 보여라
+
+    week5
+    \begin{dfn}[spanning tree]
+        
+    \end{dfn}
+
+    
+    \end{itemize}
 \end{document}
