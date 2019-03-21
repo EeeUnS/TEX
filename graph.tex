@@ -1,5 +1,5 @@
 \documentclass{oblivoir}
-\usepackage{amsthm}
+\usepackage{amsdfn}
 \usepackage{thmtools}
 
 %\usepackage{ansform}
@@ -214,7 +214,11 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
     (6,6,5,4,3,3,1) : 총 7개의 정점중 자신을 제외한 모든 정점에 간선을 잇는 차수가 6인 정점이 2개이지만 차수가 1인 정점이 있으므로  simple graph임이 모순이다.
 
     (b) if $d$ is graphic and $d_1 \le d_2 \le ... \le d_n$, then $\sum_{i=1}^{n} d_i$ is even and $\sum_{i=l}^{k} d_i \le k(k -1)+\sum_{i=k+1}^{n}\min(k, d_i)$ for $1 \le k \le n$
+
+    그래프가 심플그래프일때 차수 수열이 $d_1 \le d_2 \le ... \le d_n$이면,  $\sum_{i=1}^{n} d_i$ 짝수인것과 다음이 성립함을 보이시오
+    $\sum_{i=l}^{k} d_i \le k(k -1)+\sum_{i=k+1}^{n}\min(k, d_i)$ for $1 \le k \le n$
     
+    d는 차수수열이므로 d의 합은 $2\varepsilon$이다.
 ???
     \item 1.5.10
     
