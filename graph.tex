@@ -41,9 +41,13 @@ margin=.5em}]{thm}
         \end{itemize}
 
         Simple graph : loop가 없고 두 정점쌍에 두개이상의 간선이 존재하지않는 그래프
+
+        incident : 한 간선에 양 정점 근접
+        adjacent : 두 간선에 공통된 정점 인접
     \end{dfn}
 
     \begin{dfn}[planar]
+
         그래프를 간선들이 교차하지않게 그릴수 있는 것을 plannar graph라 한다. 
         
         plannar graph가 아닌 것을 nonplanar graph라한다.
@@ -204,7 +208,7 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
     그래프의 차수의 합은 $2\varepsilon$임이  $Theorem1.1$에 이미 증명되어 있다. 따라서 차수 수열의 합은 짝수이며 반대의 경우도 성립한다.
     
     
-    If G has vertices $(v_1, v_2, \cdots , v_n)$ the sequence ($d(v_l), d(v_2), \cdots , d(v_n)$ is called a degree sequence of G. 
+    If G has vertices $(v_1, v_2, \cdots , v_n)$ the sequence $(d(v_l), d(v_2), \cdots , d(v_n))$ is called a degree sequence of G. 
     Show that a sequence $(d_1, d_2, \cdots , d_n)$ of non-negative integers is a degree sequence of some n
     graph if and only if $\sum_{i=1}^n d_i$ is even
 
@@ -216,23 +220,24 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
     (b) if $d$ is graphic and $d_1 \le d_2 \le ... \le d_n$, then $\sum_{i=1}^{n} d_i$ is even and $\sum_{i=l}^{k} d_i \le k(k -1)+\sum_{i=k+1}^{n}\min(k, d_i)$ for $1 \le k \le n$
 
     그래프가 심플그래프일때 차수 수열이 $d_1 \le d_2 \le ... \le d_n$이면,  $\sum_{i=1}^{n} d_i$ 짝수인것과 다음이 성립함을 보이시오
-    $\sum_{i=l}^{k} d_i \le k(k -1)+\sum_{i=k+1}^{n}\min(k, d_i)$ for $1 \le k \le n$
+    $\sum_{i=1}^{k} d_i \le k(k -1)+\sum_{i=k+1}^{n}\min(k, d_i)$ for $1 \le k \le n$
     
     d는 차수수열이므로 d의 합은 $2\varepsilon$이다.
 ???
     \item 1.5.10
     
-    The edge graph of a graph G is the graph with vertex set. E(G) in
-    which two vertices are joined if and only if they are adjacent edges in
-    12 Graph Theory with Applications
-    G. Show that, if G is simple
-    (a) the edge graph of G has e(G) vertices and L (dG
-    2
-    (V)) edges;
-    vEVlG) .
+    The edge graph of a graph G is the graph with vertex set E(G) in
+    which two vertices are joined if and only if they are adjacent edges in G. 
+    
+    Show that, if G is simple
+    (a) the edge graph of G has e(G) vertices and L (d2 (V)) edges; vEVlG) .
     (b) the edge graph of Ks is isomorphic to the complement of the
     graph featured in exercise 1.2.6.
-    
+
+    그래프 G의 엣지 그래프는 꼭지점 집합 E (G)가있는 그래프로 두 개의 꼭지점이 G의 인접 엣지 인 경우에만 결합됩니다.
+
+
+
 ???
 
 
@@ -250,10 +255,17 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
     \item 1.6.1 ($u$,$v$)-walk사이에 사이클이 존재 할 경우 겹치는 정점을 중복사용하지않는 walk를 짤수있다 따라서 ($u$,$v$)-path가 존재한다.
     
     \item 1.6.2
-    
+    ????
     \item 1.6.3
+    한 정점을 패스의 시작정점으로 잡았을때 $\delta \le k$ 이기때문에  lenth가 $k$인 path를 만들기위해 서로 다른 $k$개의 연결된 정점을 선택해 path를 생성할수있다.
+    
     \item 1.6.4
+    ????
     \item 1.6.5
+    (a) : 최대한 적은 정점에 많은 간선을 사용한 그래프를 세팅하기위해,  정점 하나를 제외한 $\varepsilon-1$개의 정점으로 $(\varepsilon-1 \choose 2)$개의 엣지를 사용한 완전 그래프를 만들면 완전 그래프내의 정점들로는 더이상 간선을 연결 할 수 없기 때문에 조건의 그래프는 무조건 connected가 된다.
+
+    (b) : 정점 하나를 제외한 $\varepsilon-1$개의 정점으로 $(\varepsilon-1 \choose 2)$개의 엣지를 사용해 완전 그래프를 만들면 정점하나는 연결되어 있지않으므로 disconnected그래프이다.
+    
     \item 1.6.6
     \item 1.6.7
 
