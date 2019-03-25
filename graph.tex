@@ -167,7 +167,7 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
     \begin{proof}
         차수가 홀수와 짝수인 $V_1$, $V_2$로 정점을 나누었을 때,
         \[
-            \sum_{v \in V_1} d(v) + \sum_{v \in V_2} d(v) = \sum_{v \in V_} d(v)
+            \sum_{v \in V_1} d(v) + \sum_{v \in V_2} d(v) = \sum_{v \in V} d(v)
         \]
         는 짝수이다. $\sum_{v \in V_2} d(v)$는 짝수이므로 $\sum_{v \in V_1} d(v)$ 또한 짝수이다. 그러므로 $|V_1|$은 짝수이다.
     \end{proof}
@@ -201,18 +201,18 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
     따라서 해당 문제는 simple graph일때 반드시 두 정점의 차수가 같음을 보이는 것과 같다. 
 
     \item 1.5.5
-    만약 $G$가 정점 $v_1, v_2, \cdots , v_n$을 가질때 $(d(v_1), d(v_2), \cdots , d(v_n))$ 을 그래프 $G$의 차수 수열(degrees sequence)라 부른다.
+    만약 $G$가 정점 $v_1, v_2, ... , v_n$을 가질때 $(d(v_1), d(v_2), ... , d(v_n))$ 을 그래프 $G$의 차수 수열(degrees sequence)라 부른다.
     
-    음이 아닌 정수들의 시퀀스 $(d_1, d_2, \cdots , d_n)$가 어떤 그래프의 차수 시퀀스임이 $\sum_{i=1}^n d_i$가 짝수임과 필요충분 조건임을 보여라.
+    음이 아닌 정수들의 시퀀스 $(d_1, d_2, ... , d_n)$가 어떤 그래프의 차수 시퀀스임이 $\sum_{i=1}^n d_i$가 짝수임과 필요충분 조건임을 보여라.
 
     그래프의 차수의 합은 $2\varepsilon$임이  $Theorem1.1$에 이미 증명되어 있다. 따라서 차수 수열의 합은 짝수이며 반대의 경우도 성립한다.
     
     
-    If G has vertices $(v_1, v_2, \cdots , v_n)$ the sequence $(d(v_l), d(v_2), \cdots , d(v_n))$ is called a degree sequence of G. 
-    Show that a sequence $(d_1, d_2, \cdots , d_n)$ of non-negative integers is a degree sequence of some n
+    If G has vertices $(v_1, v_2, ... , v_n)$ the sequence $(d(v_l), d(v_2), ... , d(v_n))$ is called a degree sequence of G. 
+    Show that a sequence $(d_1, d_2, ... , d_n)$ of non-negative integers is a degree sequence of some n
     graph if and only if $\sum_{i=1}^n d_i$ is even
 
-    \item 1.5.6 : A sequence $d = (d_1, d_2 , \cdots , d_n)$ is graphic if there is a simple graph with degree sequence d. Show that
+    \item 1.5.6 : A sequence $d = (d_1, d_2 , ... , d_n)$ is graphic if there is a simple graph with degree sequence d. Show that
 
     (a) (7,6,5,4,3,3,2) : 정점이 총 7갠데 첫번째 정점의 간선이 7개인것은 simple graph의 조건을 충족하지 못한다.
     (6,6,5,4,3,3,1) : 총 7개의 정점중 자신을 제외한 모든 정점에 간선을 잇는 차수가 6인 정점이 2개이지만 차수가 1인 정점이 있으므로  simple graph임이 모순이다.
@@ -242,7 +242,7 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
 
 
 
-    \begin{dfn}[walk]순차적으로 이어지는 정점, 간선의 연결을 walk라한다. $v_{0}e_{1}v_{1}e_{2}v_{2} \cdots e_{k}v_{k}$인 walk를 $v_0$ to $v_k$ 또는 ($v_0$, $v_k$)-walk라 한다.
+    \begin{dfn}[walk]순차적으로 이어지는 정점, 간선의 연결을 walk라한다. $v_{0}e_{1}v_{1}e_{2}v_{2} ... e_{k}v_{k}$인 walk를 $v_0$ to $v_k$ 또는 ($v_0$, $v_k$)-walk라 한다.
         \begin{itemize}
             \item 지나는 간선을 한번씩만 쓴 walk를 trail이라한다.
             \item simple graph $G$의 모든 간선을 지나는 trail의 길이는 $\varepsilon (W)$이다.
@@ -262,9 +262,9 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
     \item 1.6.4
     ????
     \item 1.6.5
-    (a) : 최대한 적은 정점에 많은 간선을 사용한 그래프를 세팅하기위해,  정점 하나를 제외한 $\varepsilon-1$개의 정점으로 $(\varepsilon-1 \choose 2)$개의 엣지를 사용한 완전 그래프를 만들면 완전 그래프내의 정점들로는 더이상 간선을 연결 할 수 없기 때문에 조건의 그래프는 무조건 connected가 된다.
+    (a) : 최대한 적은 정점에 많은 간선을 사용한 그래프를 세팅하기위해,  정점 하나를 제외한 $\varepsilon-1$개의 정점으로 ${\varepsilon-1 \choose 2}$개의 엣지를 사용한 완전 그래프를 만들면 완전 그래프내의 정점들로는 더이상 간선을 연결 할 수 없기 때문에 조건의 그래프는 무조건 connected가 된다.
 
-    (b) : 정점 하나를 제외한 $\varepsilon-1$개의 정점으로 $(\varepsilon-1 \choose 2)$개의 엣지를 사용해 완전 그래프를 만들면 정점하나는 연결되어 있지않으므로 disconnected그래프이다.
+    (b) : 정점 하나를 제외한 $\varepsilon-1$개의 정점으로 ${\varepsilon-1 \choose 2}$개의 엣지를 사용해 완전 그래프를 만들면 정점하나는 연결되어 있지않으므로 disconnected그래프이다.
 
     \item 1.6.6
     \item 1.6.7
@@ -306,7 +306,7 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
                임의의 정점$v_0, v_1$에 간선이 2개이상인경우            $v_0v_1v_0$사이클을 이룬다
          
         simple graph인경우
-            정점의 개수가 k인 그래프를 생각하자. 이때 $v_0v_1v_2 \cdots v_i$인 서로 다른 정점만 최대한 이어진 연결을 생각해볼때 $v_0$과 $v_i$의 차수는 명제의 조건에의해서 무조건 $0 \le j \le k$인 정점 $v_j$에 연결이 되어있어야한다. 따라서 $v_{j}v_{j+1} \cdots v_k$인 사이클을 이룬다.
+            정점의 개수가 k인 그래프를 생각하자. 이때 $v_0v_1v_2 ... v_i$인 서로 다른 정점만 최대한 이어진 연결을 생각해볼때 $v_0$과 $v_i$의 차수는 명제의 조건에의해서 무조건 $0 \le j \le k$인 정점 $v_j$에 연결이 되어있어야한다. 따라서 $v_{j}v_{j+1} ... v_k$인 사이클을 이룬다.
     
     \item 1.7.4
     \item 1.7.5
@@ -357,7 +357,7 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
     acyclic그래프가 connected graph가 아니라고 가정해보자.
 
     그러면 각 component는 connected graph이므로 트리이다.
-    각 component의 간선의 갯수의 합은 $v(G_1)-1 + v(G_2)-1 + \cdots + v(G_n)-1 \neq v(G)-1 $
+    각 component의 간선의 갯수의 합은 $v(G_1)-1 + v(G_2)-1 + ... + v(G_n)-1 \neq v(G)-1 $
     따라서 가정에 모순 다음 명제가 성립한다.
 
     connected graph $\rightarrow$ acyclic
@@ -401,7 +401,7 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
     \end{proof}
 
     \begin{dfn}[contract]
-        그래프 $G$의 한 에지$e$를 수축한다는 것은 에지 $e$를 그래프에서 삭제하고 양 끝점을 하나의 정점으로 합치는 것이다. 그 결과 만들어지는 그래프를 $G \dot e$로 표시한다.
+        그래프 $G$의 한 에지$e$를 수축한다는 것은 에지 $e$를 그래프에서 삭제하고 양 끝점을 하나의 정점으로 합치는 것이다. 그 결과 만들어지는 그래프를 $G \cdot e$로 표시한다.
         \begin{itemize}
             \item $\nu(G \cdot e) = \nu(G \cdot e) - 1$
             \item $\varepsilon(G \cdot e) = \varepsilon(G \cdot e)-1$
@@ -419,7 +419,7 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
         그래프 $G$에서 에지$e$를 포함하지 않는 스패닝 트리는 $G-e$의 스패닝 트리 또한 된다.
         따라서 $\tau(G-e)$는 그래프 $G$에서 에지 $e$를 포함하지 않는 스패닝 트리의 개수와 같다.
         에지 $e$를 포함하는 $G$의 임의의 스패닝 트리 $T$는 $G \cdot e$의 스패닝 트리 $T \cdot e$에 일대일 대응한다.(추가적인 논리 필요) 따라서 $\tau(G \cdot e)$는 $G$에서 에지 $e$를 포함하는 스패닝 트리의 개수이다. 따라서 정리가 성립한다.
-
+    \end{proof}
     
 
     Fortunately, and rather surprisingly, there is a closed formula for T(G) which expresses T(G) as a determinant; 
@@ -431,12 +431,11 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
     \end{theorem}
 
     \begin{proof}
-        $K_n$의 정점 집합을 $N = {1,2, \cdots,n}$라 놓자.
-        그러면 $n^{n-2}$는  $N$으로부터 길이가 $n-2$인 수열\footnote{Pr ̈ufer sequences라 한다.}을 만드는 수로 볼 수 있다.
+        $K_n$의 정점 집합을 $N = \{1,2, ...,n\}$라 놓자.
+        그러면 $n^{n-2}$는  $N$으로부터 길이가 $n-2$인 수열\footnote{$Pr\ddot{u}fer \: sequences$라 한다.}을 만드는 수로 볼 수 있다.
         따라서 이 수열이 $K_n$의 spanning tree와 1:1대응을 하는걸로 이 증명이 완성된다.
-        $K_n$의 spanning tree $T$에 대해서 특정 수열 ${t_1, t_2, \cdots , t_{n-2}}$과 연관지으려 한다.
+        $K_n$의 spanning tree $T$에 대해서 특정 수열 ${t_1, t_2, ... , t_{n-2}}$과 연관지으려 한다.
         $N$을 정렬된 셋이라 가정하고, $s_1$은 $T$의 차수가 1인 첫번째 정점이라하자. $s_1$은 $t_1$과 인접한 정점이다.
-        
         그다음에 $s_1$를 $T$에서 제거하자 그다음 $T-s_1$에 차수가 1인 정점 한개를 $s_2$라 하자 이 짓거리를 $t_{n-2}$가 지워져 두 정점이 남을때 까지 반복한다. 총 반복은 $n-2$번 반복한다. 따라서 spanning tree가 수열에 대응함을 보였다.
         수열이 spanning tree에 대응함을 보이자.
         sequence P에 없는 1에서 n중 가장 작은 숫자를 찾아 P의 첫번째 숫자에 연결한다.
@@ -445,13 +444,15 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
         이렇게 함으로써 수열이 트리에 대응됨을 보일수있다.
         수열의 갯수가 $n^{n-2}$개 이므로 트리의 개수도 $n^{n-2}$개이다.
     \end{proof}
-    https://academic.naver.com/article.naver?doc_id=13986337
 
-    https://en.wikipedia.org/wiki/Pr%C3%BCfer_sequence
 
-    http://blog.daum.net/eternaljk/6176142
+        %https://academic.naver.com/article.naver?doc_id=13986337
 
-    https://www.math.uchicago.edu/~may/VIGRE/VIGRE2006/PAPERS/Casarotto.pdf
+        %https://en.wikipedia.org/wiki/Pr%C3%BCfer_sequence
+
+        %http://blog.daum.net/eternaljk/6176142
+
+        %    https://www.math.uchicago.edu/~may/VIGRE/VIGRE2006/PAPERS/Casarotto.pdf
 
     \end{itemize}
 \end{document}
