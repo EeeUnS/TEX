@@ -1,5 +1,5 @@
 \documentclass{oblivoir}
-\usepackage{amsdfn}
+\usepackage{amsthm}
 \usepackage{thmtools}
 
 %\usepackage{ansform}
@@ -265,7 +265,7 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
     (a) : 최대한 적은 정점에 많은 간선을 사용한 그래프를 세팅하기위해,  정점 하나를 제외한 $\varepsilon-1$개의 정점으로 $(\varepsilon-1 \choose 2)$개의 엣지를 사용한 완전 그래프를 만들면 완전 그래프내의 정점들로는 더이상 간선을 연결 할 수 없기 때문에 조건의 그래프는 무조건 connected가 된다.
 
     (b) : 정점 하나를 제외한 $\varepsilon-1$개의 정점으로 $(\varepsilon-1 \choose 2)$개의 엣지를 사용해 완전 그래프를 만들면 정점하나는 연결되어 있지않으므로 disconnected그래프이다.
-    
+
     \item 1.6.6
     \item 1.6.7
 
@@ -379,7 +379,38 @@ $\dfrac{v(v-1)}{2}$가 최댓값이자 그래프의 간선수 + 여그래프의 
     \begin{dfn}[spanning tree]
         
     \end{dfn}
-
     
+
+    Fortunately, and rather surprisingly, there is a closed formula for T(G) which expresses T(G) as a determinant; 
+    we shall present this result in chapter 12.
+
+
+    \begin{theorem}
+        $Cayley's folmula$ : $\tau(K_n)= n^{n-2}$
+    \end{theorem}
+
+    \begin{proof}
+        $K_n$의 정점 집합을 $N = {1,2, \cdots,n}$라 놓자.
+        그러면 $n^{n-2}$는  $N$으로부터 길이가 $n-2$인 수열\footnote{Pr ̈ufer sequences라 한다.}을 만드는 수로 볼 수 있다.
+        따라서 이 수열이 $K_n$의 spanning tree와 1:1대응을 하는걸로 이 증명이 완성된다.
+        $K_n$의 spanning tree $T$에 대해서 특정 수열 ${t_1, t_2, \cdots , t_{n-2}}$과 연관지으려 한다.
+        $N$을 정렬된 셋이라 가정하고, $s_1$은 $T$의 차수가 1인 첫번째 정점이라하자. $s_1$은 $t_1$과 인접한 정점이다.
+        
+        그다음에 $s_1$를 $T$에서 제거하자 그다음 $T-s_1$에 차수가 1인 정점 한개를 $s_2$라 하자 이 짓거리를 $t_{n-2}$가 지워져 두 정점이 남을때 까지 반복한다. 총 반복은 $n-2$번 반복한다. 따라서 spanning tree가 수열에 대응함을 보였다.
+        수열이 spanning tree에 대응함을 보이자.
+        sequence P에 없는 1에서 n중 가장 작은 숫자를 찾아 P의 첫번째 숫자에 연결한다.
+        그 후 P의 첫번째 숫자를 제거한다.
+        P가 존재하지않을 때 까지 반복한다. 마지막 연결되는 숫자는 n이다.
+        이렇게 함으로써 수열이 트리에 대응됨을 보일수있다.
+        수열의 갯수가 $n^{n-2}$개 이므로 트리의 개수도 $n^{n-2}$개이다.
+    \end{proof}
+    https://academic.naver.com/article.naver?doc_id=13986337
+
+    https://en.wikipedia.org/wiki/Pr%C3%BCfer_sequence
+
+    http://blog.daum.net/eternaljk/6176142
+
+    https://www.math.uchicago.edu/~may/VIGRE/VIGRE2006/PAPERS/Casarotto.pdf
+
     \end{itemize}
 \end{document}
