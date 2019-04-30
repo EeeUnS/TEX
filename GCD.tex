@@ -1,0 +1,34 @@
+\documentclass{oblivoir}
+    \usepackage{thmtools}
+
+\usepackage{amsthm}
+ 
+    \newtheorem{theorem}{Theorem}[section]
+    \newtheorem{corollary}{Corollary}[section]
+    \newtheorem{definition}[section]{Definition}
+
+\begin{document}
+\begin{theorem}
+$f(n) = 1+10+\cdots +10^n$이라 하자.
+
+$ \gcd(f(x) , f(y)) = f(\gcd(x,y)) $임을 보여라.
+\end{theorem}
+%...증명
+\begin{corollary}
+    $\alpha > \beta$일때, 다음이 성립한다.
+    
+    $\gcd(\alpha ,\beta) = \gcd(\alpha-\beta , \beta)$  
+\end{corollary}
+\begin{proof}
+    $\alpha$, $\beta$의 최대 공약수를  $x$라 하자.
+    $\alpha = x \cdot a , \beta = x \cdot b$ ($a,b$는 $a>$b이며 서로소인 두 정수)이며, $\alpha -\beta = x(a-b)$이다 $a-b$는 $b$와 서로소이며 두 값의 최대공약수는 여전히 $x$이다.
+\end{proof}
+
+$\gcd(f(x)-f(y),f(y)) = \gcd(f(x),f(y)) = \gcd(f(x-y) \cdot 10^{y},f(y)) $ 
+
+이때 $10^{y}$와 $f(y)$는 항상 서로소이므로 $\gcd(f(x-y), f(y))$가 성립합니다. %...증명
+
+따라서 유클리드 호제법을 전개했을때, $\gcd(f(x), f(y)) = \gcd(f(\gcd(x,y)),0)$이 되고 
+이는$f(\gcd(x,y))$과 같습니다.
+
+\end{document}
