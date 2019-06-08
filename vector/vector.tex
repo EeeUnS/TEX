@@ -1,0 +1,226 @@
+\documentclass{oblivoir}
+\usepackage{amsthm}
+\usepackage{ikps}
+\usepackage{thmtools}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\declaretheoremstyle[% spaceabove=6pt,spacebelow=6pt, headfont=\color{MainColorOne}\sffamily\bfseries, notefont=\mdseries, notebraces={[}{]}, bodyfont=\normalfont,
+headpunct={},
+postheadspace=1em,
+%qed=▣,
+]{maintheorem}
+
+\declaretheorem[%
+name=정의,
+style=maintheorem,
+numberwithin=section, shaded={%bgcolor=MainColorThree!20,
+margin=.5em}]{dfn}
+% \begin{dfn}[]
+% \end{dfn}
+
+\newcommand{\onetok}[1]{ {#1}_1, {#1}_2, ... , {#1}_k}
+\newcommand{\sumtok}[2]{  {#1}_1{#2}_1 + {#1}_2{#2}_2 + \cdots + {#1}_k{#2}_k}
+\newcommand{\cvecthree}[3]{ \begin{pmatrix}    {#1} \\    {#2} \\    {#3} \\ \end{pmatrix}}
+
+    
+\title{벡터와 공간에 대한 이해}
+\author{EUnS}
+
+\begin{document}
+    
+\maketitle
+
+여기서 대부분의 좌표표현은 벡터이고 행이아닌 열벡터로 표현합니다
+
+$ (1, 1, 1)  =  \cvecthree{1}{1}{1} $ \footnote{ 좌식을 행벡터라하고 우식을 열벡터라고 합니다.}
+는 같습니다
+
+\section{일차결합}
+\begin{dfn}[일차결합]
+    $\onetok{v}$를 n차원 벡터라 하자. 임의의 스칼라 $\onetok{a}$에 대하여
+    벡터 $v = \sumtok{a}{v}$ 는 $R^n$에 속하는 한 벡터이다. 이것을 주어진 벡터 $\onetok{v}$의 \textbf{일차결합(linear combination)}이라 한다.   
+\end{dfn}
+
+ex : 임의의 3차원 벡터 $x$는 $x = x_1i + x_2j + x_3k$와 같이 벡터 $ i = (1,0,0) , j = (0,1,0), k = (0,0,1)$의 일차결합으로 나타낼 수 있다.
+\marginpar{$i,j,k$벡터(물리에서 주로사용)는 고등학교에서 기본 단위벡터로 $e_1, e_2, e_3$와 같습니다.}
+
+\reversemarginpar
+\marginpar{내분점 외분점은 모두 일차결합의 한 형태입니다.}
+
+
+
+
+\section {span}
+
+
+\begin{dfn}[span]
+    
+유클리드 벡터공간 $R^n$의 벡터 $\onetok{v}$에 대하여, 이 벡터의 일차결합 의 전체집합을 $Span(\onetok{v})$으로 나타내자. 즉,
+\[
+    Span(\onetok{v}) =\{ \sumtok{a}{v} \:|\: \onetok{a} \in R\}
+\]
+
+유클리드 벡터공간 $R^n$의 벡터 $\onetok{v}$에 대하여,
+
+\[
+    W = Span(\onetok{v})
+\]
+일 때, $\onetok{v}$은 $W$를 \textbf{생성(span)}한다고 하고, $W$를 $\onetok{v}$에 의하여 생성된 공간(span)이라고 한다 즉, $\onetok{v}$가 $W$ 를 생성한다는 것은  $W$가 $\onetok{v}$의 모든 일차결합을 포함하고 $W$의 임의의 벡터를 $\onetok{v}$의 일차결합으로 나타낼 수 있다는 것을 의미한다.
+\end{dfn}
+
+ex
+\[
+    Span(e_1, e_2, e_3) = R^3
+\]
+\[
+    Span ( \cvecthree{1}{0}{1},\cvecthree{-3}{1}{1},\cvecthree{-2}{1}{2}) \neq R^3
+\]
+ (추후에 더 다룹니다)
+
+여기서 좌표는 시점인 원점과 종점인 한점을 잇는 벡터(=위치벡터)를 기본단위벡터 $e_1, e_2, e_3$의 일차결합으로 나타내고 계수만을 따온것이라는걸 알 수 있습니다.
+
+즉 좌표 = 위치벡터 그자체로도 볼수있는셈 또한 우리가 왜 내분점 외분점을 이용해서 한 벡터를 여러 가지의 벡터로서 표현하는지를 알 수 있습니다
+
+
+
+
+
+
+
+\section{부분집합}
+
+\begin{dfn}[부분집합]
+다음 세 조건을 만족하는 R n의 부분집합 를 R n의 \textbf{부분공간(subspace)}이라고 한다.
+\begin{enumerate}
+    \item  $0 \in S$
+    \item $x, y \in S$이면 $x + y \in S$이다.
+    \item $x \ in S$이면, 임의의 스칼라 $\alpha$에 대하여 $\alpha x \in S$이다.
+    
+    조건 2)와 3)은 다음 하나의 조건 4)로 바꿀 수 있다.
+
+    \item $x, y \in S$이면, 임의의 스칼라 $\alpha , \beta$에 대하여 $\alpha x + \beta y \in S$이다.
+\end{enumerate}
+\end{dfn}
+
+\begin{corollary}
+    $W = Span(\onetok{v})$ 은 $R^n$의 부분공간이다
+\end{corollary}
+\begin{proof}
+    증명은 충분히 혼자 직접하실 수 있습니다.    
+\end{proof}
+
+\section{일차독립과 일차종속}
+\begin{dfn}[일차종속, 일차독립]
+    
+    유클리드 벡터공간 $R^n$의 벡터 $\onetok{v}$를 생각하자. 이 벡터에 의하여 생성된 부분공간을  $W$라 하자.
+    \[
+        W = Span(\onetok{v})
+    \]
+    벡터 $\onetok{v}$ 가운데 어떤 한 벡터를 제외한 나머지 벡터들이 여전히 $W$를 생성한다고 하자. 이것은 $v_i$제외된 벡터 를 나머지 벡터들의 일차결합으로 나타낼 수 있음을 의미한다. 
+    
+    \vspace{0.5cm}
+    
+    이와 같이, 가운데 어떤 한 벡터를 나머지 벡터들의 일차결합으로 나타낼 수 있을 때, 벡터 $\onetok{v}$는  \textbf{일차종속 (linearly dependent)}이라고 한다.\footnote{단, 영벡터 0는 일차종속으로 정한다.}
+
+    \vspace{0.5cm}
+
+    일차종속이 아닌 경우 즉, 벡터 가운데 어느 것도 나머지 벡터들의 일차결합으로 나타낼 수 없을 때는 \textbf{일차독립(linearly independent)}이라고 한다.
+\end{dfn}
+
+$\onetok{v}$가 일차종속일 필요충분조건은 적어도 하나는 0이 아닌 어떤 스칼라  $\onetok{\alpha}$에 대하여  $\sumtok{\alpha}{v} = 0$
+
+$\onetok{v}$가 일차독립일 필요충분조건은 임의의 스칼라 $\onetok{\alpha}$에 대하여 $\sumtok{\alpha}{v} = 0$일때, $\alpha_1 = \alpha_2 = \alpha_k = 0$ 이다.
+ex)
+\begin{enumerate}
+    
+\item  $\cvecthree{1}{0}{1},\cvecthree{-3}{1}{1},\cvecthree{-2}{1}{2}$는 일차 종속이다.
+
+$\cvecthree{1}{0}{1} + \cvecthree{-3}{1}{1} = \cvecthree{-2}{1}{2}$ (같은 줄끼리 계산했다고 생각하시면됩니다)
+
+눈에 잘보여서 이렇게 끝낼수도 있지만 잘안보일때는
+$\cvecthree{1}{0}{1}x_1 + \cvecthree{-3}{1}{1}x_2 + \cvecthree{-2}{1}{2}x_3 = 0$인  $x_1, x_2, x_3$의 값을 찾는겁니다.
+
+이는 다음 연립방정식을 푸는것과 같습니다\\
+$
+x_1 -3x_2-x_3=0 \\
+x_2 + x_3 = 0 \\
+x_1 + x_2 + 2x_3 = 0
+$ 
+
+\item $e_1, e_2, e_3$는 일차 독립이다
+
+\end{enumerate}
+
+\section{기저(basis)}
+\begin{dfn}[기저]
+    
+$R^n$의 부분공간$V$의 벡터 $\onetok{v}$에 대하여
+\begin{enumerate}
+    \item $\onetok{v}$가 $V$를 생성하고
+    \item $\onetok{v}$가 일차독립일 때,
+\end{enumerate}
+$\onetok{v}$를 의 기저(basis)라고 한다.
+\end{dfn}
+
+기저의 개수가 기저를 만드는 공간의 차원을 나타낸다.
+
+ex)
+
+$\cvecthree{0}{1}{1},\cvecthree{1}{0}{1},\cvecthree{1}{1}{0}$과 $\cvecthree{1}{1}{1}, \cvecthree{1}{1}{0}, \cvecthree{1}{0}{0}$은 둘 다 $R^3$의 기저이다.
+당연히 정의만 만족 하면되므로 하나의 공간에 여러개의 기저가 정의될 수 있습니다.
+기저의 가장 대표적인걸로 기본 단위 벡터가있죠.
+이를 이용하면 R 상에서 좌표계를 45도 꺽어서 새로운 좌표계를 정의 할수도 있습니다. 이를 선형변환이라 합니다.
+앞의 예제에 나온
+$Span(\cvecthree{1}{0}{1},\cvecthree{-3}{1}{1},\cvecthree{-2}{1}{2})$
+은 결국에 뭘 나타낼까라는 의문이 들 수 있습니다
+세 벡터는 일차종속이며 따라서 
+
+$Span(\cvecthree{1}{0}{1},\cvecthree{-3}{1}{1},\cvecthree{-2}{1}{2}) = Span(\cvecthree{1}{0}{1},\cvecthree{-3}{1}{1})$입니다.
+
+이 두 벡터는 일차독립이므로 기저가 될 수 있고 이 공간이 2차원 평면이라는 정보까지 알 수 있습니다.
+
+이 평면상의 한점을 $(x,y,z)$라 했을 때, 이는 곧
+\[
+    \cvecthree{1}{0}{1}\alpha + \cvecthree{-3}{1}{1}\beta = \cvecthree{x}{y}{z}
+\]
+라는 일차결합 식으로 나타낼 수 있습니다. 임의의 스칼라 $\alpha, \beta$에 대해서 생성된 공간의 모든 점을 나타낼 수 있습니다.
+
+이를 풀어쓰면\\
+$
+\alpha -3 \beta = x\\
+\beta = y \\
+\alpha + \beta = z
+$
+
+
+어디서 많이 보던 모양아닌가요
+
+직선의 방정식을 나타내는 여러 가지 방법중
+벡터 방정식
+\begin{dfn}[직선의 방정식: 벡터방정식]
+    방향벡터 $\vec{u} = (a, b, c)$와 직선 위의 한 점 $(x_1, y_2, z_1)$이 주어질 때, 직선위의 점 $(x,y,z)$는 매개변수 $t$로 다음과 같이 나타낼 수 있다.\\
+    $
+    x = at + x_1 \\
+    y = bt + y_1 \\
+    z = ct + z_1
+    $
+\end{dfn}
+
+이것과 똑같은 생김새죠
+$(x_1, y_2, z_1)$가 평행이동을 나타내는 것이였다면 $\vec{u} = (a, b, c)$는 직선의 기저를 나타내는 것입니다.
+평면의 방정식을 구할 때도 직선의방정식을 구할때의 $t$를 소거하는 식과 마찬가지로 $\alpha, \beta$를 소거하여 구하면 $x+4y-z=0$ 이라는 평면의 방정식이 나옵니다
+
+\section{정리}
+
+벡터들을 가지고 다른 벡터를 표현하는걸 일차결합이라고 합니다. 
+최소한의 벡터 갯수만으로 공간을 만들어 낼때 그 벡터들을 기저라하고, 좌표는 기저의 일차결합을 계수만 따온 표현법이죠, 근본에는 기저가 깔려있습니다.
+좌표는 시점이 원점인 위치벡터와 완전히 1:1 대응합니다. 따라서 모든 기하문제는 벡터문제로 생각해서 풀수있죠.
+기저는 언제든지 바뀔 수 있으며 그에 따라서 좌표도 달라지지만 나타내는 좌표(벡터)가 나타내는 위치는 여전히 같습니다.
+예를들어 기저가 $(1,0), (0,1)$일때 $(1,1)$은 기저가 $(1,1), (-1, 0)$일때, $(1,0)$인 것과 나타내는 위치가 같습니다.
+
+
+ 
+\end{document}
