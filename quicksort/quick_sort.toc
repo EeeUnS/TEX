@@ -5,11 +5,15 @@
 \contentsline {subsection}{\numberline {3.1}최악의 분할 케이스}{2}{subsection.0.3.1}
 \contentsline {subsection}{\numberline {3.2}최선의 분할 케이스}{4}{subsection.0.3.2}
 \contentsline {subsection}{\numberline {3.3}직관적인 일반적인 케이스 방법}{4}{subsection.0.3.3}
-\contentsline {section}{\numberline {4}상세 분석}{4}{section.0.4}
-\contentsline {subsection}{\numberline {4.1}최악의-케이스 분석 }{4}{subsection.0.4.1}
+\contentsline {section}{\numberline {4}상세 분석}{5}{section.0.4}
+\contentsline {subsection}{\numberline {4.1}최악의-케이스 분석 }{5}{subsection.0.4.1}
 \contentsline {section}{\numberline {5}여러 기초 지식}{7}{section.0.5}
 \contentsline {subsection}{\numberline {5.1}시간복잡도}{7}{subsection.0.5.1}
 \contentsline {subsection}{\numberline {5.2}조화 급수의 상한과 하한}{7}{subsection.0.5.2}
 \contentsline {subsection}{\numberline {5.3}확률}{8}{subsection.0.5.3}
-\contentsline {section}{\numberline {6}기대수행시간}{9}{section.0.6}
-\contentsline {chapter}{참고\nobreakspace {}문헌}{11}{chapter*.2}
+\contentsline {section}{\numberline {6}기대 수행 시간}{9}{section.0.6}
+\contentsline {section}{\numberline {7}Quick sort의 캐시 히트율}{12}{section.0.7}
+\contentsline {section}{\numberline {8}개선}{12}{section.0.8}
+\contentsline {subsection}{\numberline {8.1}mix 삽입정렬}{12}{subsection.0.8.1}
+\contentsline {subsection}{\numberline {8.2}middle}{14}{subsection.0.8.2}
+\contentsline {chapter}{참고\nobreakspace {}문헌}{15}{chapter*.2}
