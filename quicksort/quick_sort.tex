@@ -83,6 +83,7 @@ margin=.5em}]{dfn}
 \section{의사코드 및 동작}
 
 분할 정복(divide and conquer) 방법을 통해 설계 되었다.
+당장에 유튜브에 검색만해봐도 동작 설명하는 5분짜리 유튜브가 많으니 그걸 참고하는게 편하다.
 
 \begin{lstlisting}[style = CStyle]    
 QUICKSORT(A,p,r)
@@ -388,15 +389,33 @@ E[X] &= \sum_{i=1}^{n-1}\sum_{k = 1}^{n-i} \dfrac{2}{k+1} \\
     \caption{Comparing Quicksort and Radix Sort by (a) instructions executed per item sorted (b) time per item sorted, and (c) cache misses per item sorted. This data is from a paper by LaMarca and Ladner [1996]. Due to such results, new versions of Radix Sort have been invented that take memory hierarchy into account, to regain its algorithmic advantages. Th e basic idea of cache optimizations is to use all the data in a block repeatedly before it is replaced on a miss.}
 \end{figure}
 
+\newpage
+
 \section{개선}
 
-\subsection{Quick insertion sort}
-삽입 정렬(insertion sort)의 시간 복잡도는 $O(n^2)$이지만 베스트 케이스의 경우(완전히 정렬되있는경우) $O(n)$이다.(탐색만하고 넘어가기때문) 따라서 작은 n에 대해서는 삽입정렬이 더 빠르게 되어 퀵소트 분할중 분할크기가 일정 n이하가 되면 삽입정렬으로 
-처리해 실제 quick sort를 사용했을때보다 시간적인 이득을 볼 수 있다.
+\subsection{재귀함수 제거}
 
-\subsection{middle}
+
+%http://penguin.ewu.edu/class/class/cscd300/Topic/AdvSorting/Sedgewick.pdf
+\subsection{Quick insertion sort}
+삽입 정렬(insertion sort)의 시간 복잡도는 $O(n^2)$이지만 베스트 케이스의 경우(완전히 정렬되있는경우) $O(n)$이다.(탐색만하고 넘어가기때문) 또한 작은 n에 대해서는 삽입정렬이 더 빠르게 되어 퀵소트 분할중 분할크기가 일정 n이하가 되면 삽입정렬으로 처리해 실제 quick sort를 사용했을때보다 시간적인 이득을 볼 수 있다. 
+이 n은 일반적으로 10이며 이 값보다 작을때 선택정렬을 수행하도록한다.
+
+다음은 선택정렬을 수행하는 $n$에따른 수행시간이다. 여기서 테스트 케이스의 $N =10000$ 이다.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{{q6.png}}
+    \caption{삽입정렬 수행의 분할크기 n에 따른 퀵정렬 수행시간}
+\end{figure}
+Three of midian
+\subsection{middle of medians}
 최악의 분할 케이스를 모면하기위해서 랜덤값(pivot)을 세개를 뽑은뒤 가운데 값으로 설정한다. 이러면서 평균적으로 조금더 중간값에 근접할 것으로 기대 할 수 있다.
 
+\subsection{multi threading}
+분할후 멀티쓰레딩
+
+더 자세한것은 여기에 설명있다. \url{https://en.wikipedia.org/wiki/Quicksort}
 
 \newpage
 
@@ -406,6 +425,9 @@ E[X] &= \sum_{i=1}^{n-1}\sum_{k = 1}^{n-i} \dfrac{2}{k+1} \\
     
     \bibitem{reference2}
     Patterson, David A./ Hennessy, John L. Computer Organization and Design, Fourth Edition: The Hardware/Software Interface (The Morgan Kaufmann Series in Computer Architecture and Design). 2014. ISBN-13 9788994961897, ISBN-10 8994961895
+
+    \bibitem{reference3}
+    Sedgewick, R. (1978). "Implementing Quicksort programs". Comm. ACM. 21 (10): 847–857. doi:10.1145/359619.359631.
 
 \end{thebibliography}
 \end{document}
