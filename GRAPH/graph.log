@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.3)  25 MAR 2019 20:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.3)  13 JUL 2019 00:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1413,30 +1413,30 @@ Package: shadethm 1999/11/23
  (./graph.aux)
 \openout1 = `graph.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for LUC/nanummj/m/n on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for LUC/nanummj/m/n on input line 38.
 LaTeX Font Info:    Try loading font information for LUC+nanummj on input line 
-33.
+38.
 
 (c:/usr/texlive/2018/texmf-dist/tex/latex/nanumtype1/lucnanummj.fd
 File: lucnanummj.fd 2013/02/12 v0.1 Nanum Myeongjo font definitions
 )
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
    defining Unicode char U+00B7 (decimal 183)
 
 (c:/usr/texlive/2018/texmf-dist/tex/latex/kotex-oblivoir/memhangul-ucs/memucs-g
@@ -1446,7 +1446,7 @@ LaTeX Info: Redefining \itshape on input line 74.
 LaTeX Info: Redefining \slshape on input line 78.
 )
 \AtBeginShipoutBox=\box68
-Package hyperref Info: Link coloring OFF on input line 33.
+Package hyperref Info: Link coloring OFF on input line 38.
  (c:/usr/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1457,10 +1457,10 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 33.
-LaTeX Info: Redefining \ref on input line 33.
-LaTeX Info: Redefining \pageref on input line 33.
-LaTeX Info: Redefining \nameref on input line 33.
+LaTeX Info: Redefining \nameref on input line 38.
+LaTeX Info: Redefining \ref on input line 38.
+LaTeX Info: Redefining \pageref on input line 38.
+LaTeX Info: Redefining \nameref on input line 38.
 (./graph.out) (./graph.out)
 \@outlinefile=\write5
 \openout5 = `graph.out'.
@@ -1496,209 +1496,258 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+(./graph.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 1.
+ (c:/usr/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 1.
+
+(c:/usr/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+stmry on input line 1.
+
+(c:/usr/texlive/2018/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+LaTeX Font Info:    Try loading font information for U+esvect on input line 1.
+
+(c:/usr/texlive/2018/texmf-dist/tex/latex/esvect/uesvect.fd
+File: uesvect.fd 
+))
 Package hyperref Info: bookmark level for unknown dfn defaults to 0 on input li
-ne 34.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 36.
+ne 44.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 46.
 
 (c:/usr/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 36.
-LaTeX Font Info:    Try loading font information for U+msa on input line 36.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
 
-(c:/usr/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 36.
-
-(c:/usr/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Try loading font information for U+stmry on input line 36.
-
-(c:/usr/texlive/2018/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-LaTeX Font Info:    Try loading font information for U+esvect on input line 36.
-
-
-(c:/usr/texlive/2018/texmf-dist/tex/latex/esvect/uesvect.fd
-File: uesvect.fd 
-)
-Overfull \hbox (6.0pt too wide) in paragraph at lines 47--47
-[][] 
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 54--54
-[][] 
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 61--61
-[][] 
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 82--82
+Overfull \hbox (6.0pt too wide) in paragraph at lines 57--57
 [][] 
  []
 
 [1
 
-{c:/usr/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-
-Package amsmath Warning: Foreign command \atopwithdelims;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 108.
-
-
-Overfull \hbox (2.37482pt too wide) detected at line 108
-[]
- []
-
-[3]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 143--143
+{c:/usr/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 64--64
 [][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 151--151
+Overfull \hbox (6.0pt too wide) in paragraph at lines 74--74
+[][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 95--95
+[][] 
+ []
+
+[2] [3]
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 126.
+
+[4]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 164--164
+[][] 
+ []
+
+[5]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 172--172
 [][] 
  []
 
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
-t line 154.
-[4]
+t line 175.
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 164.
- [5] [6]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 254--254
+put line 185.
+[6]
+Overfull \hbox (10.02254pt too wide) in paragraph at lines 206--208
+[]$\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 ) = [] 
+\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ][\OML/c
+mm/m/it/10 v[]\OT1/cmr/m/n/10 ] = [] \OML/cmm/m/it/10 A\OT1/cmr/m/n/10 [\OML/cm
+m/m/it/10 v[]\OT1/cmr/m/n/10 ][\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ]$ \LUC/nanu
+mmj/m/n/10/c7 t\LUC/nanummj/m/n/10/b2 ‰[] \LUC/nanummj/m/n/10/b9 »\LUC/nanummj/
+m/n/10/cc ,\LUC/nanummj/m/n/10/ac ^^@\LUC/nanummj/m/n/10/c9 ¿\LUC/nanummj/m/n/1
+0/b8 \ \OT1/cmr/m/n/10 sim-ple graph \LUC/nanummj/m/n/10/c5 –\LUC/nanummj/m/n/1
+0/c1 ^^\ $\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/1
+0 ][\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ]$
+ []
+
+
+Overfull \hbox (23.85759pt too wide) in paragraph at lines 214--215
+\OT1/cmr/m/n/10 k-regular bi-par-tite graph \LUC/nanummj/m/n/10/c7 X \OT1/cmr/m
+/n/10 bipartition($\OML/cmm/m/it/10 X$\OT1/cmr/m/n/10 ,$\OML/cmm/m/it/10 Y$\OT1
+/cmr/m/n/10 ) \LUC/nanummj/m/n/10/c7 t $\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 X\OM
+S/cmsy/m/n/10 j 6\OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 Y\OMS/cms
+y/m/n/10 j$ \LUC/nanummj/m/n/10/b7 | \LUC/nanummj/m/n/10/d5 X\LUC/nanummj/m/n/1
+0/c7 ê[] $\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 
+) = \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 Y\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 ;  d
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ) =
+ []
+
+[7] [8]
+Underfull \hbox (badness 4954) in paragraph at lines 272--274
+[][] \LUC/nanummj/bx/n/10/c8 ^^U\LUC/nanummj/bx/n/10/c7 X \OT1/cmr/bx/n/10 1.7 
+\OT1/cmr/m/n/10 (walk) []\LUC/nanummj/m/n/10/c2 ^^\\LUC/nanummj/m/n/10/cc (\LUC
+/nanummj/m/n/10/c8 ^^A\LUC/nanummj/m/n/10/c7 <\LUC/nanummj/m/n/10/b8 \ \LUC/nan
+ummj/m/n/10/c7 t\LUC/nanummj/m/n/10/c5 ¥\LUC/nanummj/m/n/10/c9 ¿\LUC/nanummj/m/
+n/10/b2 î \LUC/nanummj/m/n/10/c8 ^^U^^P\OT1/cmr/m/n/10 , \LUC/nanummj/m/n/10/ac
+ ^^D\LUC/nanummj/m/n/10/c1  \LUC/nanummj/m/n/10/c7 X \LUC/nanummj/m/n/10/c5 \L
+UC/nanummj/m/n/10/ac ∞\LUC/nanummj/m/n/10/c7 D \OT1/cmr/m/n/10 walk \LUC/nanumm
+j/m/n/10/b7 |\LUC/nanummj/m/n/10/d5 \\LUC/nanummj/m/n/10/b2 ‰[]
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 281--281
 [][] 
  []
 
-[7]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 293--293
+[9]
+Underfull \hbox (badness 1028) in paragraph at lines 331--332
+[][] \LUC/nanummj/bx/n/10/c8 ^^U\LUC/nanummj/bx/n/10/c7 X \OT1/cmr/bx/n/10 1.8 
+\OT1/cmr/m/n/10 (cy-cle) []walk \LUC/nanummj/m/n/10/ac ^^@ \LUC/nanummj/m/n/10/
+c5 ë\LUC/nanummj/m/n/10/c7 X \LUC/nanummj/m/n/10/ae 8\LUC/nanummj/m/n/10/c7 tt\
+LUC/nanummj/m/n/10/ac ‡ \LUC/nanummj/m/n/10/c2 ‹\LUC/nanummj/m/n/10/c7 ë\LUC/na
+nummj/m/n/10/c8 ^^P\LUC/nanummj/m/n/10/ac ¸ \LUC/nanummj/m/n/10/b0 ]\LUC/nanumm
+j/m/n/10/c8 ^^P\LUC/nanummj/m/n/10/c7 t \LUC/nanummj/m/n/10/ac ^^Y\LUC/nanummj/
+m/n/10/c7 D\LUC/nanummj/m/n/10/b5 L \LUC/nanummj/m/n/10/b2 Î\LUC/nanummj/m/n/10
+/d6 ^^@\LUC/nanummj/m/n/10/c7 à\LUC/nanummj/m/n/10/b2 ‰
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 334--334
 [][] 
  []
 
-[8] [9]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 344--344
+[10] [11]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 397--397
+[][] 
+ []
+
+[12] [13]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 452--452
 [][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 382--382
+Overfull \hbox (6.0pt too wide) in paragraph at lines 486--486
 [][] 
  []
 
-[10]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 412--412
-[][] 
- []
+[14] [15] [16]
+\tf@toc=\write6
+\openout6 = `graph.toc'.
 
-[11] [12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 458.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 458.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 531.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 531.
  (./graph.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 458.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 458.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 531.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 531.
 Package rerunfilecheck Info: File `graph.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 458.
+(rerunfilecheck)             Checksum: 73E8A67449386AEE98D9C9568CD74418;2247.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 531.
  ) 
 Here is how much of TeX's memory you used:
- 34523 strings out of 492649
- 621419 string characters out of 6131493
- 707469 words of memory out of 5000000
- 37694 multiletter control sequences out of 15000+600000
- 560114 words of font info for 133 fonts, out of 8000000 for 9000
+ 34637 strings out of 492649
+ 623433 string characters out of 6131493
+ 708508 words of memory out of 5000000
+ 37724 multiletter control sequences out of 15000+600000
+ 561922 words of font info for 139 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,11n,86p,10413b,662s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,12n,86p,10413b,591s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/usr/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:
-/usr/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/usr/
-texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/usr/texli
-ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/usr/texlive/201
-8/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/usr/texlive/2018/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/usr/texlive/2018/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/usr/texlive/2018/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr5.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr6.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr7.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr8.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
-fb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c
-:/usr/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb><c:/usr/
-texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmac.pfb><c:/usr/te
-xlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmad.pfb><c:/usr/texl
-ive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmb2.pfb><c:/usr/texliv
-e/2018/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmb3.pfb><c:/usr/texlive/
-2018/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmb4.pfb><c:/usr/texlive/20
-18/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmb5.pfb><c:/usr/texlive/2018
-/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmb7.pfb><c:/usr/texlive/2018/t
-exmf-dist/fonts/type1/public/nanumtype1/nanumgtmb9.pfb><c:/usr/texlive/2018/tex
-mf-dist/fonts/type1/public/nanumtype1/nanumgtmba.pfb><c:/usr/texlive/2018/texmf
--dist/fonts/type1/public/nanumtype1/nanumgtmbd.pfb><c:/usr/texlive/2018/texmf-d
-ist/fonts/type1/public/nanumtype1/nanumgtmc0.pfb><c:/usr/texlive/2018/texmf-dis
-t/fonts/type1/public/nanumtype1/nanumgtmc1.pfb><c:/usr/texlive/2018/texmf-dist/
-fonts/type1/public/nanumtype1/nanumgtmc2.pfb><c:/usr/texlive/2018/texmf-dist/fo
-nts/type1/public/nanumtype1/nanumgtmc5.pfb><c:/usr/texlive/2018/texmf-dist/font
-s/type1/public/nanumtype1/nanumgtmc6.pfb><c:/usr/texlive/2018/texmf-dist/fonts/
-type1/public/nanumtype1/nanumgtmc7.pfb><c:/usr/texlive/2018/texmf-dist/fonts/ty
-pe1/public/nanumtype1/nanumgtmc8.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type
-1/public/nanumtype1/nanumgtmc9.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/
-public/nanumtype1/nanumgtmcc.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/pu
-blic/nanumtype1/nanumgtmcd.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/publ
-ic/nanumtype1/nanumgtmd0.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public
-/nanumtype1/nanumgtmd2.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/n
-anumtype1/nanumgtmd3.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nan
-umtype1/nanumgtmd5.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanum
-type1/nanumgtmd6.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumty
-pe1/nanummjbc7.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype
-1/nanummjbc8.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/
-nanummjmac.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/na
-nummjmad.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanu
-mmjmae.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanumm
-jmaf.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjm
-b0.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb1
-.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb2.p
-fb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb3.pfb
-><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb4.pfb><
-c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb5.pfb><c:
-/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb6.pfb><c:/u
-sr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb7.pfb><c:/usr
-/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb8.pfb><c:/usr/t
-exlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb9.pfb><c:/usr/tex
-live/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmba.pfb><c:/usr/texli
-ve/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbb.pfb><c:/usr/texlive
-/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbc.pfb><c:/usr/texlive/2
-018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbd.pfb><c:/usr/texlive/201
-8/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbe.pfb><c:/usr/texlive/2018/
-texmf-dist/fonts/type1/public/nanumtype1/nanummjmc0.pfb><c:/usr/texlive/2018/te
-xmf-dist/fonts/type1/public/nanumtype1/nanummjmc1.pfb><c:/usr/texlive/2018/texm
-f-dist/fonts/type1/public/nanumtype1/nanummjmc2.pfb><c:/usr/texlive/2018/texmf-
-dist/fonts/type1/public/nanumtype1/nanummjmc3.pfb><c:/usr/texlive/2018/texmf-di
-st/fonts/type1/public/nanumtype1/nanummjmc4.pfb><c:/usr/texlive/2018/texmf-dist
-/fonts/type1/public/nanumtype1/nanummjmc5.pfb><c:/usr/texlive/2018/texmf-dist/f
-onts/type1/public/nanumtype1/nanummjmc6.pfb><c:/usr/texlive/2018/texmf-dist/fon
-ts/type1/public/nanumtype1/nanummjmc7.pfb><c:/usr/texlive/2018/texmf-dist/fonts
-/type1/public/nanumtype1/nanummjmc8.pfb><c:/usr/texlive/2018/texmf-dist/fonts/t
-ype1/public/nanumtype1/nanummjmc9.pfb><c:/usr/texlive/2018/texmf-dist/fonts/typ
-e1/public/nanumtype1/nanummjmca.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1
-/public/nanumtype1/nanummjmcc.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/p
-ublic/nanumtype1/nanummjmcd.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/pub
-lic/nanumtype1/nanummjmce.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/publi
-c/nanumtype1/nanummjmd0.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/
-nanumtype1/nanummjmd1.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/na
-numtype1/nanummjmd2.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanu
-mtype1/nanummjmd3.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumt
-ype1/nanummjmd4.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtyp
-e1/nanummjmd5.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1
-/nanummjmd6.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/n
-anummjmd7.pfb>
-Output written on graph.pdf (12 pages, 2677409 bytes).
+/usr/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/usr/
+texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/usr/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/usr/texlive/20
+18/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/usr/texlive/2018/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/usr/texlive/2018/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/usr/texlive/2018/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr10.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr5.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr6.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr7.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr8.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c
+:/usr/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/usr
+/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb><c:/usr/texli
+ve/2018/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmac.pfb><c:/usr/texlive
+/2018/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmad.pfb><c:/usr/texlive/2
+018/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmb2.pfb><c:/usr/texlive/201
+8/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmb3.pfb><c:/usr/texlive/2018/
+texmf-dist/fonts/type1/public/nanumtype1/nanumgtmb4.pfb><c:/usr/texlive/2018/te
+xmf-dist/fonts/type1/public/nanumtype1/nanumgtmb5.pfb><c:/usr/texlive/2018/texm
+f-dist/fonts/type1/public/nanumtype1/nanumgtmb7.pfb><c:/usr/texlive/2018/texmf-
+dist/fonts/type1/public/nanumtype1/nanumgtmb9.pfb><c:/usr/texlive/2018/texmf-di
+st/fonts/type1/public/nanumtype1/nanumgtmba.pfb><c:/usr/texlive/2018/texmf-dist
+/fonts/type1/public/nanumtype1/nanumgtmbd.pfb><c:/usr/texlive/2018/texmf-dist/f
+onts/type1/public/nanumtype1/nanumgtmc0.pfb><c:/usr/texlive/2018/texmf-dist/fon
+ts/type1/public/nanumtype1/nanumgtmc1.pfb><c:/usr/texlive/2018/texmf-dist/fonts
+/type1/public/nanumtype1/nanumgtmc2.pfb><c:/usr/texlive/2018/texmf-dist/fonts/t
+ype1/public/nanumtype1/nanumgtmc5.pfb><c:/usr/texlive/2018/texmf-dist/fonts/typ
+e1/public/nanumtype1/nanumgtmc6.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1
+/public/nanumtype1/nanumgtmc7.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/p
+ublic/nanumtype1/nanumgtmc8.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/pub
+lic/nanumtype1/nanumgtmc9.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/publi
+c/nanumtype1/nanumgtmcc.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/
+nanumtype1/nanumgtmcd.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/na
+numtype1/nanumgtmd0.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanu
+mtype1/nanumgtmd2.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumt
+ype1/nanumgtmd3.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtyp
+e1/nanumgtmd5.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1
+/nanumgtmd6.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/n
+anummjbb8.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nan
+ummjbc7.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanum
+mjbc8.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummj
+bcc.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjma
+c.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmad.
+pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmae.pf
+b><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmaf.pfb>
+<c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb0.pfb><c
+:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb1.pfb><c:/
+usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb2.pfb><c:/us
+r/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb3.pfb><c:/usr/
+texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb4.pfb><c:/usr/te
+xlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb5.pfb><c:/usr/texl
+ive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb6.pfb><c:/usr/texliv
+e/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb7.pfb><c:/usr/texlive/
+2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb8.pfb><c:/usr/texlive/20
+18/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb9.pfb><c:/usr/texlive/2018
+/texmf-dist/fonts/type1/public/nanumtype1/nanummjmba.pfb><c:/usr/texlive/2018/t
+exmf-dist/fonts/type1/public/nanumtype1/nanummjmbb.pfb><c:/usr/texlive/2018/tex
+mf-dist/fonts/type1/public/nanumtype1/nanummjmbc.pfb><c:/usr/texlive/2018/texmf
+-dist/fonts/type1/public/nanumtype1/nanummjmbd.pfb><c:/usr/texlive/2018/texmf-d
+ist/fonts/type1/public/nanumtype1/nanummjmbe.pfb><c:/usr/texlive/2018/texmf-dis
+t/fonts/type1/public/nanumtype1/nanummjmc0.pfb><c:/usr/texlive/2018/texmf-dist/
+fonts/type1/public/nanumtype1/nanummjmc1.pfb><c:/usr/texlive/2018/texmf-dist/fo
+nts/type1/public/nanumtype1/nanummjmc2.pfb><c:/usr/texlive/2018/texmf-dist/font
+s/type1/public/nanumtype1/nanummjmc3.pfb><c:/usr/texlive/2018/texmf-dist/fonts/
+type1/public/nanumtype1/nanummjmc4.pfb><c:/usr/texlive/2018/texmf-dist/fonts/ty
+pe1/public/nanumtype1/nanummjmc5.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type
+1/public/nanumtype1/nanummjmc6.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/
+public/nanumtype1/nanummjmc7.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/pu
+blic/nanumtype1/nanummjmc8.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/publ
+ic/nanumtype1/nanummjmc9.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public
+/nanumtype1/nanummjmca.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/n
+anumtype1/nanummjmcc.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nan
+umtype1/nanummjmcd.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanum
+type1/nanummjmce.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumty
+pe1/nanummjmd0.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype
+1/nanummjmd1.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/
+nanummjmd2.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/na
+nummjmd3.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanu
+mmjmd4.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanumm
+jmd5.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjm
+d6.pfb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd7
+.pfb>
+Output written on graph.pdf (16 pages, 2754885 bytes).
 PDF statistics:
- 596 PDF objects out of 1000 (max. 8388607)
- 371 compressed objects within 4 object streams
- 72 named destinations out of 1000 (max. 500000)
- 177 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 782 PDF objects out of 1000 (max. 8388607)
+ 545 compressed objects within 6 object streams
+ 147 named destinations out of 1000 (max. 500000)
+ 305 words of extra memory for PDF output out of 10000 (max. 10000000)
 

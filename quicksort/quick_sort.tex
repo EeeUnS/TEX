@@ -95,7 +95,7 @@ QUICKSORT(A,p,r)
 
 \begin{lstlisting}[style = CStyle]
 PARTITION(A ,p ,r)
-    x= A[r]
+    x= A[r] //pivot
     i = p-1
     for j = p to r-1
         if A[j]<= x
@@ -169,9 +169,7 @@ $$T(n) = 2T(n/2) + cn$$
     \caption{quick sort 일반적인 재귀 트리}
 \end{figure}
 
-T(n) 일때의 시간복잡도와 T(n-1)일때의 시간복잡도는 둘다 $\Theta(n)$이다. 따라서 이 둘의 시간복잡도를 합쳐도 결국 $\Theta(n)$이고 이를 합쳐서 보면 결국에 최선의 분할 케이스가 된다 
-
-따라서 이때의 시간복잡도는 결국 $\Theta(n \lg n)$이다.
+T(n) 일때의 시간복잡도와 T(n-1)일때의 시간복잡도는 둘다 $\Theta(n)$이다. 따라서 이 둘의 시간복잡도를 합쳐도 결국 $\Theta(n)$이고 이를 합쳐서 보면 결국에 최선의 분할 케이스가 된다 따라서 이때의 시간복잡도는 결국 $\Theta(n \lg n)$이다.
 
 \section{상세 분석}
 
@@ -390,10 +388,12 @@ E[X] &= \sum_{i=1}^{n-1}\sum_{k = 1}^{n-i} \dfrac{2}{k+1} \\
 \end{figure}
 
 \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{개선}
 
 \subsection{재귀함수 제거}
+
 
 
 %http://penguin.ewu.edu/class/class/cscd300/Topic/AdvSorting/Sedgewick.pdf
@@ -408,8 +408,29 @@ E[X] &= \sum_{i=1}^{n-1}\sum_{k = 1}^{n-i} \dfrac{2}{k+1} \\
     \includegraphics[scale=0.5]{{q6.png}}
     \caption{삽입정렬 수행의 분할크기 n에 따른 퀵정렬 수행시간}
 \end{figure}
+
+\begin{lstlisting}[style = CStyle]
+INSERTION_SORT(A)
+    for j = 2 to A.length
+        key = A[j]
+        i = j - 1
+        while i > 0 and A[i] > key
+            A[i+1] = A[i]
+            i = i-1
+        A[i+1] = key    
+\end{lstlisting}
+
+
+
+
+
+\subsection{pivot}
+
 Three of midian
-\subsection{middle of medians}
+위의 의사코드는 pivot값으로 맨끝의 값을 설정한다. 이는 역순정렬에 의한 최악의 케이스를 생성하기 때문에 이를 가운데값으로 설정하는것만으로도 상수시간에 개선가능하다.
+
+
+middle of medians
 최악의 분할 케이스를 모면하기위해서 랜덤값(pivot)을 세개를 뽑은뒤 가운데 값으로 설정한다. 이러면서 평균적으로 조금더 중간값에 근접할 것으로 기대 할 수 있다.
 
 \subsection{multi threading}
