@@ -354,24 +354,32 @@ week 3
 % 1.8.6
 
 \subsection{Sperner's Lemma.}
-2차원 평면상의 삼각형 T 에 대해서 이를 작은 삼각형으로 쪼갤때 교차하는 삼각형이 꼭지점 또는 전체면을 공통으로 가질때 단순하다(be simplicial)라고 한다.
+2차원 평면상의 삼각형$T$ 에 대해서 이를 작은 삼각형으로 쪼갤때 교차하는 
+삼각형이 꼭지점 또는 전체면을 공통으로 가질때 이 삼각형을 쪼갠것을 단순하다(be simplicial)라고 한다.
 
-
+그다음 단순한 삼각형의 쪼갬에 대해서 쪼개진 각 정점에 대해서 다음이 성립할때, 0,1,2 세개의 분류(labelling)가 
+적절(be proper)하다고 한다.
 
 \begin{itemize}
     \item T의 세개의 정점에는 0,1,2가 하나씩 붙는다.
     \item 그리고 T의 정점 사이의 정점에는 양 끝 T의 정점의 두 값만 값이 붙을 수 있다.
 \end{itemize}
+각 정점을 0,1,2로 가지는 삼각형을 구별된 삼각형이라한다.
 
-
-
-
-\begin{theorem}
-    적당히 내부가 갈라진 삼각형은 구별된 홀수개의 삼각형을 가진다.
-
-    Every properly labelled simplicial subdivision of a triangle has an odd number of distinguished triangles.
+\begin{theorem}[Sperner's lemma]
+    적절히 분류되고(properly labelled) 단순하게(simplicial) 삼각형을 쪼갠것은 내부에 홀수개의 구별된 삼각형을 가진다.
 \end{theorem}
 
 \begin{proof}
+    $T$를 $T_0$라 하자. 그다음 $T_1,T_2,...,T_n$을 쪼개진 삼각형들이라고 하자. 
+    0과 1로 각각 분류된 $T_i$와 $T_j$가 공통 간선일때 $v_i$,$v_j$에 간선이 존재하는
+    정점 집합 $\{v_0,v_1, ... ,v_n \}$을 정의하자.(이 정점은 T에 대응할수있다.)
     
+    이 그래프에서 $v_0$는 명백하게 차수가 홀수값을 가진다.(1.9.1) 
+    따라서 $v_1,v_2,...,v_n$중에 홀수개가 홀수값 차수를 가지게 된다.
+    삼각형이라서 이 홀수개의 차수를 가지는 정점들이 차수값이 오직 1만을 가짐을 알 수 있다.
+    $v_i$의 차수가 1임은 $T_i$가 구별된 삼각형인 경우에 만이다.
 \end{proof}
+
+\subsubsection{}
+%191
