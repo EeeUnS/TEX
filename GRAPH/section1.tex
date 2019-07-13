@@ -1,7 +1,7 @@
 
-
 \section{GRAPHS AND SUBGRAPHS}
 \subsection{Graphs and simple Graphs}
+
 \begin{dfn}[Graph] 정점과 정점을 잇는 간선들로 이루어진 것을 그래프라한다.
     \begin{itemize}
         \item $V(G)$ :  정점의 집합
@@ -11,17 +11,17 @@
         \item $\varepsilon(G)$ :  간선의 갯수
     \end{itemize}
 
+    
+    그래프를 간선들이 교차하지않게 그릴수 있는 것을 plannar graph라 한다. plannar graph가 아닌 것을 nonplanar graph라한다.
+    
+    정점이 한개인 그래프를 trivial graph라고 한다. 이외의 모든 그래프는 nontrivial 그래프이다.
+
     Simple graph : loop가 없고 두 정점쌍에 두개이상의 간선이 존재하지않는 그래프
 
     incident : 한 간선에 양 정점 근접
     adjacent : 두 간선에 공통된 정점 인접
-\end{dfn}
 
-\begin{dfn}[planar]
-
-    그래프를 간선들이 교차하지않게 그릴수 있는 것을 plannar graph라 한다. 
     
-    plannar graph가 아닌 것을 nonplanar graph라한다.
 \end{dfn}
 
 \subsection{Graph Isomorphism}
@@ -360,6 +360,15 @@ week 3
 그다음 단순한 삼각형의 쪼갬에 대해서 쪼개진 각 정점에 대해서 다음이 성립할때, 0,1,2 세개의 분류(labelling)가 
 적절(be proper)하다고 한다.
 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{simp.png}
+    \caption{(a) Asimplicial subdivision of a triangle (b) a proper labelling of the    subdivision}
+\end{figure}
+
+
+
 \begin{itemize}
     \item T의 세개의 정점에는 0,1,2가 하나씩 붙는다.
     \item 그리고 T의 정점 사이의 정점에는 양 끝 T의 정점의 두 값만 값이 붙을 수 있다.
@@ -378,8 +387,9 @@ week 3
     이 그래프에서 $v_0$는 명백하게 차수가 홀수값을 가진다.(1.9.1) 
     따라서 $v_1,v_2,...,v_n$중에 홀수개가 홀수값 차수를 가지게 된다.
     삼각형이라서 이 홀수개의 차수를 가지는 정점들이 차수값이 오직 1만을 가짐을 알 수 있다.
-    $v_i$의 차수가 1임은 $T_i$가 구별된 삼각형인 경우에 만이다.
+    $v_i$의 차수가 1임은 $T_i$가 구별된 삼각형인 경우만이다.
 \end{proof}
 
 \subsubsection{}
 %191
+

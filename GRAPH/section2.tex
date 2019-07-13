@@ -8,6 +8,26 @@ week 4
     acyclic graph : 사이클이 없는 그래프
 \end{dfn}
 
+
+\begin{theorem}
+    트리에서 두 정점은 서로 유일한 경로를 가진다.    
+\end{theorem}
+
+\begin{proof}
+    
+\end{proof}
+\begin{theorem}
+    그래프 $G$가 트리이면 $\epsilon = \nu-1$
+\end{theorem}
+
+\begin{proof}
+    
+\end{proof}
+
+
+\begin{corollary}
+    정점이 한개가 아닌 트리(nontrivial tree)는 적어도 두개의 정점의 차수가 1이다.    
+\end{corollary}
 \subsubsection{} 
 %
 \subsubsection{} 
@@ -52,6 +72,88 @@ G의 중심은 최대 d(u, v)가 가능한 한 작은 꼭지점 u이다.
 
 트리 하나가 정확히 하나의 중심 또는 두 개의 인접한 중심을 가지고 있음을 보여라
 
+\subsection{Cut Edges and Bonds}
+\begin{dfn}[cut edge]
+    
+    그래프 $G$에 대해 $\omega(G-e)>\omega(G)$인 간선 $e$를 절단 간선(a cut edge)이라고 한다.
+
+\end{dfn}
+
+\begin{theorem}
+    그래프$G$의 간선 $e$가 사이클에 속하지 않으면 간선$e$는 절단 간선이다.
+\end{theorem}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{theorem}
+    모든 간선이 절단 간선이면 연결된 그래프는 트리이다.
+\end{theorem}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{corollary}
+    그래프가 연결되어 있으면 $\epsilon \ge v-1 $    
+\end{corollary}
+    
+\begin{theorem}
+    연결된 그래프 $G$의 스패닝트리를 $T$라 하자 $e$를 $T$에 속하지않은 그래프 $G$의 간선이라할때
+    $T+e$는 유일한 사이클을 가진다.
+\end{theorem}
+
+\begin{dfn}[an edge cut]
+    \begin{itemize}
+        \item  $[S,S']$ : $S,S' \le V$이고, 정점이 각각 $S$, $S'$에 하나씩 있는 간섭 집합을 에 있는것을 $[S,S']$라 표현 한다.
+    
+        \item  An edge cut of $G$ : $S$는 비어있지 않은 적절한 $V$의 부분 집합이고, $\bar{S} = V/S$인  $[S,\bar{S}]$를 $G$의 간선 절단(an edge cut of $G$)이라고 한다.
+
+        \item  Bond : 최소한의 비지않은 $G$의 간선 절단을 본드(bond) 라고한다.
+
+        \item $\bar{H}(G)$ : $H$를 $G$의 부분 그래프라고 할때 $\bar{H}(G)$를 $G-E(H)$라고 한다. 
+    
+        \item cotree :연결 그래프 $G$에서, 스패닝 트리 $T$의 $\bar{T}$ 형태를 G의 cotree라고 한다.
+    \end{itemize}
+\end{dfn}
+\begin{theorem}
+    $T$를 그래프 $G$의 스패닝 트리라고 할때, $e$를 $T$의 어떤 간선이라고 하자. 그러면
+    \begin{itemize}
+        \item cotree $\bar{T}$는 $G$의 본드를 가지고 있지않다.        
+        \item $\bar{T}+e$는 $G$의 유일한 본드를 가지고있다
+    \end{itemize}
+\end{theorem}
+
+\begin{proof}
+    
+\end{proof}
+
+\subsection{Cut Vertices}
+
+\begin{dfn}[cut vertex]
+    $E$가 두개의 비지않은 부분집합 정점 $v$만을 유일하게 가지는 $G[E_1]$,$G[E_2]$로 분할 될수 있을때 정점 $v$를 절단 정점(a cut vertex)라 한다.
+    
+    $G$가 loop간선이없고 nontrivial일때, $\omega(G-v) > \omega(G)$인 정점 $v$를 절단 정점이라 한다.
+\end{dfn}
+
+\begin{theorem}
+    트리 $G$에 대해 $d(v) > 1$일때 v는 절단 정점이다.   
+\end{theorem}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{corollary}
+    모든 nontrivial,loopless 연결 그래프는 절단 정점이 아닌 정점을 적어도 두개이상 가진다.
+\end{corollary}
+
+
+\begin{proof}
+    
+\end{proof}
+
 week5
 
 \begin{dfn}[spanning tree]
@@ -76,10 +178,6 @@ week5
 \begin{proof}
     $\psi_G(e) = xy$라 할때, 유일한 사이클이아닌 두 개 이상의 사이클이 생성될 경우  e의 에지 추가하기전의 $x, y$ 유일한 경로가아닌 두개이상의 경로가 있다는 것을 의미하는데 트리는 유일한 경로임이 이미 증명되었으므로 유일한 사이클을 가진다.
 \end{proof}
-\subsection{Cut Edges and Bonds}
-
-\subsection{Cut Vertices}
-
 \subsection{Cayley's Formula}
 \begin{dfn}[contract]
     그래프 $G$의 한 에지$e$를 수축한다는 것은 에지 $e$를 그래프에서 삭제하고 양 끝점을 하나의 정점으로 합치는 것이다. 그 결과 만들어지는 그래프를 $G \cdot e$로 표시한다.
@@ -126,3 +224,5 @@ we shall present this result in chapter 12.
     수열의 갯수가 $n^{n-2}$개 이므로 트리의 개수도 $n^{n-2}$개이다.
 \end{proof}
 
+\subsection{THE CONNECfOR PROBLEM}
+(대충 크루스칼 알고리즘에 대한 내용)
