@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.3)  14 JUL 2019 01:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.3)  14 JUL 2019 02:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1628,7 +1628,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 295--295
  []
 
 [10] [11]
-<simp.png, id=327, 703.87968pt x 295.1025pt>
+<simp.png, id=332, 703.87968pt x 295.1025pt>
 File: simp.png Graphic file (type png)
 <use simp.png>
 Package pdftex.def Info: simp.png  used on input line 366.
@@ -1671,37 +1671,42 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 80--80
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 119--119
+Overfull \hbox (6.0pt too wide) in paragraph at lines 102--102
 [][] 
  []
 
 [15]
-LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 123.
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 138--138
+Overfull \hbox (6.0pt too wide) in paragraph at lines 143--143
 [][] 
  []
 
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 150.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 161--161
+Overfull \hbox (6.0pt too wide) in paragraph at lines 165--165
 [][] 
  []
 
 [16]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 191--191
+Overfull \hbox (6.0pt too wide) in paragraph at lines 211--211
 [][] 
  []
 
 [17]) [18]
+\openout2 = `section3.aux'.
+
+ (./section3.tex) [19
+
+
+]
 \tf@toc=\write6
 \openout6 = `graph.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 57.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 57.
- (./graph.aux (./section1.aux) (./section2.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 57.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 57.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 58.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 58.
+ (./graph.aux (./section1.aux) (./section2.aux) (./section3.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 58.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 58.
 
 
 Package rerunfilecheck Warning: File `graph.out' has changed.
@@ -1709,15 +1714,15 @@ Package rerunfilecheck Warning: File `graph.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `graph.out':
-(rerunfilecheck)             Before: 73E8A67449386AEE98D9C9568CD74418;2247
-(rerunfilecheck)             After:  1B099EDD8A98EA5C67D4BBD46DD1A7B3;2420.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 57.
+(rerunfilecheck)             Before: 1B099EDD8A98EA5C67D4BBD46DD1A7B3;2420
+(rerunfilecheck)             After:  8AB53ED8FD5661430B57C1C0BB4E2683;2648.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 58.
  ) 
 Here is how much of TeX's memory you used:
- 34717 strings out of 492649
- 624690 string characters out of 6131493
- 710932 words of memory out of 5000000
- 37748 multiletter control sequences out of 15000+600000
+ 34729 strings out of 492649
+ 624864 string characters out of 6131493
+ 710933 words of memory out of 5000000
+ 37752 multiletter control sequences out of 15000+600000
  563301 words of font info for 144 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,12n,86p,10413b,644s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1809,10 +1814,10 @@ fb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd4.pfb
 ><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd5.pfb><
 c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd6.pfb><c:
 /usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd7.pfb>
-Output written on graph.pdf (18 pages, 2909784 bytes).
+Output written on graph.pdf (19 pages, 2918264 bytes).
 PDF statistics:
- 851 PDF objects out of 1000 (max. 8388607)
- 600 compressed objects within 6 object streams
- 177 named destinations out of 1000 (max. 500000)
- 310 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 863 PDF objects out of 1000 (max. 8388607)
+ 610 compressed objects within 7 object streams
+ 180 named destinations out of 1000 (max. 500000)
+ 318 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -70,3 +70,5 @@
 \contentsline {subsection}{\numberline {2.3}Cut Vertices}{16}{subsection.0.2.3}
 \contentsline {subsection}{\numberline {2.4}Cayley's Formula}{17}{subsection.0.2.4}
 \contentsline {subsection}{\numberline {2.5}THE CONNECfOR PROBLEM}{18}{subsection.0.2.5}
+\contentsline {section}{\numberline {3}Connectivity}{19}{section.0.3}
+\contentsline {subsection}{\numberline {3.1}Connectivity}{19}{subsection.0.3.1}
