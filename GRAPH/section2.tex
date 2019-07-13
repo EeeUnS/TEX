@@ -1,0 +1,128 @@
+
+week 4
+\section{Tree}
+\subsection{Trees}
+
+\begin{dfn}[tree] connected acyclic graph
+
+    acyclic graph : 사이클이 없는 그래프
+\end{dfn}
+
+\subsubsection{} 
+%
+\subsubsection{} 
+%
+\subsubsection{} 
+%
+\subsubsection{} 
+%
+\subsubsection{} 
+%  2.1.5
+Let 0 be a graph with v-I edges. Show that the following three statements are equivalent: 
+(a) G is connected;
+(b) G is acyclic;
+(c) G is a tree.
+
+연결된 acyclic graph는 정의에 의해 tree임이 자명하므로 간선의 개수가 $\nu -1$  일때, acyclic graph일때 connected한것과 connected graph일때 acyclic 그래프임이 필요충분조건임을 보이는 것으로 충분하다.
+
+acyclic $\rightarrow$ connected graph
+
+acyclic그래프가 connected graph가 아니라고 가정해보자.
+
+그러면 각 component는 connected graph이므로 트리이다.
+각 component의 간선의 갯수의 합은 $v(G_1)-1 + v(G_2)-1 + ... + v(G_n)-1 \neq v(G)-1 $
+따라서 가정에 모순 다음 명제가 성립한다.
+
+connected graph $\rightarrow$ acyclic
+
+acyclic graph가 아니라고 하자 cycle이 형성된곳의 간선을 하나씩 제거해서 acyclic 그래프가 되도록 만들면 트리가 된다.
+$\nu-1-n \neq \nu -1 $ 가정에 모순이라 다음 명제가 성립한다.
+\subsubsection{} 
+%
+\subsubsection{} 
+%
+\subsubsection{} 
+% 2.1.8
+A centre of G is a vertex u such that max d(u, v) is as small as possible.
+Show that a tree has either exactly one centre or two,
+adj acent, centres.
+
+
+G의 중심은 최대 d(u, v)가 가능한 한 작은 꼭지점 u이다.
+
+트리 하나가 정확히 하나의 중심 또는 두 개의 인접한 중심을 가지고 있음을 보여라
+
+week5
+
+\begin{dfn}[spanning tree]
+    그래프 $G$의 트리인 spanning subgraph를 $G$의 신장 트리(spaning tree)라고 부른다.
+\end{dfn}
+
+\begin{corollary}
+    $2.4.1$ 모든 연결된 그래프는 스패닝 트리를 가진다.
+\end{corollary}
+
+\begin{proof}
+    그래프 $G$가 connected graph이면 $G$의 cennected spanning subgraph가 존재한다.
+    그래프 $H$를 $G$의 최소한의 connected spanning subgraph라 하자.
+    이때 $H$가 acyclic가 아니라고 가정 해보자.
+    그래프 $H$가 사이클이 존재하는 경우,간선 사이클 경로의 임의의 인접한 정점 $u, v$를 잡았을때 $u, v$의 간선을 제거해도 $u, v$는 여전이 연결되어있다. 이는 최소한의 connected spanning subgraph라는 것에 모순이다. 
+    따라서 그래프 $H$는 connected spaning graph이며 acyclic함으로 스패닝 트리이다.
+\end{proof}
+
+\begin{theorem}
+    $T$가 연결된 그래프 $G$의 스패닝 트리라고 하고 $e$를 $T$에 속하지 않은 $G$의 에지라고 하자. 그러면 $T + e$는 유일한 사이클을 가진다.
+\end{theorem}
+\begin{proof}
+    $\psi_G(e) = xy$라 할때, 유일한 사이클이아닌 두 개 이상의 사이클이 생성될 경우  e의 에지 추가하기전의 $x, y$ 유일한 경로가아닌 두개이상의 경로가 있다는 것을 의미하는데 트리는 유일한 경로임이 이미 증명되었으므로 유일한 사이클을 가진다.
+\end{proof}
+\subsection{Cut Edges and Bonds}
+
+\subsection{Cut Vertices}
+
+\subsection{Cayley's Formula}
+\begin{dfn}[contract]
+    그래프 $G$의 한 에지$e$를 수축한다는 것은 에지 $e$를 그래프에서 삭제하고 양 끝점을 하나의 정점으로 합치는 것이다. 그 결과 만들어지는 그래프를 $G \cdot e$로 표시한다.
+    \begin{itemize}
+        \item $\nu(G \cdot e) = \nu(G \cdot e) - 1$
+        \item $\varepsilon(G \cdot e) = \varepsilon(G \cdot e)-1$
+        \item $\omega(G \cdot e) = \omega(G)$
+        \item  $T$가 트리이면 $T \cdot e$도 트리이다.
+        \item 그래프 G의 스패닝 트리의 개수를 $\tau(G)$로 표시한다.
+    \end{itemize}
+\end{dfn}
+
+\begin{theorem}
+    2.8 그래프 $G$의 임의의 에지 $e$에 대해서 $\tau(G) =\tau(G-e) + \tau(G \cdot e)$이 성립한다.
+\end{theorem}
+
+\begin{proof}
+    그래프 $G$에서 에지$e$를 포함하지 않는 스패닝 트리는 $G-e$의 스패닝 트리 또한 된다.
+    따라서 $\tau(G-e)$는 그래프 $G$에서 에지 $e$를 포함하지 않는 스패닝 트리의 개수와 같다.
+    에지 $e$를 포함하는 $G$의 임의의 스패닝 트리 $T$는 $G \cdot e$의 스패닝 트리 $T \cdot e$에 일대일 대응한다.(추가적인 논리 필요) 따라서 $\tau(G \cdot e)$는 $G$에서 에지 $e$를 포함하는 스패닝 트리의 개수이다. 따라서 정리가 성립한다.
+\end{proof}
+
+
+Fortunately, and rather surprisingly, there is a closed formula for T(G) which expresses T(G) as a determinant; 
+we shall present this result in chapter 12.
+
+
+\begin{theorem}
+    $Cayley's folmula$ : $\tau(K_n)= n^{n-2}$
+\end{theorem}
+
+\begin{proof}
+    $K_n$의 정점 집합을 $N = \{1,2, ...,n\}$라 놓자.
+    그러면 $n^{n-2}$는  $N$으로부터 길이가 $n-2$인 수열\footnote{$Pr\ddot{u}fer \: sequences$라 한다.}을 만드는 수로 볼 수 있다.
+    따라서 이 수열이 $K_n$의 spanning tree와 1:1대응을 하는걸로 이 증명이 완성된다.
+    $K_n$의 spanning tree $T$에 대해서 특정 수열 ${t_1, t_2, ... , t_{n-2}}$과 연관지으려 한다.
+    $N$을 정렬된 셋이라 가정하고, $s_1$은 $T$의 차수가 1인 첫번째 정점이라하자. $s_1$은 $t_1$과 인접한 정점이다.
+    그다음에 $s_1$를 $T$에서 제거하자 그다음 $T-s_1$에 차수가 1인 정점 한개를 $s_2$라 하자 이 짓거리를 $t_{n-2}$가 지워져 두 정점이 남을때 까지 반복한다. 총 반복은 $n-2$번 반복한다. 따라서 spanning tree가 수열에 대응함을 보였다.
+    수열이 spanning tree에 대응함을 보이자.
+    sequence P에 없는 1에서 n중 가장 작은 숫자를 찾아 P의 첫번째 숫자에 연결한다.
+    그 후 P의 첫번째 숫자를 제거한다.
+    P가 존재하지않을 때 까지 반복한다. 마지막 연결되는 숫자는 n이다.
+    이렇게 함으로써 수열이 트리에 대응됨을 보일수있다.
+    수열의 갯수가 $n^{n-2}$개 이므로 트리의 개수도 $n^{n-2}$개이다.
+\end{proof}
+
