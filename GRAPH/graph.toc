@@ -67,7 +67,7 @@
 \contentsline {subsubsection}{\numberline {2.1.7}}{15}{subsubsection.0.2.1.7}
 \contentsline {subsubsection}{\numberline {2.1.8}}{15}{subsubsection.0.2.1.8}
 \contentsline {subsection}{\numberline {2.2}Cut Edges and Bonds}{15}{subsection.0.2.2}
-\contentsline {subsection}{\numberline {2.3}Cut Vertices}{16}{subsection.0.2.3}
+\contentsline {subsection}{\numberline {2.3}Cut Vertexes}{16}{subsection.0.2.3}
 \contentsline {subsection}{\numberline {2.4}Cayley's Formula}{17}{subsection.0.2.4}
 \contentsline {subsection}{\numberline {2.5}THE CONNECfOR PROBLEM}{18}{subsection.0.2.5}
 \contentsline {section}{\numberline {3}Connectivity}{19}{section.0.3}

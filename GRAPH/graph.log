@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.3)  14 JUL 2019 02:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.3)  14 JUL 2019 17:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1412,7 +1412,7 @@ Package: shadethm 1999/11/23
 \c@corollary=\count354
 \c@thm=\count355
  (./graph.aux
-(./section1.aux) (./section2.aux))
+(./section1.aux) (./section2.aux) (./section3.aux))
 \openout1 = `graph.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
@@ -1628,7 +1628,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 295--295
  []
 
 [10] [11]
-<simp.png, id=332, 703.87968pt x 295.1025pt>
+<simp.png, id=342, 703.87968pt x 295.1025pt>
 File: simp.png Graphic file (type png)
 <use simp.png>
 Package pdftex.def Info: simp.png  used on input line 366.
@@ -1695,7 +1695,17 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 211--211
 [17]) [18]
 \openout2 = `section3.aux'.
 
- (./section3.tex) [19
+ (./section3.tex
+Overfull \hbox (6.0pt too wide) in paragraph at lines 15--15
+[][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 25--25
+[][] 
+ []
+
+) [19
 
 
 ]
@@ -1707,22 +1717,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 58.
  (./graph.aux (./section1.aux) (./section2.aux) (./section3.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 58.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 58.
-
-
-Package rerunfilecheck Warning: File `graph.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `graph.out':
-(rerunfilecheck)             Before: 1B099EDD8A98EA5C67D4BBD46DD1A7B3;2420
-(rerunfilecheck)             After:  8AB53ED8FD5661430B57C1C0BB4E2683;2648.
+Package rerunfilecheck Info: File `graph.out' has not changed.
+(rerunfilecheck)             Checksum: 55AC5EC5B1F2BB4516981676E7C2155B;2648.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 58.
  ) 
 Here is how much of TeX's memory you used:
- 34729 strings out of 492649
- 624864 string characters out of 6131493
- 710933 words of memory out of 5000000
- 37752 multiletter control sequences out of 15000+600000
+ 34739 strings out of 492649
+ 625031 string characters out of 6131493
+ 712153 words of memory out of 5000000
+ 37756 multiletter control sequences out of 15000+600000
  563301 words of font info for 144 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,12n,86p,10413b,644s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1814,10 +1817,10 @@ fb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd4.pfb
 ><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd5.pfb><
 c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd6.pfb><c:
 /usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd7.pfb>
-Output written on graph.pdf (19 pages, 2918264 bytes).
+Output written on graph.pdf (19 pages, 2919602 bytes).
 PDF statistics:
- 863 PDF objects out of 1000 (max. 8388607)
- 610 compressed objects within 7 object streams
- 180 named destinations out of 1000 (max. 500000)
- 318 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 877 PDF objects out of 1000 (max. 8388607)
+ 624 compressed objects within 7 object streams
+ 184 named destinations out of 1000 (max. 500000)
+ 334 words of extra memory for PDF output out of 10000 (max. 10000000)
 
