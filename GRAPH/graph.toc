@@ -72,3 +72,7 @@
 \contentsline {subsection}{\numberline {2.5}THE CONNECfOR PROBLEM}{18}{subsection.0.2.5}
 \contentsline {section}{\numberline {3}Connectivity}{19}{section.0.3}
 \contentsline {subsection}{\numberline {3.1}Connectivity}{19}{subsection.0.3.1}
+\contentsline {subsection}{\numberline {3.2}BLOCKS}{20}{subsection.0.3.2}
+\contentsline {section}{\numberline {4}Euler Tours and Hamilton Cycles}{21}{section.0.4}
+\contentsline {subsection}{\numberline {4.1}Euler Tours}{21}{subsection.0.4.1}
+\contentsline {subsection}{\numberline {4.2}HAMILTON CYCLES}{21}{subsection.0.4.2}
