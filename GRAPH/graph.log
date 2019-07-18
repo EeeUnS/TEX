@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.3)  16 JUL 2019 00:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.3)  19 JUL 2019 00:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1412,7 +1412,7 @@ Package: shadethm 1999/11/23
 \c@corollary=\count354
 \c@thm=\count355
  (./graph.aux
-(./section1.aux) (./section2.aux) (./section3.aux))
+(./section1.aux) (./section2.aux) (./section3.aux) (./section4.aux))
 \openout1 = `graph.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
@@ -1628,7 +1628,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 295--295
  []
 
 [10] [11]
-<simp.png, id=342, 703.87968pt x 295.1025pt>
+<simp.png, id=362, 703.87968pt x 295.1025pt>
 File: simp.png Graphic file (type png)
 <use simp.png>
 Package pdftex.def Info: simp.png  used on input line 366.
@@ -1654,45 +1654,65 @@ T1/cmr/m/n/10 (1.9.1) \LUC/nanummj/m/n/10/b5 0\LUC/nanummj/m/n/10/b7 |\LUC/nanu
 mmj/m/n/10/c1 ^^\ $\OML/cmm/m/it/10 v[]; v[]; :::; v[]$
  []
 
-) [13 <./simp.PNG>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
+
+ []
+
+[13 <./simp.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 402--403
+
+ []
+
+) [14]
 \openout2 = `section2.aux'.
 
  (./section2.tex
-Overfull \hbox (6.0pt too wide) in paragraph at lines 9--9
+Overfull \hbox (6.0pt too wide) in paragraph at lines 10--10
 [][] 
  []
 
-[14
+[15
 
 
 ]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 80--80
+Overfull \hbox (6.0pt too wide) in paragraph at lines 81--81
 [][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 102--102
-[][] 
- []
-
-[15]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 143--143
-[][] 
- []
-
-LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 150.
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 165--165
+Overfull \hbox (6.0pt too wide) in paragraph at lines 103--103
 [][] 
  []
 
 [16]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 211--211
+Overfull \hbox (6.0pt too wide) in paragraph at lines 144--144
 [][] 
  []
 
-[17]) [18]
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 151.
+[17] [18]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 208--208
+[][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 254--254
+[][] 
+ []
+
+[19] [20]) [21]
 \openout2 = `section3.aux'.
 
  (./section3.tex
@@ -1710,10 +1730,10 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 34--34
 [][] 
  []
 
-[19
+[22
 
 
-]) [20]
+]) [23]
 \openout2 = `section4.aux'.
 
  (./section4.tex
@@ -1726,7 +1746,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 28--28
 [][] 
  []
 
-) [21
+) [24
 
 
 ]
@@ -1739,22 +1759,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 60.
 (./section4.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 60.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 60.
-
-
-Package rerunfilecheck Warning: File `graph.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `graph.out':
-(rerunfilecheck)             Before: 55AC5EC5B1F2BB4516981676E7C2155B;2648
-(rerunfilecheck)             After:  04CF92713AF4E6F3E66874923B8242B7;3213.
+Package rerunfilecheck Info: File `graph.out' has not changed.
+(rerunfilecheck)             Checksum: 04CF92713AF4E6F3E66874923B8242B7;3213.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 60.
  ) 
 Here is how much of TeX's memory you used:
- 34768 strings out of 492649
- 625486 string characters out of 6131493
- 712151 words of memory out of 5000000
- 37762 multiletter control sequences out of 15000+600000
+ 34787 strings out of 492649
+ 625804 string characters out of 6131493
+ 713370 words of memory out of 5000000
+ 37767 multiletter control sequences out of 15000+600000
  563595 words of font info for 145 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,12n,86p,10413b,644s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1847,10 +1860,10 @@ fb><c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd3.pfb
 c:/usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd5.pfb><c:
 /usr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd6.pfb><c:/u
 sr/texlive/2018/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd7.pfb>
-Output written on graph.pdf (21 pages, 2934702 bytes).
+Output written on graph.pdf (24 pages, 2957654 bytes).
 PDF statistics:
- 907 PDF objects out of 1000 (max. 8388607)
- 650 compressed objects within 7 object streams
- 200 named destinations out of 1000 (max. 500000)
- 334 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 946 PDF objects out of 1000 (max. 8388607)
+ 686 compressed objects within 7 object streams
+ 212 named destinations out of 1000 (max. 500000)
+ 366 words of extra memory for PDF output out of 10000 (max. 10000000)
 
