@@ -81,6 +81,11 @@
 \contentsline {subsection}{\numberline {2.5}THE CONNECfOR PROBLEM}{21}{subsection.0.2.5}
 \contentsline {section}{\numberline {3}Connectivity}{22}{section.0.3}
 \contentsline {subsection}{\numberline {3.1}Connectivity}{22}{subsection.0.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}}{22}{subsubsection.0.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}}{23}{subsubsection.0.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}}{23}{subsubsection.0.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.4}}{23}{subsubsection.0.3.1.4}
+\contentsline {subsubsection}{\numberline {3.1.5}}{23}{subsubsection.0.3.1.5}
 \contentsline {subsection}{\numberline {3.2}BLOCKS}{23}{subsection.0.3.2}
 \contentsline {section}{\numberline {4}Euler Tours and Hamilton Cycles}{24}{section.0.4}
 \contentsline {subsection}{\numberline {4.1}Euler Tours}{24}{subsection.0.4.1}
