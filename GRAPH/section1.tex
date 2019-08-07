@@ -16,13 +16,18 @@
     
     정점이 한개인 그래프를 trivial graph라고 한다. 이외의 모든 그래프는 nontrivial 그래프이다.
 
-    Simple graph : loop가 없고 두 정점쌍에 두개이상의 간선이 존재하지않는 그래프
+    loop : 끝이 동일한 간선.
+    link : 끝이 다른 간선.
 
+    Simple graph : loop가 없고 두 정점쌍에 두개이상의 간선이 존재하지않는 그래프
+    
     incident : 한 간선에 양 정점 근접
     adjacent : 두 간선에 공통된 정점 인접
 
     
 \end{dfn}
+
+
 
 \subsection{Graph Isomorphism}
 
@@ -122,7 +127,10 @@ week2
         \item $H \subseteq G$,$H\neq G $이면 $ H \subset G$라 표기하고, $H$를  $G$의 proper graph라 한다.
         \item $V(H) = V(G) , H \subseteq G $이면 $H$($G$)를  spaning subgraph(supergraph)라 한다.
         \item spaning subgraph과 동시에 simple graph이면, undelying simple graph라한다.
+        \item 그래프 $G$가 $\forall v \in  V,d(v) =k$이면,k-regular이다. 완전그래프와 완전 이분 그래프(complete bipartite graphs $K_{n,n}$), k-cube는 레귤러다.
     \end{itemize}
+
+
 \end{dfn}
 \subsection{Vertex Degrees}
 \begin{dfn}[degree(차수)] $d_G(v)$는 정점 $v$에 연결된 간선의 갯수를 나타낸다. 그래프의 정점의 차수의 최솟값을 $\delta(G)$ , 최댓값을 $\Delta(G)$로 표기한다.
@@ -169,6 +177,8 @@ $d(i) = \sum_{j=1}^n A[v_i][v_j] = \sum_{j=1}^n A[v_j][v_i]$이다.
 마찬가지로 simple graph에서 $A[v_i][v_j]$은 무조건 0 또는 1을 가지므로 $A[v_i][v_j] \cdot A[v_j][v_i] = A[v_i][v_j]$이다.
 
 $A^2$에서 $A^2[v_i][v_i] = \sum_{j=1}^n A[v_i][v_j] \cdot A[v_j][v_i]= \sum_{j=1}^n A[v_i][v_j] = d(i)$
+
+
 
 \subsubsection{} 
 % 1.5.3
