@@ -1,0 +1,44 @@
+\documentclass{oblivoir}
+\usepackage{graphicx}
+\setcounter{section}{-1}
+
+\usepackage{url}
+
+\usepackage{xcolor}
+\usepackage{listings}
+%C스타일을 만들기위한 패키지
+
+
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+%https://tex.stackexchange.com/questions/348651/c-code-to-add-in-the-document
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{backgroundColour},   
+    commentstyle=\color{mGreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{mGray},
+    stringstyle=\color{mPurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\begin{document}
+    
+    \tableofcontents
+    \include{preface}
+    \include{01part1}
+    \include{01part2}
+\end{document}
