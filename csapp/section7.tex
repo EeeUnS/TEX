@@ -1,0 +1,85 @@
+Linker
+
+7.1 .c-> .i -> .s -> .o ->(linker) exe
+
+​
+
+​
+
+7.2 static linker
+
+​
+
+순서
+
+1.symbol resolution(7.6)
+
+2. Relocation(7.7)
+
+​
+
+7.3 object file(object module)
+
+1. Relocatable ob~(7.4)
+
+2.Executable ob~(7.8,7.9)
+
+3.shared ob~ (7.10)
+
+​
+
+7.5 symbol & symbol table(.symtab section)
+
+​
+
+1. 전역(definition)
+
+2. 전역(Reference)
+
+3. 지역(locale),static -> table X
+
+​
+
+​
+
+​
+
+7.6 symbol resolution
+
+​
+
+1.section,symbol def Relocation
+
+2.in section symbol ref ''
+
+​
+
+​
+
+7.7 Relocation
+
+​
+
+-o ,-o-> .a
+
+규칙 : 중복 symbol 처리
+
+1. 복수의 강한 symbol(초기화된 전역) -> compiler error
+
+2. 강 > 약(초기화 X 전역)
+
+3. 약s->아무거나
+
++ static lib
+
+​
+
+7.8,7.9 Executable ob~
+
+​
+
+​
+
+7.10,7.11
+
+DLL, .so 
