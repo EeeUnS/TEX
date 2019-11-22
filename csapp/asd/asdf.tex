@@ -1,8 +1,5 @@
 
-%\documentclass{report}
-%\usepackage[cjk]{kotex}
-
-\documentclass[chapter,oneside]{oblivoir}
+\documentclass{oblivoir}%[chapter,oneside]
 
 %\usepackage{ikps,ansform}
 \usepackage{amsthm}
@@ -27,12 +24,12 @@ postheadspace=1em,
 \declaretheorem[%
 name=정의,
 style=maintheorem,
-numberwithin=chapter, shaded={%bgcolor=MainColorThree!20,
+numberwithin=section, shaded={%bgcolor=MainColorThree!20,
 margin=.5em}]{dfn}
 % \begin{dfn}[]
 % \end{dfn}
 
-\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{theorem}{Theorem}[section]
 \newtheorem{corollary}{Corollary}[theorem]
 \newtheorem{lemma}[theorem]{Lemma}
 %https://www.overleaf.com/learn/latex/Theorems_and_proofs
@@ -66,301 +63,313 @@ margin=.5em}]{dfn}
 
 \begin{document}
     
-    \title{EUnS's book}
-    \author{ EUnS }
+asd
 
-    \maketitle
-
-    \tableofcontents
+\end{document}
 
 
 
-\chapter{A Tour of Computer Systems}
+%     \title{EUnS's book}
+%     \author{ EUnS }
+
+%     \maketitle
+
+%     \tableofcontents
 
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.3]{pic/pic1}
-    \caption{The compilation system.}
-\end{figure}
 
-linux> gcc -o hello hello.c
-
-컴파일 시스템을 이해해야하는 이유
-
-\begin{enumerate}
-    \item 성능 최적화
-    \item 링커 에러 이해하기
-    \item 보안 약점
-\end{enumerate}
+% \section{A Tour of Computer Systems}
 
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.5]{pic/pic2}
-    \caption{Hardware organization
-    of a typical system. CPU:
-    central processing unit,
-    ALU: arithmetic/logic unit,
-    PC: program counter, USB:
-    Universal Serial Bus.}
-\end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.5]{pic/pic1}
+%     \caption{The compilation system.}
+% \end{figure}
+
+% linux> gcc -o hello hello.c
+
+% 컴파일 시스템을 이해해야하는 이유
+
+% \begin{enumerate}
+%     \item 성능 최적화
+%     \item 링커 에러 이해하기
+%     \item 보안 약점
+% \end{enumerate}
 
 
-\begin{itemize}
-    \item Buses
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.5]{pic/pic2}
+%     \caption{Hardware organization
+%     of a typical system. CPU:
+%     central processing unit,
+%     ALU: arithmetic/logic unit,
+%     PC: program counter, USB:
+%     Universal Serial Bus.}
+% \end{figure}
+
+
+% \begin{itemize}
+%     \item Buses
     
-    하드웨어에 돌아다니는 데이터 통로(a collection of electrical conduits) word라고 하는 고정크기의 바이트 단위로 데이터가 전송된다. 최근에는 4byte 또는 8byte 크기를 가진다.
+%     하드웨어에 돌아다니는 데이터 통로(a collection of electrical conduits) word라고 하는 고정크기의 바이트 단위로 데이터가 전송된다. 최근에는 4byte 또는 8byte 크기를 가진다.
 
-    \item I/O Devices
-    시스템과 외부로부터의 연결을 가능케하는 장치.
+%     \item I/O Devices
+%     시스템과 외부로부터의 연결을 가능케하는 장치.
 
-    \item Main Memory
+%     \item Main Memory
     
-    프로세서가 프로그램을 실행하는 동안 데이터와 프로그램을 저장하는 임시 저장장치이다. 물리적으로 DRAM(Dynamic Random Access Memorry)로 구성되어 있다.
+%     프로세서가 프로그램을 실행하는 동안 데이터와 프로그램을 저장하는 임시 저장장치이다. 물리적으로 DRAM(Dynamic Random Access Memorry)로 구성되어 있다.
 
-    \item Processor(CPU)
+%     \item Processor(CPU)
     
-    프로그램 카운터(PC)는 메인메모리의 기계어 인스트럭션을 가리키는데 이 인스트럭션 값을 읽어서 특정한 동작을 수행하고 PC값을 갱신한다. 이 동작은 메인 메모리, 레지스터 파일, ALU주위를 돈다.
-    레지스터 파일은 고유의 이름을 갖는 워드 크기의 레지스터 집합이다.
-\end{itemize}
+%     프로그램 카운터(PC)는 메인메모리의 기계어 인스트럭션을 가리키는데 이 인스트럭션 값을 읽어서 특정한 동작을 수행하고 PC값을 갱신한다. 이 동작은 메인 메모리, 레지스터 파일, ALU주위를 돈다.
+%     레지스터 파일은 고유의 이름을 갖는 워드 크기의 레지스터 집합이다.
+% \end{itemize}
 
-추가적인것 .
+% 추가적인것 .
 
-캐시
+% 캐시
 
-메모리 계층
+% 메모리 계층
 
-쓰레드 동시성
+% 쓰레드 동시성
 
-프로세스 contex switching
+% 프로세스 contex switching
 
-가상메모리
+% 가상메모리
 
-파일
+% 파일
 
-네트워크
-
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.5]{pic/pic3.png}
-    \caption{메모리 계층}
-\end{figure}
+% 네트워크
 
 
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.5]{pic/pic4.png}
-    \caption{ward 0x1234567이 저장되는 방식.}
-\end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.5]{pic/pic3.png}
+%     \caption{ward 0x1234567이 저장되는 방식.}
+% \end{figure}
 
 
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.5]{pic/pic5.png}
-    \caption{ward 0x1234567이 저장되는 방식.}
-\end{figure}
-
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.4]{pic/pic6.png}
-    \caption{ward 0x1234567이 저장되는 방식.}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.5]{pic/pic7.png}
-    \caption{ward 0x1234567이 저장되는 방식.}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.4]{pic/pic8.png}
-    \caption{ward 0x1234567이 저장되는 방식.}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.5]{pic/pic9.png}
-    \caption{ward 0x1234567이 저장되는 방식.}
-\end{figure}
-
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.3]{pic/pic10.png}
-    \caption{ward 0x1234567이 저장되는 방식.}
-\end{figure}
-
-
-%\chapter{Part I Program Structure and Execution}
-\part{Part I Program Structure and Execution}
-
-\chapter{Representing and Manipulating Information}
-
-
-메모리에 객체가 저장되는 방식
-
-객체의 수조는 사용된 바이트의 최소 주소로 정함.
-4byte크기인 int type 변수 x가 주소 0x100로 설정된다면 $int \&x$의 값은 0x100이고 주소 0x100,1,2,0x103에 x가 저장된다.
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.5]{pic/pic4.png}
+%     \caption{ward 0x1234567이 저장되는 방식.}
+% \end{figure}
 
 
 
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.5]{pic/pic5.png}
+%     \caption{ward 0x1234567이 저장되는 방식.}
+% \end{figure}
+
+
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.5]{pic/pic6.png}
+%     \caption{ward 0x1234567이 저장되는 방식.}
+% \end{figure}
+
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.5]{pic/pic7.png}
+%     \caption{ward 0x1234567이 저장되는 방식.}
+% \end{figure}
+
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.5]{pic/pic8.png}
+%     \caption{ward 0x1234567이 저장되는 방식.}
+% \end{figure}
+
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.5]{pic/pic4.png}
+%     \caption{ward 0x1234567이 저장되는 방식.}
+% \end{figure}
+
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.5]{pic/pic9.png}
+%     \caption{ward 0x1234567이 저장되는 방식.}
+% \end{figure}
+
+
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.5]{pic/pic10.png}
+%     \caption{ward 0x1234567이 저장되는 방식.}
+% \end{figure}
+
+
+% \chapter{Part I Program Structure and Execution}
+
+
+% \section{Representing and Manipulating Information}
+
+
+% 메모리에 객체가 저장되는 방식
+
+% 객체의 수조는 사용된 바이트의 최소 주소로 정함.
+% 4byte크기인 int type 변수 x가 주소 0x100로 설정된다면 $int \&x$의 값은 0x100이고 주소 0x100,1,2,0x103에 x가 저장된다.
 
 
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.3]{pic/pic11.png}
-    \caption{ward 0x1234567이 저장되는 방식.}
-\end{figure}
 
 
-\begin{itemize}
-    \item little endian :  최하위 바이트를 시작주소에 차례로 저장하는 방식 (intel)
-    \item big endian : 최상위 바이트를 시작주소에 차례로 저장하는 방식 (IBM Oracle)
-\end{itemize}
+
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.5]{pic/pic11.png}
+%     \caption{ward 0x1234567이 저장되는 방식.}
+% \end{figure}
 
 
-\begin{lstlisting}[style = CStyle]
- #include <stdio.h>
- typedef unsigned char *byte_pointer;
-
- void show_bytes(byte_pointer start, size_t len) {
- int i;
- for (i = 0; i < len; i++)
- printf(" %.2x", start[i]);
- printf("\n");
- }
-
- void show_int(int x) {
- show_bytes((byte_pointer) &x, sizeof(int));
- }
-
- void show_float(float x) {
- show_bytes((byte_pointer) &x, sizeof(float));
- }
-
- void show_pointer(void *x) {
- show_bytes((byte_pointer) &x, sizeof(void *));
- }
+% \begin{itemize}
+%     \item little endian :  최하위 바이트를 시작주소에 차례로 저장하는 방식 (intel)
+%     \item big endian : 최상위 바이트를 시작주소에 차례로 저장하는 방식 (IBM Oracle)
+% \end{itemize}
 
 
- void test_show_bytes(int val) {
-     int ival = val;
-     float fval = (float) ival;
-     int *pval = &ival;
-     show_int(ival);
-     show_float(fval);
-     show_pointer(pval);
-     }
+% \begin{lstlisting}[style = CStyle]
+%  #include <stdio.h>
+%  typedef unsigned char *byte_pointer;
 
-\end{lstlisting}
-서로 다른 컴퓨터 타입은 서로 다르고, 호환성이 없는 인스트럭션과 인코딩을 사용한다. 다른 운영체제를 실행하는 동일한 프로세서들도 각자의 코딩 관습에 차이가 잇으며, 따라서 이들은 바이너리 호환성을 갖지 못한다.
+%  void show_bytes(byte_pointer start, size_t len) {
+%  int i;
+%  for (i = 0; i < len; i++)
+%  printf(" %.2x", start[i]);
+%  printf("\n");
+%  }
 
-\begin{lstlisting}[style = CStyle]
-    void inplace_swap(int *x, int *y) {
-     *y = *x ^ *y; /* Step 1 */
-     *x = *x ^ *y; /* Step 2 */
-     *y = *x ^ *y; /* Step 3 */
-     }
-    \end{lstlisting}
+%  void show_int(int x) {
+%  show_bytes((byte_pointer) &x, sizeof(int));
+%  }
+
+%  void show_float(float x) {
+%  show_bytes((byte_pointer) &x, sizeof(float));
+%  }
+
+%  void show_pointer(void *x) {
+%  show_bytes((byte_pointer) &x, sizeof(void *));
+%  }
+
+
+%  void test_show_bytes(int val) {
+%      int ival = val;
+%      float fval = (float) ival;
+%      int *pval = &ival;
+%      show_int(ival);
+%      show_float(fval);
+%      show_pointer(pval);
+%      }
+
+% \end{lstlisting}
+% 서로 다른 컴퓨터 타입은 서로 다르고, 호환성이 없는 인스트럭션과 인코딩을 사용한다. 다른 운영체제를 실행하는 동일한 프로세서들도 각자의 코딩 관습에 차이가 잇으며, 따라서 이들은 바이너리 호환성을 갖지 못한다.
+
+% \begin{lstlisting}[style = CStyle]
+%     void inplace_swap(int *x, int *y) {
+%      *y = *x ^ *y; /* Step 1 */
+%      *x = *x ^ *y; /* Step 2 */
+%      *y = *x ^ *y; /* Step 3 */
+%      }
+%     \end{lstlisting}
     
     
-    Shift Operations in C
+%     Shift Operations in C
     
-    \begin{itemize}
-        \item  논리(logical) 우측 쉬프트 : 좌측 끝을 k개의 0으로 채운다.
-        \item  산출(arithmetic) 우측 쉬프트 : 좌측 끝을 k개의 1로 채운다.
-    \end{itemize}
+%     \begin{itemize}
+%         \item  논리(logical) 우측 쉬프트 : 좌측 끝을 k개의 0으로 채운다.
+%         \item  산출(arithmetic) 우측 쉬프트 : 좌측 끝을 k개의 1로 채운다.
+%     \end{itemize}
     
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[scale=0.4]{pic/shift}
-    \end{figure}
+%     \begin{figure}[h!]
+%         \centering
+%         \includegraphics[scale=0.5]{pic/shift}
+%     \end{figure}
     
 
 
 
-\chapter{Machine-Level Representation of Programs}
+% \section{Machine-Level Representation of Programs}
 
 
-linux> gcc -Og -o p p1.c p2.c
+% linux> gcc -Og -o p p1.c p2.c
 
 
--0g 옵션 : 최적화 x
+% -0g 옵션 : 최적화 x
 
-ISA (instruction set architectune)
+% ISA (instruction set architectune)
 
-linux> gcc -Og -S mstore.c
+% linux> gcc -Og -S mstore.c
 
--S : 어셈블리 코드만 만든다 .s
+% -S : 어셈블리 코드만 만든다 .s
 
-linux> gcc -Og -c mstore.c
+% linux> gcc -Og -c mstore.c
 
-바이너리 형식 목적파일 .o  생성
-
-
-linux> objdump -d mstore.o
-
-disassembly
+% 바이너리 형식 목적파일 .o  생성
 
 
-\section{x86 assembly}
+% linux> objdump -d mstore.o
+
+% disassembly
 
 
-\begin{figure}[h!]
-    \centering
-%    \includegraphics[scale=0.5]{pic/pic1}
-    \caption{ward 0x1234567이 저장되는 방식.}
-\end{figure}
+% \subsection{x86 assembly}
 
 
-
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.5]{pic/pic1}
-    \caption{ward 0x1234567이 저장되는 방식.}
-\end{figure}
+% \begin{figure}[h!]
+%     \centering
+% %    \includegraphics[scale=0.5]{pic/pic1}
+%     \caption{ward 0x1234567이 저장되는 방식.}
+% \end{figure}
 
 
 
 
-
-3.1 A Historical Perspective 202
-3.2 Program Encodings 205
-3.3 Data Formats 213
-3.4 Accessing Information 215
-3.5 Arithmetic and Logical Operations 227
-3.6 Control 236
-3.7 Procedures 274
-3.8 Array Allocation and Access 291
-3.9 Heterogeneous Data Structures 301
-3.10 Combining Control and Data in Machine-Level Programs 312
-3.11 Floating-Point Code 329
-3.12 Summary 345
-
-\chapter{Processor Architecture}
-
-387
-4.1 The Y86-64 Instruction Set Architecture 391
-4.2 Logic Design and the Hardware Control Language HCL 408
-4.3 Sequential Y86-64 Implementations 420
-4.4 General Principles of Pipelining 448
-4.5 Pipelined Y86-64 Implementations 457
-4.6 Summary 506
-4.6.1 Y86-64 Simulators 508
-Bibliographic Notes 509
-Homework Problems 509
-Solutions to Practice Problems 516
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.5]{pic/pic1}
+%     \caption{ward 0x1234567이 저장되는 방식.}
+% \end{figure}
 
 
-\include{section5}
+
+
+
+% 3.1 A Historical Perspective 202
+% 3.2 Program Encodings 205
+% 3.3 Data Formats 213
+% 3.4 Accessing Information 215
+% 3.5 Arithmetic and Logical Operations 227
+% 3.6 Control 236
+% 3.7 Procedures 274
+% 3.8 Array Allocation and Access 291
+% 3.9 Heterogeneous Data Structures 301
+% 3.10 Combining Control and Data in Machine-Level Programs 312
+% 3.11 Floating-Point Code 329
+% 3.12 Summary 345
+
+% \section{Processor Architecture}
+
+% 387
+% 4.1 The Y86-64 Instruction Set Architecture 391
+% 4.2 Logic Design and the Hardware Control Language HCL 408
+% 4.3 Sequential Y86-64 Implementations 420
+% 4.4 General Principles of Pipelining 448
+% 4.5 Pipelined Y86-64 Implementations 457
+% 4.6 Summary 506
+% 4.6.1 Y86-64 Simulators 508
+% Bibliographic Notes 509
+% Homework Problems 509
+% Solutions to Practice Problems 516
+
+
+%\include{section5}
 
 
 
@@ -406,7 +415,7 @@ Solutions to Practice Problems 516
 
 % \chapter{Part II Running Programs on a System}
 
-% \chapter{Linking}
+% \section{Linking}
 
 % 7.1 Compiler Drivers 707
 % 7.2 Static Linking 708
@@ -458,7 +467,7 @@ Solutions to Practice Problems 516
 
 % ​
 
-% 7.5 symbol & symbol table(.symtab chapter)
+% 7.5 symbol & symbol table(.symtab section)
 
 % ​
 
@@ -478,9 +487,9 @@ Solutions to Practice Problems 516
 
 % ​
 
-% 1.chapter,symbol def Relocation
+% 1.section,symbol def Relocation
 
-% 2.in chapter symbol ref ''
+% 2.in section symbol ref ''
 
 % ​
 
@@ -521,7 +530,7 @@ Solutions to Practice Problems 516
 
 % --------------------------------------------------
 % 8
-% \chapter{Exceptional Control Flow}
+% \section{Exceptional Control Flow}
 % 8.1 Exceptions 759
 % 8.1.1 Exception Handling 760
 % 8.1.2 Classes of Exceptions 762
@@ -556,7 +565,7 @@ Solutions to Practice Problems 516
 % Solutions to Practice Problems 831
 
 
-% \chapter{Virtual Memory}
+% \section{Virtual Memory}
 
 % 9.1 Physical and Virtual Addressing 839
 % 9.2 Address Spaces 840
@@ -620,7 +629,7 @@ Solutions to Practice Problems 516
 % Part III Interaction and Communication
 % between Programs
 
-% \chapter{System-Level I/O}
+% \section{System-Level I/O}
 
 % 10.1 Unix I/O 926
 % 10.2 Files 927
@@ -640,7 +649,7 @@ Solutions to Practice Problems 516
 % Homework Problems 950
 % Solutions to Practice Problems 951
 
-% \chapter{Network Programming}
+% \section{Network Programming}
 % 11.1 The Client-Server Programming Model 954
 % 11.2 Networks 955
 % 11.3 The Global IP Internet 960
@@ -668,7 +677,7 @@ Solutions to Practice Problems 516
 % Homework Problems 1001
 % Solutions to Practice Problems 1002
 
-% \chapter{Concurrent Programming}
+% \section{Concurrent Programming}
 % 12.1 Concurrent Programming with Processes 1009
 % 12.1.1 A Concurrent Server Based on Processes 1010
 % 12.1.2 Pros and Cons of Processes 1011
@@ -707,5 +716,3 @@ Solutions to Practice Problems 516
 % Bibliographic Notes 1066
 % Homework Problems 1067
 % Solutions to Practice Problems 1072
-
-\end{document}
