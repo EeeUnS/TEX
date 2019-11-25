@@ -350,3 +350,46 @@ combine5의 다음코드를
 \end{figure}
 
 
+\section{Summary of Results for Optimizing Combining Code}
+
+\section{Some Limiting Factors}
+\subsection{Register Spilling}
+    사용가능한 레지스터 수를 넘긴 병렬성을 갖는다면 값들을 메모리로 넘기는 식을 이용해서 런타임 스택에 공간을 할당한다.
+\subsection{Branch Prediction and Misprediction Penalties}
+    신경쓰지말것
+
+\section{Understanding Memory Performance}
+\subsection{Load Performance}
+메모리 읽기에대해서 매 클럭사이클마다 유닛갯수만큼 읽을수있기 때문에 하한선이 존재한다.
+\subsection{Store Performance}
+store 유닛과 load 유닛의 데이터 의존성이 발생할 수 있다. 같은 주소를 바로 저장하고 읽는경우에 성능저하가 나올수있다. 이때 생성되는 연산이 7개의 클럭사이클이 필요.
+
+\section{Life in the Real World: Performance Improvement Techniques}
+
+\textrm{High-level design.} Choose appropriate algorithms and data structures for the problem at hand. Be especially vigilant to avoid algorithms or coding techniques that yield asymptotically poor performance.
+
+\textrm{Basic coding principles.} Avoid optimization blockers so that a compiler can generate efficient code.
+\begin{itemize}
+    \item Eliminate excessive function calls. Move computations out of loops when possible. Consider selective compromises of program modularity to gain greater efficiency.
+    \item Eliminate unnecessary memory references. Introduce temporary variables to hold intermediate results. Store a result in an array or global variable only when the final value has been computed.
+\end{itemize}
+
+\textrm{Low-level optimizations.} Structure code to take advantage of the hardware capabilities.
+\begin{itemize}
+    \item Unroll loops to reduce overhead and to enable further optimizations.
+    \item Find ways to increase instruction-level parallelism by techniques such as multiple accumulators and reassociation.
+    \item Rewrite conditional operations in a functional style to enable compilation via conditional data transfers.
+\end{itemize}
+
+
+5.14 Identifying and Eliminating Performance Bottlenecks 598
+
+
+gprof
+
+\begin{lstlisting}[language=bash]
+    linux> gcc -Og -pg prog.c -o prog
+    linux> ./prog file.txt
+    linux> gprof prog
+\end{lstlisting}
+
