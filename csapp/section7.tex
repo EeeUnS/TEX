@@ -1,85 +1,180 @@
-Linker
+\chapter{Linker}
 
-7.1 .c-> .i -> .s -> .o ->(linker) exe
+\section{Compiler Drivers}
 
-​
 
-​
 
-7.2 static linker
+\begin{lstlisting}[language=bash]
+    linux> gcc -Og -o prog main.c sum.css
 
-​
+    cpp [other arguments] main.c /tmp/main.is
+    as [other arguments] -o /tmp/main.o /tmp/main.s
+    ld -o prog [system object files and args] /tmp/main.o /tmp/sum.o
+    linux> ./prog
+\end{lstlisting}
 
-순서
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{Static linking. The linker combines relocatable    object files to form an executable object file prog}
+\end{figure}
 
-1.symbol resolution(7.6)
 
-2. Relocation(7.7)
 
-​
+\section{Static Linking}
 
-7.3 object file(object module)
+about sympbol(7.5)
+\begin{enumerate}
+    \item symbol resolution(7.6)
+    \item Relocation(7.7)
+\end{enumerate}
 
-1. Relocatable ob~(7.4)
+\section{Object Files}
 
-2.Executable ob~(7.8,7.9)
+Object files are merely collections of blocks
+of bytes. Some of these blocks contain program code, others contain program
+data, and others contain data structures that guide the linker and loader. A linker
+concatenates blocks together, decides on run-time locations for the concatenated
+blocks, and modifies various locations within the code and data blocks. Linkers
+have minimal understanding of the target machine. The compilers and assemblers
+that generate the object files have already done most of the work.
 
-3.shared ob~ (7.10)
 
-​
+\begin{itemize}
+    \item Relocatable ob~(7.4) : compiler,assembler output
+    \item Executable ob~(7.8,7.9) linker output
+    \item shared ob~ (7.10)
+\end{itemize}
 
-7.5 symbol \& symbol table(.symtab section)
 
-​
 
-1. 전역(definition)
+\section{Relocatable Object Files}
 
-2. 전역(Reference)
 
-3. 지역(locale),static -> table X
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{Typical ELF relocatable object file.}
+\end{figure}
 
-​
 
-​
+\section{Symbols and Symbol Tables}
 
-​
 
-7.6 symbol resolution
+\begin{itemize}
+    \item Global symbols that are defined by module m and that can be referenced by other modules :nonstatic C functions and
+    global variables
+    \item Global symbols that are referenced by module m but defined by some other module : nonstatic C functions and global variables that are defined in other modules.
+    \item Local symbolsthat are defined and referenced exclusively by module m : nonstatic C functions and global variables that are defined in other modules.
+\end{itemize}
 
-​
+\section{Symbol Resolution}
 
-1.section,symbol def Relocation
+\subsection{How Linkers Resolve Duplicate Symbol Name}
 
-2.in section symbol ref ''
+\begin{itemize}
+    \item strong symbol : 초기화된 전역변수
+    \item weak symbol : 초기화x 전역변수
+\end{itemize}
 
-​
+Rule
+\begin{enumerate}
+    \item Multiple strong symbols with the same name are not allowed.
+    \item Given a strong symbol and multiple weak symbols with the same name, choose the strong symbol.
+    \item Given multiple weak symbols with the same name, choose any of the weak symbols.
+\end{enumerate}
 
-​
+\subsection{Linking with Static Libraries}
 
-7.7 Relocation
+라이브러리 생성
 
-​
+\begin{lstlisting}[language=bash]
+linux> gcc -c addvec.c multvec.c
+linux> ar rcs libvector.a addvec.o multvec.o
+\end{lstlisting}
 
--o ,-o-> .a
+라이브러리 링킹
 
-규칙 : 중복 symbol 처리
+\begin{lstlisting}[language=bash]
+    
+linux> gcc -c main2.c
+linux> gcc -static -o prog2c main2.o ./libvector.a
 
-1. 복수의 강한 symbol(초기화된 전역) -> compiler error
+linux> gcc -c main2.c
+linux> gcc -static -o prog2c main2.o -L. -lvector
 
-2. 강 > 약(초기화 X 전역)
+\end{lstlisting}
 
-3. 약s->아무거나
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{Linking with static libraries.}
+\end{figure}
 
-+ static lib
 
-​
 
-7.8,7.9 Executable ob~
 
-​
+\section{Relocation}
 
-​
+\begin{enumerate}
+    \item Relocating sections and symbol definitionss   인스트럭션과 전역변수들이 런타임 메모리 주소를 가진다.
+    \item Relocating symbol references within sections.    
+    모든 심볼들이 런타임 메모리 주소를 가진다.
+\end{enumerate}
 
-7.10,7.11
+\subsection{Relocation Entries}
+위치를 모르는 심볼을 어떻게 처리할지에대해 어셈블러가만듬
 
-DLL, .so 
+
+재배치타입
+\begin{itemize}
+    \item R_X86_64_PC32
+    \item R_X86_64_32.
+\end{itemize}
+\subsection{Relocating Symbol References}
+
+
+\section{Executable Object Files}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{Typical ELF executable object file.}
+\end{figure}
+
+\section{Loading Executable Object Files}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{\textbf{Linux x86-64 run-time memory image.} 
+    Gaps due to segment alignment requirements and addressspace layout randomization (ASLR) are not shown. Not to scale}
+\end{figure}
+
+loading : 실행가능한 목적파일 내의 코드와 데이터를 메모리로 복사하고 첫번째 인스트럭션(엔트리 포인트)으로 점프해서실행하는 과정
+
+\section{Dynamic Linking with Shared Libraries}
+
+\begin{lstlisting}[language=bash]
+linux> gcc -shared -fpic -o libvector.so addvec.c multvec.c
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash]
+    linux> gcc -o prog2l main2.c ./libvector.so
+\end{lstlisting}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{Dynamic linking with shared libraries.}
+\end{figure}
+
+
+
+\section{Loading and Linking Shared Libraries from Applications}
+
+\section{Position-Independent Code (PIC)}
+
+
+\section{Library Interpositioning}
