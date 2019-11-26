@@ -15,7 +15,7 @@
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.5]{}
+    \includegraphics[scale=0.5]{pic/section7/pic1.png}
     \caption{Static linking. The linker combines relocatable    object files to form an executable object file prog}
 \end{figure}
 
@@ -53,7 +53,7 @@ that generate the object files have already done most of the work.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.5]{}
+    \includegraphics[scale=0.5]{pic/section7/pic2.png}
     \caption{Typical ELF relocatable object file.}
 \end{figure}
 
@@ -107,7 +107,7 @@ linux> gcc -static -o prog2c main2.o -L. -lvector
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.5]{}
+    \includegraphics[scale=0.5]{pic/section7/pic3.png}
     \caption{Linking with static libraries.}
 \end{figure}
 
@@ -127,10 +127,12 @@ linux> gcc -static -o prog2c main2.o -L. -lvector
 
 
 재배치타입
+
 \begin{itemize}
-    \item R_X86_64_PC32
-    \item R_X86_64_32.
+    \item R\_X86\_64\_PC32
+    \item R\_X86\_64\_32.
 \end{itemize}
+
 \subsection{Relocating Symbol References}
 
 
@@ -139,7 +141,7 @@ linux> gcc -static -o prog2c main2.o -L. -lvector
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.5]{}
+    \includegraphics[scale=0.4]{pic/section7/pic4.png}
     \caption{Typical ELF executable object file.}
 \end{figure}
 
@@ -147,7 +149,7 @@ linux> gcc -static -o prog2c main2.o -L. -lvector
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.5]{}
+    \includegraphics[scale=0.5]{pic/section7/pic5.png}
     \caption{\textbf{Linux x86-64 run-time memory image.} 
     Gaps due to segment alignment requirements and addressspace layout randomization (ASLR) are not shown. Not to scale}
 \end{figure}
@@ -166,7 +168,7 @@ linux> gcc -shared -fpic -o libvector.so addvec.c multvec.c
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.5]{}
+    \includegraphics[scale=0.5]{pic/section7/pic6.png}
     \caption{Dynamic linking with shared libraries.}
 \end{figure}
 
