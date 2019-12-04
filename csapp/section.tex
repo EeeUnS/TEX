@@ -1,0 +1,259 @@
+
+
+\chapter{Machine-Level Representation of Programs}
+
+%https://dayjms.tistory.com/entry/비주얼-스튜디오-코드의-11가지-유용한-기능-1-멀티커서-에디팅MultiCursor-Editing
+%https://www.vobour.com/개발-생산성을-올려주는-vscode의-소소-한-기능들
+
+\section{Program Encodings}
+\section{Data Formats}
+\section{A Historical Perspective}
+\section{Accessing Information}
+
+
+linux> gcc -Og -o p p1.c p2.c
+
+
+-0g 옵션 : 최적화 x
+
+ISA (instruction set architectune)
+
+linux> gcc -Og -S mstore.c
+
+-S : 어셈블리 코드만 만든다 .s
+
+linux> gcc -Og -c mstore.c
+
+바이너리 형식 목적파일 .o  생성
+
+
+linux> objdump -d mstore.o
+
+disassembly
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{Sizes of C data types in x86-64. With a 64-bit machine, pointers are 8 bytes long.}
+\end{figure}
+
+
+
+\subsection{Operand Specifiers}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{Operand forms. Operands can denote immediate (constant) values, register values, or values from memory. The scaling factor s must be either 1, 2, 4, or 8}
+\end{figure}
+
+\begin{itemize}
+    \item register : 레지스터 값 접근
+    \item 나머지 모두 포인터 접근!,괄호도!
+\end{itemize}
+
+\subsection{Data Movement Instructions}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{Simple data movement instructions}
+\end{figure}
+
+movl의 경우 상위 4바이트 0으로 세팅
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{Zero-extending data movement instructions. These instructions have a register or memory location as the source and a register as the destination.
+    }
+\end{figure}
+
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{Sign-extending data movement instructions. The movs instructions have a register or memory location as the source and a register as the destination. The cltq instruction is specific to registers $\%eax$ and $\%rax$.
+    }
+\end{figure}
+
+\subsection{Data Movement Example}
+
+\subsection{Pushing and Popping Stack Data}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{Push and pop instructions}
+\end{figure}
+
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{Illustration of stack operation. By convention, we draw stacks upside down, so that the “top” of the stack is shown at the bottom. With x86-64, stacks grow toward       lower addresses, so pushing involves decrementing the stack pointer (register %rsp) and storing to memory, while popping involves reading from memory and incrementing the stack pointer.}
+\end{figure}
+
+pushq 와 같다.
+\begin{lstlsting}[]
+    subq $8,%rsp Decrement stack pointer
+    movq %rbp,(%rsp) Store %rbp on stack    
+\end{lstlsting}
+
+
+popq 와 같다.
+\begin{lstlsting}[]
+movq (%rsp),%rax Read %rax from stack
+addq $8,%rsp Increment stack pointer
+\end{lstlsting}
+
+\section{Arithmetic and Logical Operations}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{Integer arithmetic operations. The load effective address (leaq) instruction is commonly used to perform simple arithmetic. The remaining ones are more standard unary or binary operations. We use the notation >>A and >>L to denote arithmetic and logical right shift, respectively. Note the nonintuitive ordering of the operands with ATT-format assembly code.}
+\end{figure}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{Special arithmetic operations. These operations provide full 128-bit multiplication and division, for both signed and unsigned numbers. The pair of registers %rdx and %rax are viewed as forming a single 128-bit oct word.}
+\end{figure}
+
+% \subsection{Load Effective Address}
+% \subsection{Unary and Binary Operations}
+% \subsection{Shift Operations}
+% \subsection{Discussion}
+% \subsection{Special Arithmetic Operations}
+
+
+
+\section{Control}
+
+\subsection{Condition Codes}
+\begin{itemize}
+    \item CF: Carry flag. The most recent operation generated a carry out of the most significant bit. Used to detect overflow for unsigned operations.
+    \item ZF: Zero flag. The most recent operation yielded zero.
+    \item SF: Sign flag. The most recent operation yielded a negative value.
+    \item OF: Overflow flag. The most recent operation caused a two’s-complement overflow—either negative or positive.
+\end{itemize}
+
+\subsection{Accessing the Condition Codes}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{Comparison and test instructions. These instructions set the condition    codes without updating any other registers.}
+    \caption{}
+\end{figure}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{The set instructions. Each instruction sets a single byte to 0 or 1 based on some combination of the condition codes. Some instructions have “synonyms,” that is,    alternate names for the same machine instruction.}
+\end{figure}
+
+\subsection{Jump Instructions}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{The jump instructions. These instructions jump to a labeled destination    when the jump condition holds. Some instructions have “synonyms,” alternate names    for the same machine instruction.}
+\end{figure}
+
+\subsection{Jump Instruction Encodings}
+
+
+\subsection{Implementing Conditional Branches with Conditional Control Moves}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{The conditional move instructions. These instructions copy the source    value S to its destination R when the move condition holds. Some instructions have    “synonyms,” alternate names for the same machine instruction.}
+\end{figure}
+
+\subsection{Loops}
+\subsection{Switch Statements}
+
+
+\section{Procedures}
+\subsection{The Run-Time Stack}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{General stack frame    structure. The stack    can be used for passing    arguments, for toring    return information, for    saving registers, and for    local storage. Portions    may be mitted when not    needed.    }
+\end{figure}
+
+
+
+\subsection{Control Transfer}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{}
+\end{figure}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{}
+\end{figure}
+
+
+\subsection{Data Transfer}
+\subsection{Local Storage on the Stack}
+\subsection{Local Storage in Registers}
+\subsection{Recursive Procedures}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{}
+    \caption{}
+\end{figure}
+
+
+\section{Array Allocation and Access}
+\section{Basic Principles}
+\section{Pointer Arithmetic}
+\section{Nested Arrays}
+\section{Fixed-Size Arrays}
+\section{Variable-Size Arrays}
+
+
+\section{Heterogeneous Data Structures}
+\subsection{Structures}
+\subsection{Unions}
+\subsection{Data Alignment}
+
+\section{Combining Control and Data in Machine-Level Programs}
+\subsection{Understanding Pointers}
+\subsection{Life in the Real World: Using the gdb Debugger}
+\subsection{Out-of-Bounds Memory References and Buffer Overflow}
+\subsection{Thwarting Buffer Overflow Attacks}
+\subsection{Supporting Variable-Size Stack Frames}
+
+
+\section{Floating-Point Code}
+\section{Floating-Point Movement and Conversion Operations}
+\section{Floating-Point Code in Procedures}
+\section{Floating-Point Arithmetic Operations}
+\section{Defining and Using Floating-Point Constants}
+\section{Using Bitwise Operations in Floating-Point Code}
+\section{Floating-Point Comparison Operations}
+\section{Observations about Floating-Point Code}
+
+
