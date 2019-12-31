@@ -15,13 +15,8 @@
 
 \begin{figure}[h!]
     \centering
-<<<<<<< HEAD
-    \includegraphics[scale=0.5]{}
-    \caption{Static linking. The linker combines relocatable object files to form an executable object file prog}
-=======
     \includegraphics[scale=0.5]{pic/section7/pic1.png}
     \caption{Static linking. The linker combines relocatable    object files to form an executable object file prog}
->>>>>>> parent of cab0e49... Update section7.tex
 \end{figure}
 
 
@@ -62,7 +57,6 @@ that generate the object files have already done most of the work.
     \caption{Typical ELF relocatable object file.}
 \end{figure}
 
-<<<<<<< HEAD
 \begin{itemize}
     \item \textbf{.text} The machine code of the compiled program.
     \item \textbf{.rodata} Read-only data such as the format strings in printf statements, and jump tables for switch statements.
@@ -82,10 +76,6 @@ that generate the object files have already done most of the work.
     \item \textbf{.line} A mapping between line numbers in the original C source program and machine code instructions in the .text section. It is only present if the compiler driver is invoked with the -g option.
     \item \textbf{.strtab} A string table for the symbol tables in the .symtab and .debug sections and for the section names in the section headers. A string table is a sequence of null-terminated character strings.
 \end{itemize}
-=======
-
-\section{Symbols and Symbol Tables}
->>>>>>> parent of cab0e49... Update section7.tex
 
 \section{Symbols and Symbol Tables}
 
@@ -153,19 +143,10 @@ linux> gcc -static -o prog2c main2.o -L. -lvector
 위치를 모르는 심볼을 어떻게 처리할지에대해 어셈블러가만듬
 .rel.data section에 존재
 
-<<<<<<< HEAD
 재배치방식
 \begin{itemize}
     \item R_X86_64_PC32 : 상대주소
     \item R_X86_64_32. : 절대주소
-=======
-
-재배치타입
-
-\begin{itemize}
-    \item R\_X86\_64\_PC32
-    \item R\_X86\_64\_32.
->>>>>>> parent of cab0e49... Update section7.tex
 \end{itemize}
 
 \subsection{Relocating Symbol References}
