@@ -16,7 +16,7 @@
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.5]{}
-    \caption{Static linking. The linker combines relocatable    object files to form an executable object file prog}
+    \caption{Static linking. The linker combines relocatable object files to form an executable object file prog}
 \end{figure}
 
 
@@ -76,14 +76,13 @@ that generate the object files have already done most of the work.
     \item \textbf{.line} A mapping between line numbers in the original C source program and machine code instructions in the .text section. It is only present if the compiler driver is invoked with the -g option.
     \item \textbf{.strtab} A string table for the symbol tables in the .symtab and .debug sections and for the section names in the section headers. A string table is a sequence of null-terminated character strings.
 \end{itemize}
+
 \section{Symbols and Symbol Tables}
 
-
 \begin{itemize}
-    \item Global symbols that are defined by module m and that can be referenced by other modules :nonstatic C functions and
-    global variables
+    \item Global symbols that are defined by module m and that can be referenced by other modules :nonstatic C functions and global variables
     \item Global symbols that are referenced by module m but defined by some other module : nonstatic C functions and global variables that are defined in other modules.
-    \item Local symbolsthat are defined and referenced exclusively by module m : nonstatic C functions and global variables that are defined in other modules.
+    \item Local symbols that are defined and referenced exclusively by module m : nonstatic C functions and global variables that are defined in other modules.
 \end{itemize}
 
 \section{Symbol Resolution}
@@ -135,20 +134,21 @@ linux> gcc -static -o prog2c main2.o -L. -lvector
 \section{Relocation}
 
 \begin{enumerate}
-    \item Relocating sections and symbol definitionss   인스트럭션과 전역변수들이 런타임 메모리 주소를 가진다.
-    \item Relocating symbol references within sections.    
+    \item Relocating sections and symbol definitionss :  여러개의 .data section 합친다. 이후 인스트럭션과 전역변수들이 런타임 메모리 주소를 가진다.
+    \item Relocating symbol references within sections. :모든 심볼 참조를 수정한다. 이후  
     모든 심볼들이 런타임 메모리 주소를 가진다.
 \end{enumerate}
 
 \subsection{Relocation Entries}
 위치를 모르는 심볼을 어떻게 처리할지에대해 어셈블러가만듬
+.rel.data section에 존재
 
-
-재배치타입
+재배치방식
 \begin{itemize}
-    \item R_X86_64_PC32
-    \item R_X86_64_32.
+    \item R_X86_64_PC32 : 상대주소
+    \item R_X86_64_32. : 절대주소
 \end{itemize}
+
 \subsection{Relocating Symbol References}
 
 
