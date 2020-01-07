@@ -1,0 +1,73 @@
+
+\chapter{Concurrent Programming}
+
+\begin{itemize}
+    \item Accessing slow I/O devices
+    \item Interacting with humans.
+    \item Reducing latency by deferring work
+    \item Servicing multiple network clients
+    \item Computing in parallel on multi-core machines
+    \item 
+\end{itemize}
+
+동시성 프로그램을 위한 세가지 접근 방법
+\begin{itemize}
+    \item Processes
+    \item I/O multiplexing
+    \item Threads
+\end{itemize}
+
+
+
+\section{Concurrent Programming with Processes}
+A Concurrent Server Based on Processes
+Pros and Cons of Processes
+
+pork exec, waitpid등의 프로세스 제어 함수를 사용한다
+특징
+\begin{itemize}
+    \item 분리된 주소공간을 가진다.
+    \item 프로세스가 상태정보를 공유하는것이 어렵다.
+    \item 명시적인 IPC(interprocess communications)를 사용해야한다..
+    \item 프로세스 제어와 IPC 오버헤드가 크기 때문에 더 느려질수있다.
+\end{itemize}
+
+
+Concurrent Programming with I/O Multiplexing
+1 A Concurrent Event-Driven Server Based on I/Multiplexing
+2 Pros and Cons of I/O Multiplexing
+
+
+
+
+Concurrent Programming with Threads
+1 Thread Execution Model
+2 Posix Threads
+3 Creating Threads
+4 Terminating Threads
+5 Reaping Terminated Threads
+6 Detaching Threads
+7 Initializing Threads
+8 A Concurrent Server Based on Threads
+Shared Variables in Threaded Programs
+1 Threads Memory Model
+2 Mapping Variables to Memory
+3 Shared Variables
+Synchronizing Threads with Semaphores
+1 Progress Graphs
+2 Semaphores
+3 Using Semaphores for Mutual Exclusion
+4 Using Semaphores to Schedule Shared Resources
+5 Putting It Together: A Concurrent Server Based Prethreading
+Using Threads for Parallelism
+
+
+
+
+Other Concurrency Issues
+1 Thread Safety
+2 Reentrancy
+3 Using Existing Library Functions in Threaded Programs
+4 Races
+5 Deadlocks
+Summary
