@@ -44,6 +44,32 @@ syscall :
     \item kill
 \end{itemize}
 
+\subsection{context switch}
+
+운영체제 커널이 context switch를 사용해서 멀티태스킹을 구현한다. 이것은 저수준의 예외 매커니즘 위에 구축된다.
+커널은 각 프로세스마다 context를 유지하는데 다음이 구성되어있다.
+\begin{itemize}
+    \item  the general-purpose registers
+    \item the floating-point registers
+    \item the program counter
+    \item user’s stack, status registers
+    \item kernel’s stack
+    \item various kernel data structures such as a page table that characterizes the address space
+    \item process table that contains information about the current process
+    \item a file table that contains information about the files that the process has opened.
+\end{itemize}
+
+
+
+
+수행 절차.
+\begin{enumerate}
+    \item saves the context of the current process
+    \item restores the saved context of some previously preempted Processes
+    \item passes control to this newly restored process.
+\end{enumerate}
+
+context switch는 system call을 실행중에 일어나거나 inturrupt의 결과로 발생할수있다.
 
 \section{Processes}
 
@@ -54,6 +80,9 @@ syscall :
     \item fork : 새로운 메모리에 매핑하여 자식프로세스로서 호출
     \item exevce : 현재 실행되는 프로그램의 메모리에 덮어쓰워 프로세스를 호출
 \end{itemize}
+
+Unix에서 지원하는 시스템콜로 프로세스를 제어할수있다.
+
 
 exevce는 실행할 프로그램에 argv(인자리스트)와  envp(환경변수)를 보낼수있다
 
