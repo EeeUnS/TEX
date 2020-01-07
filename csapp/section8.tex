@@ -18,7 +18,7 @@
 \begin{itemize}
     \item inturrupt(비동기) : I/O에서 시그널  다음 인스트럭션으로 돌려준다.
     \item trap(동기) : instruction 실행결과. syscall로 OS단에서 처리,다음 인스트럭션으로 돌려준다.
-    \item fault(동기) : ex) 가상 메모리 페이지 오류
+    \item fault(동기) : ex) 가상 메모리 페이지 오류, 현재 인스트럭션으로 돌려준다.
     \item abort(동기) : 하드웨어 단의 복구불가능 에러, 프로그램 종료
 \end{itemize}
 
@@ -39,7 +39,7 @@ syscall :
     \item getpid
     \item fork
     \item execve
-    \item _exit
+    \item \_exit
     \item sait4
     \item kill
 \end{itemize}
@@ -59,20 +59,20 @@ exevce는 실행할 프로그램에 argv(인자리스트)와  envp(환경변수)
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.5]{}
+    \includegraphics[scale=0.5]{pic/section8/pic1}
     \caption{Organization of an argument list.}
 \end{figure}
 
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.5]{}
+    \includegraphics[scale=0.47]{pic/section8/pic2}
     \caption{Organization of an environment variable list.}
 \end{figure}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.5]{}
+    \includegraphics[scale=0.5]{pic/section8/pic3}
     \caption{Typical organization of the user stack when a    new program starts.}
 \end{figure}
 

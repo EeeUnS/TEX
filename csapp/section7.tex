@@ -5,9 +5,9 @@
 
 
 \begin{lstlisting}[language=bash]
-    linux> gcc -Og -o prog main.c sum.css
+    linux> gcc -Og -o prog main.c sum.c
 
-    cpp [other arguments] main.c /tmp/main.is
+    cc1 /tmp/main.i -Og [other arguments] -o /tmp/main.s
     as [other arguments] -o /tmp/main.o /tmp/main.s
     ld -o prog [system object files and args] /tmp/main.o /tmp/sum.o
     linux> ./prog
