@@ -8,8 +8,11 @@
     linux> gcc -Og -o prog main.c sum.c
 
     cc1 /tmp/main.i -Og [other arguments] -o /tmp/main.s
+
     as [other arguments] -o /tmp/main.o /tmp/main.s
+
     ld -o prog [system object files and args] /tmp/main.o /tmp/sum.o
+
     linux> ./prog
 \end{lstlisting}
 
@@ -90,11 +93,11 @@ that generate the object files have already done most of the work.
 \subsection{How Linkers Resolve Duplicate Symbol Name}
 
 \begin{itemize}
-    \item strong symbol : 초기화된 전역변수
+    \item strong symbol : 초기화된 전역변수, 함수
     \item weak symbol : 초기화x 전역변수
 \end{itemize}
 
-Rule
+Rule (정확하겐 책 참고)
 \begin{enumerate}
     \item Multiple strong symbols with the same name are not allowed.
     \item Given a strong symbol and multiple weak symbols with the same name, choose the strong symbol.
@@ -107,6 +110,7 @@ Rule
 
 \begin{lstlisting}[language=bash]
 linux> gcc -c addvec.c multvec.c
+
 linux> ar rcs libvector.a addvec.o multvec.o
 \end{lstlisting}
 
@@ -152,14 +156,18 @@ linux> gcc -static -o prog2c main2.o -L. -lvector
 \subsection{Relocating Symbol References}
 
 
-\section{Executable Object Files}
 
+\newpage
+
+\section{Executable Object Files}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.4]{pic/section7/pic4.png}
+    \includegraphics[scale=0.35]{pic/section7/pic4.png}
     \caption{Typical ELF executable object file.}
 \end{figure}
+
+\newpage
 
 \section{Loading Executable Object Files}
 
@@ -171,6 +179,7 @@ linux> gcc -static -o prog2c main2.o -L. -lvector
 \end{figure}
 
 loading : 실행가능한 목적파일 내의 코드와 데이터를 메모리로 복사하고 첫번째 인스트럭션(엔트리 포인트)으로 점프해서실행하는 과정
+
 
 \section{Dynamic Linking with Shared Libraries}
 
