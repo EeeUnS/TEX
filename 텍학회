@@ -1,0 +1,179 @@
+
+static web page
+
+mkdocs
+python
+
+katex
+
+jekyll
+ruby
+
+
+mathjax
+
+
+직접 개설 vs tistory/네이버 블로그
+
+영구적으로 보관용이
+극한의 커스텀 가능
+
+단
+시작하기 너무 어려움
+유지비
+
+
+
+유지비x
+시작하기 편함
+관리가 편함
+
+비교적 자유도가 떨어짐.
+언젠가 없어진다면?
+
+
+아 tex 하고싶다.
+
+네이버 블로그
+
+1. 수식 편집기 사용
+
+2.tistory와 같음.
+매 글쓰기마다 html편집 필요.
+
+삽입.
+
+github page
+1. 무료
+2. 내부는 jekyll로 돌아감.
+3. 도메인 추가가능
+
+
+복잡하다. 
+
+github 블로그를 만들려면 ruby를 깔고.. jekyll 설치하고..
+쉘에 명령어를.. 그다음 git clone...
+
+이게 진짜 내가 원하는 것이 맞는가 한번 만들어보는데
+노력이 많이듬.
+
+
+
+
+tistory  mathjax쓰는법
+
+
+html 편집
+
+mathjax 
+tistory : 
+</head>에
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+헤더 한번만 바꾸면됨
+
+
+
+
+jekyll vs mkdocs
+
+jekyll 
+github blog로 이용시 가장 간편함
+ruby 설치.
+
+
+
+using javascript library
+
+mathjax  : for using MathML, and AsciiMath
+
+
+katex vs mathjax
+
+rendering 속도
+katex 
+
+기능, 확장성 mathjax
+
+14년 글 
+https://math.meta.stackexchange.com/questions/16809/a-mathjax-alternative-from-khan-academy
+
+17년 글
+https://physics.meta.stackexchange.com/questions/10152/katex-instead-of-mathjax
+
+19년 글
+https://meta.stackexchange.com/questions/338933/next-math-renderer-mathjax-v3-versus-katex
+
+
+
+수행 속도 차이.
+https://www.intmath.com/cg5/katex-mathjax-comparison.php
+
+
+
+결론 : 쓰고싶은거 씁시다.
+
+
+
+katex cammands  : 
+https://katex.org/docs/supported.html
+
+mathjax cammands  : 
+
+http://docs.mathjax.org/en/latest/input/tex/macros/
+
+
+
+https://sujinlee.me/pandoc-thesis/
+
+
+
+
+
+가장쉬운방법
+
+자신이 괜찮다 생각하는 블로그 베끼기
+
+
+
+
+
+need 
+
+네이버블로그에
+katex 
+mathjax 쓴 결과물 보여주기
+
+
+
+
+
+
+katex로 markdown 작성시 도움되는 vscode플러그인
+
+vscode 에 markdown+math(or markdown math)라는 katex렌더링 결과를 보여주는
+확장기능이 존재
+
+
+
+pandoc
+
+markdown to tex
+tex to markdown
+
+
+
+mathexchange
+
+
+
+
+section
+
+1. blog
+
+2. tex plugin
+
+katex vs mathjax
