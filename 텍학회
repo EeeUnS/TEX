@@ -1,17 +1,12 @@
 
-static web page
+section
 
-mkdocs
-python
+1. blog
 
-katex
-
-jekyll
-ruby
+2. tex plugin
 
 
-mathjax
-
+1. blog
 
 직접 개설 vs tistory/네이버 블로그
 
@@ -31,8 +26,8 @@ mathjax
 비교적 자유도가 떨어짐.
 언젠가 없어진다면?
 
-
 아 tex 하고싶다.
+
 
 네이버 블로그
 
@@ -43,11 +38,21 @@ mathjax
 
 삽입.
 
+
+
+static web page generate
+
+mkdocs
+python
+
+jekyll
+ruby
+
+
 github page
 1. 무료
 2. 내부는 jekyll로 돌아감.
 3. 도메인 추가가능
-
 
 복잡하다. 
 
@@ -59,24 +64,6 @@ github 블로그를 만들려면 ruby를 깔고.. jekyll 설치하고..
 
 
 
-
-tistory  mathjax쓰는법
-
-
-html 편집
-
-mathjax 
-tistory : 
-</head>에
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
-헤더 한번만 바꾸면됨
-
-
-
-
 jekyll vs mkdocs
 
 jekyll 
@@ -85,9 +72,58 @@ ruby 설치.
 
 
 
+2. 텍을 블로그에서 써보자
+
+
+수식을 지원하는 블로그를 쓰자 (네이버 블로그)
+여백 0로 만들고 pdf를 이미지로 변환후 업로드
+이미지로 렌더링후 이미지를 업로드.
+http://latex2png.com
+
+
+2 - 2 tex plugin
+
+
+katex vs mathjax
+
+tistory  mathjax쓰는법
+
+html 편집
+
+mathjax 
+
+
+tistory & 
+blogspot(google blog) 공통: 
+
+
+mathjax 
+
+</head> 부분에 다음코드를 삽입한다.
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+katex
+~~~~
+
+헤더 설정에서 한번만 바꾸면됨
+
+
+naver blog에서 쓰는법.
+~~~~
+
+
+
+
+
 using javascript library
 
 mathjax  : for using MathML, and AsciiMath
+
+
 
 
 katex vs mathjax
@@ -108,12 +144,15 @@ https://meta.stackexchange.com/questions/338933/next-math-renderer-mathjax-v3-ve
 
 
 
+
+
+
 수행 속도 차이.
 https://www.intmath.com/cg5/katex-mathjax-comparison.php
 
 
-
 결론 : 쓰고싶은거 씁시다.
+
 
 
 
@@ -121,8 +160,28 @@ katex cammands  :
 https://katex.org/docs/supported.html
 
 mathjax cammands  : 
-
 http://docs.mathjax.org/en/latest/input/tex/macros/
+
+
+
+
+
+//////////////////////////////////////////////////////////////
+
+github blog + 지킬 + katex 
+
+
+요구사항 
+github 계정
+github desktop(git사용가능)
+(ruby 설치)
+
+
+https://github.com/linjer/jekyll-katex
+
+
+
+
 
 
 
@@ -131,11 +190,31 @@ https://sujinlee.me/pandoc-thesis/
 
 
 
-
 가장쉬운방법
 
-자신이 괜찮다 생각하는 블로그 베끼기
+자신이 괜찮다 생각하는 블로그 베끼기 license가 있을시 확인
+github에서 zip채로 긁어서 원하는 포스트 부분만 직접할것.
 
+
+
+
+3. katex로 markdown 작성시 도움되는 vscode플러그인
+
+vscode 에 markdown+math(or markdown math)라는 katex렌더링 결과를 보여주는 확장기능이 존재
+
+online editor 또한 존재.
+
+https://upmath.me
+
+
+pandoc
+
+markdown to tex
+tex to markdown
+
+mathexchange
+
+katex vs mathjax
 
 
 
@@ -145,35 +224,3 @@ need
 네이버블로그에
 katex 
 mathjax 쓴 결과물 보여주기
-
-
-
-
-
-
-katex로 markdown 작성시 도움되는 vscode플러그인
-
-vscode 에 markdown+math(or markdown math)라는 katex렌더링 결과를 보여주는
-확장기능이 존재
-
-
-
-pandoc
-
-markdown to tex
-tex to markdown
-
-
-
-mathexchange
-
-
-
-
-section
-
-1. blog
-
-2. tex plugin
-
-katex vs mathjax
