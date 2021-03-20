@@ -1,0 +1,114 @@
+\documentclass{oblivoir}
+
+\usepackage{amsthm}
+\usepackage{thmtools}
+\usepackage{lipsum}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{ansform}
+\usepackage{thmtools}
+\usepackage{graphicx}
+%https://www.overleaf.com/learn/latex/Inserting_Images
+
+\usepackage{listings}
+\usepackage{xcolor}
+\declaretheoremstyle[% spaceabove=6pt,spacebelow=6pt, headfont=\color{MainColorOne}\sffamily\bfseries, notefont=\mdseries, notebraces={[}{]}, bodyfont=\normalfont,
+headpunct={},
+postheadspace=1em,
+%qed=▣,
+]{maintheorem}
+
+\declaretheorem[%
+name=정의,
+style=maintheorem,
+numberwithin=chapter, shaded={%bgcolor=MainColorThree!20,
+margin=.5em}]{dfn}
+% \begin{dfn}[]
+% \end{dfn}
+
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+%https://www.overleaf.com/learn/latex/Theorems_and_proofs
+
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+%https://tex.stackexchange.com/questions/348651/c-code-to-add-in-the-document
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{backgroundColour},   
+    commentstyle=\color{mGreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{mGray},
+    stringstyle=\color{mPurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+\usepackage{bookmark}
+
+\bookmarksetup{startatroot}
+
+
+\begin{document}
+
+\title{}
+\author{}
+
+\maketitle
+
+\tableofcontents
+
+
+\chapter{}
+
+
+\section{}
+
+
+\subsection{}
+
+
+\subsubsection{}
+
+
+
+\begin{itemize}
+  \item 
+  \item 
+\end{itemize}
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.3]{pic/section1and2/pic1}
+  \caption{}
+\end{figure}
+
+
+
+\begin{lstlisting}[style = CStyle]
+
+\end{lstlisting}
+
+
+\begin{dfn}[]
+\end{dfn}
+
+\end{document}
